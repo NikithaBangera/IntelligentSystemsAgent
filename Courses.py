@@ -8,6 +8,7 @@ import csv
 graph = Graph()
 graph.parse("Classes.rdf", format="application/rdf+xml")
 
+
 def webPageScraping():
     page = requests.get("https://www.concordia.ca/academics/graduate/calendar/current/encs/computer-science-courses.html#course-descriptions")
     soup = BeautifulSoup(page.content, "html.parser")
@@ -57,19 +58,27 @@ def courseTripleGenerator(course_class):
         next(file_reader)
         for course_list in file_reader:
             #print(course_list)
-            course = course_ns[course_list[0]+"_"+course_list[2]]
+            course = course_ns[course_list[2]+"_"+course_list[0]]
             course_graph.add((course, RDF.type, course_class))
             course_graph.add((course, DC.identifier, Literal(course_list[0])))
             course_graph.add((course, DC.title, Literal(course_list[1])))
             course_graph.add((course, DC.subject, Literal(course_list[2])))
             course_graph.add((course, DC.description, Literal(course_list[3])))
 
-    #print(course_graph.serialize(format='turtle'))
+    print(course_graph.serialize(format='turtle'))
 
-def universityTripleGenerator():
+
+def universityTripleGenerator(university_class):
+    university_ns = Namespace("http://example.org/university/")
     university_graph = Graph()
-    university =
-    uni
+    university_list = ["Concordia_University"]
+    university = university_ns[university_list[0]]
+    university_graph.add((university, RDF.type, university_class))
+    university_graph.add((university, FOAF.name, Literal("Concordia University")))
+    university_graph.add((university, RDFS.seeAlso, Literal("http://dbpedia.org/resource/Concordia_University")))
+
+    print(university_graph.serialize(format='turtle'))
+
 
 webPageScraping()
 

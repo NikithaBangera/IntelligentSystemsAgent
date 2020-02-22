@@ -9,7 +9,7 @@ with open("StudentsRecord.csv", 'r') as csv_file:
     next(file_reader)
     for student_list in file_reader:
         print(student_list)
-        student = student_ns["_"+student_list[0]]
+        student = student_ns[student_list[0]]
         student_graph.add((student, RDF.type, FOAF.Student))
         student_graph.add((student, FOAF.studentId, Literal(student_list[0])))
         student_graph.add((student, FOAF.givenName, Literal(student_list[1])))
