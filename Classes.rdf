@@ -17,6 +17,12 @@
     <rdfs:label xml:lang="en">Student</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://focu.io/schema#hasTranscript">
+    <rdfs:domain rdf:resource="http://focu.io/schema#Student"/>
+    <rdfs:comment>Student has transcript</rdfs:comment>
+    <rdfs:label xml:lang="en">hasTranscript</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://focu.io/schema#isAwarded">
     <rdfs:comment>Student is awarded the grade</rdfs:comment>
     <rdfs:label xml:lang="en">isAwarded</rdfs:label>
@@ -30,6 +36,10 @@
     <rdfs:comment>Course contains topic</rdfs:comment>
     <rdfs:label xml:lang="en">containsTopic</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://focu.io/schema#Transcript">
+    <rdfs:label xml:lang="en">Transcript</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://focu.io/schema#isofferedBy">
     <rdfs:range rdf:resource="http://focu.io/schema#Courses"/>

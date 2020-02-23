@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-from rdflib.namespace import RDFS, RDF, FOAF, DC, DCTERMS
+from rdflib.namespace import RDFS, RDF, FOAF, DC, OWL
 from rdflib import Graph, Namespace, Literal
 import csv
 
@@ -130,10 +130,10 @@ def topicsTripleGenerator(topic_class):
             topic_graph.add((topic, RDFS.seeAlso, Literal(topic_list[1])))
             topic_graph.add((topic, FOAF.isPrimaryTopicOf, Literal(topic_list[2])))
 
-    print(topic_graph.serialize(format='turtle'))
+    #print(topic_graph.serialize(format='turtle'))
 
 
-def studentTripleGenerator(student_class, enrolled_property, takes_course_property, is_awarded, university):
+def studentTripleGenerator(student_class, enrolled_property, takes_course_property, is_awarded, university, has_transcript, transcript):
     student_ns = Namespace("http://example.org/people/")
     student_graph = Graph()
     with open("StudentsRecord.csv", 'r') as csv_file:
@@ -150,10 +150,28 @@ def studentTripleGenerator(student_class, enrolled_property, takes_course_proper
             student_graph.add((student, takes_course_property, Literal(student_list[4])))
             student_graph.add((student, is_awarded, Literal(student_list[5])))
             student_graph.add((student, enrolled_property, university))
-
+            student_graph.add((student, has_transcript, transcript))
 
     #print(student_graph.serialize(format='turtle'))
 
+
+def transcriptTripleGenerator(transcript_class):
+    transcript_ns = Namespace("http://example.org/transcript/")
+    transcript_graph = Graph()
+    with open("transcript.csv", 'r') as csv_file:
+        file_reader = csv.reader(csv_file, delimiter="|")
+        next(file_reader)
+        for transcript_list in file_reader:
+            # print(student_list)
+            transcript = transcript_ns[transcript_list[0]]
+            transcript_graph.add((transcript, RDF.type, transcript_class))
+            transcript_graph.add((transcript, DC.identifier, Literal(transcript_list[0])))
+            transcript_graph.add((transcript, DC.title, Literal(transcript_list[1])))
+            transcript_graph.add((transcript, OWL.hasValue, Literal(transcript_list[2])))
+            transcript_graph.add((transcript, DC.PeriodOfTime, Literal(transcript_list[3])))
+
+    print(transcript_graph.serialize(format='turtle'))
+    return transcript
 
 comp_grad_page = "https://www.concordia.ca/academics/graduate/calendar/current/encs/computer-science-courses.html#course-descriptions"
 webPageScraping(comp_grad_page)
@@ -169,6 +187,8 @@ for row in subject:
         student_class = row
     if "#Topics" in row:
         topic_class = row
+    if "#Transcript" in row:
+        transcript_class = row
 
 properties = list(graph.subjects(RDF.type, RDF.Property))
 #print(properties)
@@ -181,9 +201,12 @@ for row in properties:
         is_awarded = row
     if "#isofferedBy" in row:
         is_offered_by = row
+    if "#hasTranscript" in row:
+        has_transcript = row
 
 university = universityTripleGenerator(university_class)
 #print(university)
 courseTripleGenerator(course_class, comp_grad_page, is_offered_by, university)
 topicsTripleGenerator(topic_class)
-studentTripleGenerator(student_class, enrolled_property, takes_course_property, is_awarded, university)
+transcript = transcriptTripleGenerator(transcript_class)
+studentTripleGenerator(student_class, enrolled_property, takes_course_property, is_awarded, university, has_transcript, transcript)
