@@ -24,6 +24,8 @@ focu:Topics
   a rdfs:Class ;
   rdfs:label "Topics"@en .
 
+
+
 focu:isEnrolledAt
   a rdf:Property ;
   rdfs:label "isEnrolledAt"@en ;
