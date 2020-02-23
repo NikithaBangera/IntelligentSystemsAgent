@@ -1,17 +1,21 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-
+import re
 
 def course_name_extract(courses, course_number, course_subject, course_name, course_desc):
     #print(courses)
+    reg_pattern = re.compile(r'[A-Z]\d\d -')
     for i in courses[1:]:
         #print(i.find_all("b"))
         data = i.getText().replace(u"\xa0", u" ")
-        #print(data.strip())
+        #print(data)
         if "Note:" in data:
             continue
+        if reg_pattern.search(data):
+            continue
         else:
+            #print(data)
             if "\n" in data:
                 #print(data)
                 data_split = data.split("\n")
@@ -31,32 +35,36 @@ def course_name_extract(courses, course_number, course_subject, course_name, cou
 
 
 def courses_with_desc(courses, course_number, course_subject, course_name, course_desc):
-    '''a = courses[1].getText(strip=True).replace(u"\xa0", u" ")
-    if "credits" in a:
-        print(a.split("credits)", 2))'''
     for item in courses:
-        print(item)
-        item_clean = item.getText(strip=True).replace(u"\xa0", u" ")
+        item_clean = item.getText().replace(u"\xa0", u" ")
+        #print(item_clean)
+        
         if "**)" in item_clean:
-            item_split = item_clean.split(")", 2)
-        elif "credits" in item_clean:
-            item_split = item_clean.split("credits)", 2)
-        elif "credit" in item_clean:
-            item_split = item_clean.split("credit)", 2)
+            item_split = item_clean.strip().split(")", 2)
+        elif "credits" in item_clean or "Credits" in item_clean:
+            item_split = item_clean.strip().split("redits)", 2)
+        elif "credit" in item_clean or "Credit" in item_clean:
+            item_split = item_clean.strip().split("redit)", 2)
 
+        if "value" in item_clean:
+            item_split = item_clean.split("value)", 2)
+        elif "(****)" in item_clean:
+            item_split = item_clean.split("redits)", 2)
+
+        #print(item_split)
         name_split = item_split[0].split("(",1)[0]
         #print(name_split)
-        #print(item_split[1])
-        #if name_split.strip().split(" ",2)[0] in course_subject and name_split.strip().split(" ",2)[1] in course_number:
-        '''if name_split.strip().split(" ",2)[2] in course_name:
+        #print()
+        desc = item_split[1]
+        if name_split.strip().split(" ",2)[2] in course_name:
             #print(name_split.strip().split(" ",2)[2])
             index1 = course_name.index(name_split.strip().split(" ",2)[2])
-            course_desc[index1] = item_split[1]
+            course_desc[index1] = desc.strip()
         else:
             course_subject.append(name_split.strip().split(" ", 2)[0])
             course_number.append(name_split.strip().split(" ", 2)[1])
             course_name.append(name_split.strip().split(" ", 2)[2])
-            course_desc.append(item_split[1])'''
+            course_desc.append(desc.strip())
 
 def webPageScraping(grad_page):
     course_name = []
@@ -71,19 +79,18 @@ def webPageScraping(grad_page):
     #course_details = course_details.find_all(class_="large-text")
     for i in range(3, 46):
         courses = course_details[i].find_all(class_="large-text")
-        #print(courses)
         course_name_extract(courses, course_number, course_subject, course_name, course_desc)
 
-    #for i in range(51, 52):
-    for i in range(52,53):
+    #for i in range(51, 55):
+    for i in range(55,56):
         courses = course_details[i].find_all(class_="large-text")
         #print(courses)
         courses_with_desc(courses, course_number, course_subject, course_name, course_desc)
 
-    '''print(course_number)
+    print(course_number)
     print(course_subject)
     print(course_name)
-    print(course_desc)'''
+    print(course_desc)
 
 
 

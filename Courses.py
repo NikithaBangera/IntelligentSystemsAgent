@@ -66,8 +66,6 @@ def webPageScraping(comp_grad_page):
             course_number.append(items_split[1])
             course_name.append(items_split[2])
 
-
-
     '''print(course_subject)
     print(course_number)
     print(course_name)
@@ -94,8 +92,7 @@ def universityTripleGenerator(university_class):
     return university
 
 
-
-def courseTripleGenerator(course_class, comp_grad_page):
+def courseTripleGenerator(course_class, comp_grad_page, is_offered_by, university):
     course_ns = Namespace("http://example.org/course/")
     course_graph = Graph()
     with open("Courses.csv", 'r') as csv_file:
@@ -110,6 +107,7 @@ def courseTripleGenerator(course_class, comp_grad_page):
             course_graph.add((course, DC.subject, Literal(course_list[2])))
             course_graph.add((course, DC.description, Literal(course_list[3])))
             course_graph.add((course, RDFS.seeAlso, Literal(comp_grad_page)))
+            course_graph.add((course, is_offered_by, Literal(university)))
 
 
     #print(course_graph.serialize(format='turtle'))
@@ -130,11 +128,12 @@ def topicsTripleGenerator(topic_class):
             topic_graph.add((topic, RDF.type, topic_class))
             topic_graph.add((topic, DC.title, Literal(topic_list[0])))
             topic_graph.add((topic, RDFS.seeAlso, Literal(topic_list[1])))
+            topic_graph.add((topic, FOAF.isPrimaryTopicOf, Literal(topic_list[2])))
 
-    #print(topic_graph.serialize(format='turtle'))
+    print(topic_graph.serialize(format='turtle'))
 
 
-def studentTripleGenerator(student_class, enrolled_property, university):
+def studentTripleGenerator(student_class, enrolled_property, takes_course_property, is_awarded, university):
     student_ns = Namespace("http://example.org/people/")
     student_graph = Graph()
     with open("StudentsRecord.csv", 'r') as csv_file:
@@ -148,10 +147,12 @@ def studentTripleGenerator(student_class, enrolled_property, university):
             student_graph.add((student, FOAF.givenName, Literal(student_list[1])))
             student_graph.add((student, FOAF.familyName, Literal(student_list[2])))
             student_graph.add((student, FOAF.mbox, Literal(student_list[3])))
+            student_graph.add((student, takes_course_property, Literal(student_list[4])))
+            student_graph.add((student, is_awarded, Literal(student_list[5])))
             student_graph.add((student, enrolled_property, university))
-            # course triple to be added
 
-    print(student_graph.serialize(format='turtle'))
+
+    #print(student_graph.serialize(format='turtle'))
 
 
 comp_grad_page = "https://www.concordia.ca/academics/graduate/calendar/current/encs/computer-science-courses.html#course-descriptions"
@@ -174,9 +175,15 @@ properties = list(graph.subjects(RDF.type, RDF.Property))
 for row in properties:
     if "#isEnrolledAt" in row:
         enrolled_property = row
+    if "#takesCourse" in row:
+        takes_course_property = row
+    if "#isAwarded" in row:
+        is_awarded = row
+    if "#isofferedBy" in row:
+        is_offered_by = row
 
 university = universityTripleGenerator(university_class)
 #print(university)
-courseTripleGenerator(course_class, comp_grad_page)
+courseTripleGenerator(course_class, comp_grad_page, is_offered_by, university)
 topicsTripleGenerator(topic_class)
-studentTripleGenerator(student_class, enrolled_property, university)
+studentTripleGenerator(student_class, enrolled_property, takes_course_property, is_awarded, university)

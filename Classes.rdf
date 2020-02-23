@@ -17,6 +17,11 @@
     <rdfs:label xml:lang="en">Student</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://focu.io/schema#isAwarded">
+    <rdfs:comment>Student is awarded the grade</rdfs:comment>
+    <rdfs:label xml:lang="en">isAwarded</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://focu.io/schema#Courses">
     <rdfs:label xml:lang="en">Courses</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
@@ -26,16 +31,16 @@
     <rdfs:label xml:lang="en">containsTopic</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://focu.io/schema#isofferedBy">
+    <rdfs:range rdf:resource="http://focu.io/schema#Courses"/>
+    <rdfs:domain rdf:resource="http://focu.io/schema#University"/>
+    <rdfs:comment>University offers courses</rdfs:comment>
+    <rdfs:label xml:lang="en">isofferedBy</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://focu.io/schema#Topics">
     <rdfs:label xml:lang="en">Topics</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://focu.io/schema#offersCourse">
-    <rdfs:range rdf:resource="http://focu.io/schema#University"/>
-    <rdfs:domain rdf:resource="http://focu.io/schema#Courses"/>
-    <rdfs:comment>University offers courses</rdfs:comment>
-    <rdfs:label xml:lang="en">offersCourse</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://focu.io/schema#University">
     <rdfs:label xml:lang="en">University</rdfs:label>
