@@ -34,9 +34,9 @@ def webPageScraping(comp_grad_page):
         else:
           x=courses_split[0]
         course_desc.append(x)
-        course_subject.append(cname_split.split(" ", 2)[0])
-        course_number.append(cname_split.split(" ", 2)[1])
-        course_name.append(cname_split.split(" ", 2)[2])
+        course_subject.append(cname_split.strip().split(" ", 2)[0])
+        course_number.append(cname_split.strip().split(" ", 2)[1])
+        course_name.append(cname_split.strip().split(" ", 2)[2])
 
     courses_list = []
     for j in range(1, len(course_name_list), 2):
@@ -53,10 +53,12 @@ def webPageScraping(comp_grad_page):
 
     #print(courses_list)
     for items in courses_list:
-        item_spl = items.split("(",1)
-        items_split = item_spl[0].split(" ", 2)
+        if "(" in items:
+            item_spl = items.split("(", 1)
+        else:
+            item_spl = items.split("\n",1)
+        items_split = item_spl[0].strip().split(" ", 2)
         #print(items_split[2])
-        #if items_split[0] in course_subject and items_split[1] in course_number:
         if items_split[2] in course_name:
             #print("yes")
             continue
@@ -170,7 +172,7 @@ def transcriptTripleGenerator(transcript_class):
             transcript_graph.add((transcript, OWL.hasValue, Literal(transcript_list[2])))
             transcript_graph.add((transcript, DC.PeriodOfTime, Literal(transcript_list[3])))
 
-    print(transcript_graph.serialize(format='turtle'))
+    #print(transcript_graph.serialize(format='turtle'))
     return transcript
 
 comp_grad_page = "https://www.concordia.ca/academics/graduate/calendar/current/encs/computer-science-courses.html#course-descriptions"

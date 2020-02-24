@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import re
 
+
 def course_name_extract(courses, course_number, course_subject, course_name, course_desc):
     #print(courses)
     reg_pattern = re.compile(r'[A-Z]\d\d -')
@@ -17,7 +18,6 @@ def course_name_extract(courses, course_number, course_subject, course_name, cou
         else:
             #print(data)
             if "\n" in data:
-                #print(data)
                 data_split = data.split("\n")
                 #print(data_split)
                 for l in data_split:
@@ -38,33 +38,44 @@ def courses_with_desc(courses, course_number, course_subject, course_name, cours
     for item in courses:
         item_clean = item.getText().replace(u"\xa0", u" ")
         #print(item_clean)
-        
-        if "**)" in item_clean:
+
+        if "ENCS 8501 Comprehensive Examination (No credit value)" in item_clean:
+            continue
+
+        if "ENGR 791 Topics in Engineering II" in item_clean:
+            item_split = item_clean.strip().split("\n", 2)
+
+        if "(***)" in item_clean:
             item_split = item_clean.strip().split(")", 2)
+        #elif "(****)" in item_clean:
+        #    item_split = item_clean.split("redits)", 2)
         elif "credits" in item_clean or "Credits" in item_clean:
             item_split = item_clean.strip().split("redits)", 2)
         elif "credit" in item_clean or "Credit" in item_clean:
             item_split = item_clean.strip().split("redit)", 2)
-
-        if "value" in item_clean:
-            item_split = item_clean.split("value)", 2)
-        elif "(****)" in item_clean:
-            item_split = item_clean.split("redits)", 2)
+        elif "credtis" in item_clean:
+            item_split = item_clean.strip().split("redtis)", 2)
 
         #print(item_split)
-        name_split = item_split[0].split("(",1)[0]
+        if item_split[0] == '(4 c':
+            name_split = 'INDU 6211 Production Systems and Inventory Control'
+        else:
+            name_split = item_split[0].split("(",1)[0]
         #print(name_split)
         #print()
-        desc = item_split[1]
-        if name_split.strip().split(" ",2)[2] in course_name:
-            #print(name_split.strip().split(" ",2)[2])
-            index1 = course_name.index(name_split.strip().split(" ",2)[2])
-            course_desc[index1] = desc.strip()
+        if len(item_split) == 1:
+            continue
         else:
-            course_subject.append(name_split.strip().split(" ", 2)[0])
-            course_number.append(name_split.strip().split(" ", 2)[1])
-            course_name.append(name_split.strip().split(" ", 2)[2])
-            course_desc.append(desc.strip())
+            desc = item_split[1]
+            if name_split.strip().split(" ",2)[2] in course_name:
+                #print(name_split.strip().split(" ",2)[2])
+                index1 = course_name.index(name_split.strip().split(" ",2)[2])
+                course_desc[index1] = desc.strip()
+            else:
+                course_subject.append(name_split.strip().split(" ", 2)[0])
+                course_number.append(name_split.strip().split(" ", 2)[1])
+                course_name.append(name_split.strip().split(" ", 2)[2])
+                course_desc.append(desc.strip())
 
 def webPageScraping(grad_page):
     course_name = []
@@ -81,8 +92,7 @@ def webPageScraping(grad_page):
         courses = course_details[i].find_all(class_="large-text")
         course_name_extract(courses, course_number, course_subject, course_name, course_desc)
 
-    #for i in range(51, 55):
-    for i in range(55,56):
+    for i in range(51, 58):
         courses = course_details[i].find_all(class_="large-text")
         #print(courses)
         courses_with_desc(courses, course_number, course_subject, course_name, course_desc)
@@ -92,8 +102,14 @@ def webPageScraping(grad_page):
     print(course_name)
     print(course_desc)
 
+    df = pd.DataFrame(
+        {'course_number': course_number,
+         'course_name': course_name,
+         'course_subject': course_subject,
+         'course_desc': course_desc
+         })
+    df.to_csv('Courses.csv', mode='a', index=False, sep='|', header=False)
 
 
-
-grad_page = "http://www.concordia.ca/academics/graduate/calendar/current/encs/engineering-courses.html#topic"
+grad_page = "https://www.concordia.ca/academics/graduate/calendar/current/encs/engineering-courses.html#topicsinengineering"
 webPageScraping(grad_page)
