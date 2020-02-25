@@ -1,1429 +1,414 @@
 topic_name|topic_url|course_name
-Distributed|http://dbpedia.org/resource/Distributed_computing|Distributed System Design
-System|http://dbpedia.org/resource/System|Distributed System Design
-Design|http://dbpedia.org/resource/Software_design|Distributed System Design
-Principles|http://dbpedia.org/resource/Principle|Distributed System Design
 distributed computing|http://dbpedia.org/resource/Distributed_computing|Distributed System Design
 scalability|http://dbpedia.org/resource/Scalability|Distributed System Design
-transparency|http://dbpedia.org/resource/Open_government|Distributed System Design
 concurrency|http://dbpedia.org/resource/Concurrent_computing|Distributed System Design
-consistency|http://dbpedia.org/resource/Consistency_model|Distributed System Design
 fault tolerance|http://dbpedia.org/resource/Fault_tolerance|Distributed System Design
 Client-server|http://dbpedia.org/resource/Client–server_model|Distributed System Design
-interaction|http://dbpedia.org/resource/Interaction|Distributed System Design
-technologies|http://dbpedia.org/resource/Information_technology|Distributed System Design
 interprocess communication|http://dbpedia.org/resource/Inter-process_communication|Distributed System Design
-sockets|http://dbpedia.org/resource/Network_socket|Distributed System Design
-group|http://dbpedia.org/resource/Social_group|Distributed System Design
 communication|http://dbpedia.org/resource/Communication|Distributed System Design
 remote procedure call|http://dbpedia.org/resource/Remote_procedure_call|Distributed System Design
-remote|http://dbpedia.org/resource/Remote_desktop_software|Distributed System Design
-method|http://dbpedia.org/resource/Software_development_process|Distributed System Design
-invocation|http://dbpedia.org/resource/Remote_procedure_call|Distributed System Design
-object|http://dbpedia.org/resource/Object-oriented_programming|Distributed System Design
-request|http://dbpedia.org/resource/Hypertext_Transfer_Protocol|Distributed System Design
-broker|http://dbpedia.org/resource/Broker|Distributed System Design
 CORBA|http://dbpedia.org/resource/Common_Object_Request_Broker_Architecture|Distributed System Design
-web services|http://dbpedia.org/resource/Web_service|Distributed System Design
-Distributed|http://dbpedia.org/resource/Distributed_computing|Distributed System Design
 server|http://dbpedia.org/resource/Web_server|Distributed System Design
-process|http://dbpedia.org/resource/Business_process|Distributed System Design
-replication|http://dbpedia.org/resource/Reproducibility|Distributed System Design
-fault tolerance|http://dbpedia.org/resource/Fault_tolerance|Distributed System Design
-passive|http://dbpedia.org/resource/Passive_voice|Distributed System Design
-replication|http://dbpedia.org/resource/Reproducibility|Distributed System Design
-high availability|http://dbpedia.org/resource/Computer_cluster|Distributed System Design
-active|http://dbpedia.org/resource/Active_learning|Distributed System Design
-replication|http://dbpedia.org/resource/Reproducibility|Distributed System Design
-coordination|http://dbpedia.org/resource/Motor_coordination|Distributed System Design
-transactions|http://dbpedia.org/resource/Transaction_processing|Distributed System Design
 concurrency control|http://dbpedia.org/resource/Concurrency_control|Distributed System Design
-Designing|http://dbpedia.org/resource/Design|Distributed System Design
-software|http://dbpedia.org/resource/Application_software|Distributed System Design
 fault-tolerant|http://dbpedia.org/resource/Fault_tolerance|Distributed System Design
-highly|http://dbpedia.org/resource/Enriched_uranium|Distributed System Design
 distributed systems|http://dbpedia.org/resource/Distributed_computing|Distributed System Design
-process|http://dbpedia.org/resource/Business_process|Distributed System Design
-replication|http://dbpedia.org/resource/Reproducibility|Distributed System Design
-Laboratory|http://dbpedia.org/resource/Laboratory|Distributed System Design
-week|http://dbpedia.org/resource/Week|Distributed System Design
-Parallel|http://dbpedia.org/resource/Parallel_computing|Parallel Programming 
-Programming|http://dbpedia.org/resource/Programming_language|Parallel Programming 
-Migration|http://dbpedia.org/resource/PC_migration|Parallel Programming 
-Von Neumann|http://dbpedia.org/resource/Von_Neumann_architecture|Parallel Programming 
-parallel processing|http://dbpedia.org/resource/Parallel_computing|Parallel Programming 
-architectures|http://dbpedia.org/resource/Computer_architecture|Parallel Programming 
-shared-memory|http://dbpedia.org/resource/Shared_memory|Parallel Programming 
-message-passing|http://dbpedia.org/resource/Message_passing|Parallel Programming 
-paradigms|http://dbpedia.org/resource/Programming_paradigm|Parallel Programming 
-massively parallel|http://dbpedia.org/resource/MIMD|Parallel Programming 
-computers|http://dbpedia.org/resource/Computer_data_storage|Parallel Programming 
-commodity|http://dbpedia.org/resource/Commodity_computing|Parallel Programming 
-parallel processing|http://dbpedia.org/resource/Parallel_computing|Parallel Programming 
-clusters|http://dbpedia.org/resource/Computer_cluster|Parallel Programming 
-multi-core|http://dbpedia.org/resource/Multi-core_processor|Parallel Programming 
-based|http://dbpedia.org/resource/Radix|Parallel Programming 
-heterogeneous computing|http://dbpedia.org/resource/Heterogeneous_computing|Parallel Programming 
-Issues|http://dbpedia.org/resource/Environmental_issue|Parallel Programming 
-memory|http://dbpedia.org/resource/Computer_memory|Parallel Programming 
-consistency|http://dbpedia.org/resource/Consistency|Parallel Programming 
-load balancing|http://dbpedia.org/resource/Weight_distribution|Parallel Programming 
-Parallel algorithms|http://dbpedia.org/resource/Parallel_algorithm|Parallel Programming 
-shared-memory|http://dbpedia.org/resource/Shared_memory|Parallel Programming 
-message passing|http://dbpedia.org/resource/Message_passing|Parallel Programming 
-platforms|http://dbpedia.org/resource/Operating_system|Parallel Programming 
-efficiency|http://dbpedia.org/resource/Efficiency|Parallel Programming 
-scalability|http://dbpedia.org/resource/Scalability|Parallel Programming 
-issues|http://dbpedia.org/resource/Software_project_management|Parallel Programming 
-performance|http://dbpedia.org/resource/Computer_performance|Parallel Programming 
-Parallel programming|http://dbpedia.org/resource/Parallel_computing|Parallel Programming 
-environments|http://dbpedia.org/resource/Desktop_environment|Parallel Programming 
-parallel programming|http://dbpedia.org/resource/Parallel_computing|Parallel Programming 
-models|http://dbpedia.org/resource/Computer_simulation|Parallel Programming 
-languages|http://dbpedia.org/resource/Programming_language|Parallel Programming 
-software|http://dbpedia.org/resource/Application_software|Parallel Programming 
-tools|http://dbpedia.org/resource/Programming_tool|Parallel Programming 
-Laboratory|http://dbpedia.org/resource/Laboratory|Parallel Programming 
-week|http://dbpedia.org/resource/Week|Parallel Programming 
-project|http://dbpedia.org/resource/Project_management|Parallel Programming 
-Animation|http://dbpedia.org/resource/Animation|Animation for Computer Games 
-Computer Games|http://dbpedia.org/resource/PC_game|Animation for Computer Games 
-algorithms|http://dbpedia.org/resource/Algorithm|Animation for Computer Games 
-data structures|http://dbpedia.org/resource/Data_structure|Animation for Computer Games 
-modelling|http://dbpedia.org/resource/3D_modeling|Animation for Computer Games 
-rendering|http://dbpedia.org/resource/3D_rendering|Animation for Computer Games 
-dynamic|http://dbpedia.org/resource/Type_system|Animation for Computer Games 
-principles|http://dbpedia.org/resource/Principle|Animation for Computer Games 
-traditional animation|http://dbpedia.org/resource/Traditional_animation|Animation for Computer Games 
-production|http://dbpedia.org/resource/Manufacturing|Animation for Computer Games 
-pipeline|http://dbpedia.org/resource/Graphics_pipeline|Animation for Computer Games 
-animation|http://dbpedia.org/resource/Animation|Animation for Computer Games 
-hardware|http://dbpedia.org/resource/Computer_hardware|Animation for Computer Games 
-software|http://dbpedia.org/resource/Software|Animation for Computer Games 
-orientation|http://dbpedia.org/resource/Sexual_orientation|Animation for Computer Games 
-representation|http://dbpedia.org/resource/Knowledge_representation_and_reasoning|Animation for Computer Games 
-interpolation|http://dbpedia.org/resource/Interpolation|Animation for Computer Games 
-modelling|http://dbpedia.org/resource/3D_modeling|Animation for Computer Games 
-physical|http://dbpedia.org/resource/Physics|Animation for Computer Games 
-articulated|http://dbpedia.org/resource/Joint|Animation for Computer Games 
-objects|http://dbpedia.org/resource/Object-oriented_programming|Animation for Computer Games 
-inverse kinematics|http://dbpedia.org/resource/Inverse_kinematics|Animation for Computer Games 
-motion control|http://dbpedia.org/resource/Motion_control|Animation for Computer Games 
-capture|http://dbpedia.org/resource/Video_capture|Animation for Computer Games 
-procedural|http://dbpedia.org/resource/Procedural_programming|Animation for Computer Games 
-behavioural|http://dbpedia.org/resource/Behavior|Animation for Computer Games 
-animation|http://dbpedia.org/resource/Animation|Animation for Computer Games 
-camera|http://dbpedia.org/resource/Digital_camera|Animation for Computer Games 
-animation|http://dbpedia.org/resource/Animation|Animation for Computer Games 
-scripting|http://dbpedia.org/resource/Computer_programming|Animation for Computer Games 
-system|http://dbpedia.org/resource/Dynamical_system|Animation for Computer Games 
-project|http://dbpedia.org/resource/Project_management|Animation for Computer Games 
-Laboratory|http://dbpedia.org/resource/Laboratory|Animation for Computer Games 
-week|http://dbpedia.org/resource/Week|Animation for Computer Games 
+Neumann|http://dbpedia.org/resource/Balthasar_Neumann|Parallel Programming
+parallel processing|http://dbpedia.org/resource/Parallel_computing|Parallel Programming
+message-passing|http://dbpedia.org/resource/Message_passing|Parallel Programming
+massively parallel|http://dbpedia.org/resource/MIMD|Parallel Programming
+commodity|http://dbpedia.org/resource/Commodity_computing|Parallel Programming
+multi-core|http://dbpedia.org/resource/Multi-core_processor|Parallel Programming
+heterogeneous computing|http://dbpedia.org/resource/Heterogeneous_computing|Parallel Programming
+memory|http://dbpedia.org/resource/Computer_memory|Parallel Programming
+load balancing|http://dbpedia.org/resource/Weight_distribution|Parallel Programming
+message passing|http://dbpedia.org/resource/Message_passing|Parallel Programming
+scalability|http://dbpedia.org/resource/Scalability|Parallel Programming
+Parallel programming|http://dbpedia.org/resource/Parallel_computing|Parallel Programming
+parallel programming|http://dbpedia.org/resource/Parallel_computing|Parallel Programming
+traditional animation|http://dbpedia.org/resource/Traditional_animation|Animation for Computer Games
+pipeline|http://dbpedia.org/resource/Graphics_pipeline|Animation for Computer Games
+interpolation|http://dbpedia.org/resource/Interpolation|Animation for Computer Games
+inverse kinematics|http://dbpedia.org/resource/Inverse_kinematics|Animation for Computer Games
+motion control|http://dbpedia.org/resource/Motion_control|Animation for Computer Games
 Machine Learning|http://dbpedia.org/resource/Machine_learning|Machine Learning
-Introduction|http://dbpedia.org/resource/Florrie_discography|Machine Learning
-fundamentals|http://dbpedia.org/resource/Fundamental_frequency|Machine Learning
 machine learning|http://dbpedia.org/resource/Machine_learning|Machine Learning
-Linear|http://dbpedia.org/resource/Linearity|Machine Learning
-models|http://dbpedia.org/resource/Statistical_model|Machine Learning
-linear|http://dbpedia.org/resource/Linear_regression|Machine Learning
 polynomial regression|http://dbpedia.org/resource/Polynomial_regression|Machine Learning
 overfitting|http://dbpedia.org/resource/Overfitting|Machine Learning
 model selection|http://dbpedia.org/resource/Model_selection|Machine Learning
 logistic regression|http://dbpedia.org/resource/Logistic_regression|Machine Learning
-naive Bayes|http://dbpedia.org/resource/Naive_Bayes_classifier|Machine Learning
-Non-linear|http://dbpedia.org/resource/Nonlinear_system|Machine Learning
-models|http://dbpedia.org/resource/Statistical_model|Machine Learning
 decision trees|http://dbpedia.org/resource/Decision_tree_learning|Machine Learning
-boosting|http://dbpedia.org/resource/Boosted_fission_weapon|Machine Learning
 neural networks|http://dbpedia.org/resource/Artificial_neural_network|Machine Learning
 Support vector machines|http://dbpedia.org/resource/Support_vector_machine|Machine Learning
-kernels|http://dbpedia.org/resource/Kernel_method|Machine Learning
 Computational learning theory|http://dbpedia.org/resource/Computational_learning_theory|Machine Learning
-Experimental|http://dbpedia.org/resource/Design_of_experiments|Machine Learning
-methodology|http://dbpedia.org/resource/Methodology|Machine Learning
-Structured|http://dbpedia.org/resource/Structured_programming|Machine Learning
-models|http://dbpedia.org/resource/Statistical_model|Machine Learning
-graphical models|http://dbpedia.org/resource/Graphical_model|Machine Learning
 deep belief networks|http://dbpedia.org/resource/Deep_belief_network|Machine Learning
 Unsupervised learning|http://dbpedia.org/resource/Unsupervised_learning|Machine Learning
 k-means|http://dbpedia.org/resource/K-means_clustering|Machine Learning
-mixture models|http://dbpedia.org/resource/Mixture_model|Machine Learning
-density|http://dbpedia.org/resource/Probability_density_function|Machine Learning
-estimation|http://dbpedia.org/resource/Approximation|Machine Learning
 expectation maximization|http://dbpedia.org/resource/Expectation–maximization_algorithm|Machine Learning
 principle component analysis|http://dbpedia.org/resource/Principal_component_analysis|Machine Learning
 dimensionality reduction|http://dbpedia.org/resource/Dimensionality_reduction|Machine Learning
-methods|http://dbpedia.org/resource/Methodology|Machine Learning
-Learning|http://dbpedia.org/resource/Learning|Machine Learning
 dynamical systems|http://dbpedia.org/resource/Dynamical_system|Machine Learning
 Markov|http://dbpedia.org/resource/Hidden_Markov_model|Machine Learning
-models|http://dbpedia.org/resource/Statistical_model|Machine Learning
-types|http://dbpedia.org/resource/Type_system|Machine Learning
-temporal|http://dbpedia.org/resource/Temporal_logic|Machine Learning
-sequence|http://dbpedia.org/resource/Sequence|Machine Learning
-models|http://dbpedia.org/resource/Statistical_model|Machine Learning
 Reinforcement learning|http://dbpedia.org/resource/Reinforcement_learning|Machine Learning
-Survey|http://dbpedia.org/resource/Survey_methodology|Machine Learning
-machine learning|http://dbpedia.org/resource/Machine_learning|Machine Learning
-applications|http://dbpedia.org/resource/Computer_program|Machine Learning
-project|http://dbpedia.org/resource/Project|Machine Learning
-Laboratory|http://dbpedia.org/resource/Laboratory|Machine Learning
-week|http://dbpedia.org/resource/Week|Machine Learning
-Advanced|http://dbpedia.org/resource/GCE_Advanced_Level|Advanced Game Development 
-Game Development|http://dbpedia.org/resource/Video_game_development|Advanced Game Development 
-computer games|http://dbpedia.org/resource/PC_game|Advanced Game Development 
-Game engine|http://dbpedia.org/resource/Game_engine|Advanced Game Development 
-design|http://dbpedia.org/resource/Software_design|Advanced Game Development 
-Artificial Intelligence|http://dbpedia.org/resource/Artificial_intelligence|Advanced Game Development 
-AI|http://dbpedia.org/resource/Artificial_intelligence|Advanced Game Development 
-player character|http://dbpedia.org/resource/Player_character|Advanced Game Development 
-coordinated|http://dbpedia.org/resource/Coordination_complex|Advanced Game Development 
-pathfinding|http://dbpedia.org/resource/Pathfinding|Advanced Game Development 
-representations|http://dbpedia.org/resource/Knowledge_representation_and_reasoning|Advanced Game Development 
-decision making|http://dbpedia.org/resource/Decision-making|Advanced Game Development 
-tactical|http://dbpedia.org/resource/Military_tactics|Advanced Game Development 
-AI|http://dbpedia.org/resource/Artificial_intelligence|Advanced Game Development 
-AI|http://dbpedia.org/resource/Artificial_intelligence|Advanced Game Development 
-learning|http://dbpedia.org/resource/Machine_learning|Advanced Game Development 
-games|http://dbpedia.org/resource/Game_theory|Advanced Game Development 
-based|http://dbpedia.org/resource/Radix|Advanced Game Development 
-collision detection|http://dbpedia.org/resource/Collision_detection|Advanced Game Development 
-response|http://dbpedia.org/resource/Hypertext_Transfer_Protocol|Advanced Game Development 
-gaming|http://dbpedia.org/resource/PC_game|Advanced Game Development 
-games|http://dbpedia.org/resource/Game_theory|Advanced Game Development 
-networking|http://dbpedia.org/resource/Computer_network|Advanced Game Development 
-distributed|http://dbpedia.org/resource/Distributed_computing|Advanced Game Development 
-game design|http://dbpedia.org/resource/Game_design|Advanced Game Development 
-mobile gaming|http://dbpedia.org/resource/Mobile_game|Advanced Game Development 
-realism|http://dbpedia.org/resource/Philosophical_realism|Advanced Game Development 
-cut scenes|http://dbpedia.org/resource/Cutscene|Advanced Game Development 
-3D sound|http://dbpedia.org/resource/Surround_sound|Advanced Game Development 
-project|http://dbpedia.org/resource/Project_management|Advanced Game Development 
-Laboratory|http://dbpedia.org/resource/Laboratory|Advanced Game Development 
-week|http://dbpedia.org/resource/Week|Advanced Game Development 
-Computer Vision|http://dbpedia.org/resource/Computer_vision|Computer Vision 
-This|http://dbpedia.org/resource/Sathya_Sai_Baba|Computer Vision 
-introduces|http://dbpedia.org/resource/Exposition_(narrative)|Computer Vision 
-basic|http://dbpedia.org/resource/Basic_research|Computer Vision 
-concepts|http://dbpedia.org/resource/Concept|Computer Vision 
-computer vision|http://dbpedia.org/resource/Computer_vision|Computer Vision 
-image|http://dbpedia.org/resource/Digital_image_processing|Computer Vision 
-formation|http://dbpedia.org/resource/Abiogenesis|Computer Vision 
-grouping|http://dbpedia.org/resource/Gestalt_psychology|Computer Vision 
-geometric|http://dbpedia.org/resource/Geometry|Computer Vision 
-vision|http://dbpedia.org/resource/Computer_vision|Computer Vision 
-perceptual organization|http://dbpedia.org/resource/Perception|Computer Vision 
-software|http://dbpedia.org/resource/Software_system|Computer Vision 
-tools|http://dbpedia.org/resource/Programming_tool|Computer Vision 
-Students|http://dbpedia.org/resource/Student|Computer Vision 
-learn|http://dbpedia.org/resource/Machine_learning|Computer Vision 
-fundamental|http://dbpedia.org/resource/Basic_research|Computer Vision 
-algorithms|http://dbpedia.org/resource/Algorithm|Computer Vision 
-gain|http://dbpedia.org/resource/Antenna_gain|Computer Vision 
-experience|http://dbpedia.org/resource/Experience|Computer Vision 
-programming|http://dbpedia.org/resource/Computer_programming|Computer Vision 
-program|http://dbpedia.org/resource/Computer_program|Computer Vision 
-OpenCV|http://dbpedia.org/resource/OpenCV|Computer Vision 
-powerful|http://dbpedia.org/resource/Statistical_power|Computer Vision 
-software interface|http://dbpedia.org/resource/Interface_(computing)|Computer Vision 
-process|http://dbpedia.org/resource/Business_process|Computer Vision 
-data|http://dbpedia.org/resource/Data_mining|Computer Vision 
-captured|http://dbpedia.org/resource/Prisoner_of_war|Computer Vision 
-passive|http://dbpedia.org/resource/Passive_daylighting|Computer Vision 
-active|http://dbpedia.org/resource/Active_learning|Computer Vision 
-sensors|http://dbpedia.org/resource/Sensor|Computer Vision 
-project|http://dbpedia.org/resource/Project_management|Computer Vision 
-Laboratory|http://dbpedia.org/resource/Laboratory|Computer Vision 
-Students|http://dbpedia.org/resource/Student|Computer Vision 
-received|http://dbpedia.org/resource/Amiri_Baraka|Computer Vision 
-COMP|http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific|Computer Vision 
-Computer Vision|http://dbpedia.org/resource/Computer_vision|Computer Vision 
-Scientific Computation|http://dbpedia.org/resource/Computational_science|Topics in Scientific Computation
-elements|http://dbpedia.org/resource/Structural_engineering|Topics in Scientific Computation
+computer|http://dbpedia.org/resource/Computer_science|Advanced Game Development
+Game engine|http://dbpedia.org/resource/Game_engine|Advanced Game Development
+Artificial Intelligence|http://dbpedia.org/resource/Artificial_intelligence|Advanced Game Development
+AI|http://dbpedia.org/resource/Artificial_intelligence|Advanced Game Development
+player character|http://dbpedia.org/resource/Player_character|Advanced Game Development
+pathfinding|http://dbpedia.org/resource/Pathfinding|Advanced Game Development
+collision detection|http://dbpedia.org/resource/Collision_detection|Advanced Game Development
+mobile gaming|http://dbpedia.org/resource/Mobile_game|Advanced Game Development
+realism|http://dbpedia.org/resource/Philosophical_realism|Advanced Game Development
+3D|http://dbpedia.org/resource/3D_computer_graphics|Advanced Game Development
+Computer Vision|http://dbpedia.org/resource/Computer_vision|Computer Vision
+computer vision|http://dbpedia.org/resource/Computer_vision|Computer Vision
+perceptual organization|http://dbpedia.org/resource/Perception|Computer Vision
+OpenCV|http://dbpedia.org/resource/OpenCV|Computer Vision
+COMP|http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific|Computer Vision
 numerical methods|http://dbpedia.org/resource/Numerical_analysis|Topics in Scientific Computation
-central|http://dbpedia.org/resource/Central_nervous_system|Topics in Scientific Computation
 scientific computation|http://dbpedia.org/resource/Computational_science|Topics in Scientific Computation
-The|http://dbpedia.org/resource/The|Topics in Scientific Computation
-precise|http://dbpedia.org/resource/Accuracy_and_precision|Topics in Scientific Computation
-contents|http://dbpedia.org/resource/Mind|Topics in Scientific Computation
-topics|http://dbpedia.org/resource/Conversation_threading|Topics in Scientific Computation
-An|http://dbpedia.org/resource/Alternating_group|Topics in Scientific Computation
-numerical solution|http://dbpedia.org/resource/Numerical_analysis|Topics in Scientific Computation
-nonlinear equations|http://dbpedia.org/resource/Nonlinear_system|Topics in Scientific Computation
-continuation|http://dbpedia.org/resource/Numerical_continuation|Topics in Scientific Computation
-methods|http://dbpedia.org/resource/Subgradient_method|Topics in Scientific Computation
-numerical solution|http://dbpedia.org/resource/Numerical_analysis|Topics in Scientific Computation
-initial|http://dbpedia.org/resource/Initial_value_problem|Topics in Scientific Computation
-problems|http://dbpedia.org/resource/Computational_problem|Topics in Scientific Computation
+nonlinear|http://dbpedia.org/resource/Nonlinear_system|Topics in Scientific Computation
 ordinary differential equations|http://dbpedia.org/resource/Ordinary_differential_equation|Topics in Scientific Computation
 finite difference method|http://dbpedia.org/resource/Finite_difference_method|Topics in Scientific Computation
 numerical stability|http://dbpedia.org/resource/Numerical_stability|Topics in Scientific Computation
-stiff|http://dbpedia.org/resource/Stiff_equation|Topics in Scientific Computation
-equations|http://dbpedia.org/resource/Partial_differential_equation|Topics in Scientific Computation
-problems|http://dbpedia.org/resource/Computational_problem|Topics in Scientific Computation
-ordinary differential equations|http://dbpedia.org/resource/Ordinary_differential_equation|Topics in Scientific Computation
 collocation|http://dbpedia.org/resource/Collocation_method|Topics in Scientific Computation
-methods|http://dbpedia.org/resource/Subgradient_method|Topics in Scientific Computation
-numerical solution|http://dbpedia.org/resource/Numerical_analysis|Topics in Scientific Computation
 partial differential equations|http://dbpedia.org/resource/Partial_differential_equation|Topics in Scientific Computation
-nonlinear|http://dbpedia.org/resource/Nonlinear_system|Topics in Scientific Computation
 diffusion|http://dbpedia.org/resource/Diffusion_equation|Topics in Scientific Computation
-problems|http://dbpedia.org/resource/Computational_problem|Topics in Scientific Computation
-project|http://dbpedia.org/resource/Project_management|Topics in Scientific Computation
 Numerical Analysis|http://dbpedia.org/resource/Numerical_analysis|Numerical Analysis of Nonlinear Equations
-Nonlinear|http://dbpedia.org/resource/Nonlinear_system|Numerical Analysis of Nonlinear Equations
-An|http://dbpedia.org/resource/Alternating_group|Numerical Analysis of Nonlinear Equations
-numerical algorithms|http://dbpedia.org/resource/Numerical_analysis|Numerical Analysis of Nonlinear Equations
-nonlinear equations|http://dbpedia.org/resource/Nonlinear_system|Numerical Analysis of Nonlinear Equations
-discrete|http://dbpedia.org/resource/Discrete_time_and_continuous_time|Numerical Analysis of Nonlinear Equations
-continuous|http://dbpedia.org/resource/Discrete_time_and_continuous_time|Numerical Analysis of Nonlinear Equations
-systems|http://dbpedia.org/resource/Systems_engineering|Numerical Analysis of Nonlinear Equations
-The|http://dbpedia.org/resource/The|Numerical Analysis of Nonlinear Equations
+nonlinear|http://dbpedia.org/resource/Nonlinear_system|Numerical Analysis of Nonlinear Equations
 numerical analysis|http://dbpedia.org/resource/Numerical_analysis|Numerical Analysis of Nonlinear Equations
 numerical simulation|http://dbpedia.org/resource/Computer_simulation|Numerical Analysis of Nonlinear Equations
-This|http://dbpedia.org/resource/Sathya_Sai_Baba|Numerical Analysis of Nonlinear Equations
-scientists|http://dbpedia.org/resource/Science|Numerical Analysis of Nonlinear Equations
-engineers|http://dbpedia.org/resource/Engineering|Numerical Analysis of Nonlinear Equations
-nonlinear|http://dbpedia.org/resource/Nonlinear_system|Numerical Analysis of Nonlinear Equations
-phenomena|http://dbpedia.org/resource/Phenomenon|Numerical Analysis of Nonlinear Equations
-computational|http://dbpedia.org/resource/Computer_simulation|Numerical Analysis of Nonlinear Equations
-aspects|http://dbpedia.org/resource/Astrological_aspect|Numerical Analysis of Nonlinear Equations
 homotopy|http://dbpedia.org/resource/Homotopy|Numerical Analysis of Nonlinear Equations
-continuation|http://dbpedia.org/resource/Numerical_continuation|Numerical Analysis of Nonlinear Equations
-methods|http://dbpedia.org/resource/Software_development_process|Numerical Analysis of Nonlinear Equations
-fixed points|http://dbpedia.org/resource/Renormalization_group|Numerical Analysis of Nonlinear Equations
-solutions|http://dbpedia.org/resource/Equation|Numerical Analysis of Nonlinear Equations
 asymptotic stability|http://dbpedia.org/resource/Lyapunov_stability|Numerical Analysis of Nonlinear Equations
-bifurcations|http://dbpedia.org/resource/Bifurcation_theory|Numerical Analysis of Nonlinear Equations
-periodic|http://dbpedia.org/resource/Periodic_function|Numerical Analysis of Nonlinear Equations
-solutions|http://dbpedia.org/resource/Equation|Numerical Analysis of Nonlinear Equations
-transition|http://dbpedia.org/resource/Transition_metal|Numerical Analysis of Nonlinear Equations
-chaos|http://dbpedia.org/resource/Chaos_theory|Numerical Analysis of Nonlinear Equations
-conservative|http://dbpedia.org/resource/Conservatism_in_the_United_States|Numerical Analysis of Nonlinear Equations
-systems|http://dbpedia.org/resource/Systems_engineering|Numerical Analysis of Nonlinear Equations
 travelling wave|http://dbpedia.org/resource/Wave|Numerical Analysis of Nonlinear Equations
-solutions|http://dbpedia.org/resource/Equation|Numerical Analysis of Nonlinear Equations
 discretization|http://dbpedia.org/resource/Discretization|Numerical Analysis of Nonlinear Equations
-variety|http://dbpedia.org/resource/Algebraic_variety|Numerical Analysis of Nonlinear Equations
-applications|http://dbpedia.org/resource/Computer_program|Numerical Analysis of Nonlinear Equations
-Numerical|http://dbpedia.org/resource/Numerical_linear_algebra|Numerical Analysis of Nonlinear Equations
-software packages|http://dbpedia.org/resource/Software|Numerical Analysis of Nonlinear Equations
-project|http://dbpedia.org/resource/Project_management|Numerical Analysis of Nonlinear Equations
-Digital|http://dbpedia.org/resource/Digital_electronics|Digital Geometric Modelling
-Geometric|http://dbpedia.org/resource/Geometry|Digital Geometric Modelling
-Modelling|http://dbpedia.org/resource/Conceptual_model|Digital Geometric Modelling
-This|http://dbpedia.org/resource/Sathya_Sai_Baba|Digital Geometric Modelling
-introduces|http://dbpedia.org/resource/Exposition_(narrative)|Digital Geometric Modelling
 digital geometry|http://dbpedia.org/resource/Digital_geometry|Digital Geometric Modelling
-modelling|http://dbpedia.org/resource/3D_modeling|Digital Geometric Modelling
 pipeline|http://dbpedia.org/resource/Graphics_pipeline|Digital Geometric Modelling
-focusing|http://dbpedia.org/resource/Superlens|Digital Geometric Modelling
-data structures|http://dbpedia.org/resource/Data_structure|Digital Geometric Modelling
-algorithms|http://dbpedia.org/resource/Numerical_analysis|Digital Geometric Modelling
 digital|http://dbpedia.org/resource/Digital_electronics|Digital Geometric Modelling
-representation|http://dbpedia.org/resource/Knowledge_representation_and_reasoning|Digital Geometric Modelling
-processing|http://dbpedia.org/resource/Digital_image_processing|Digital Geometric Modelling
 3D|http://dbpedia.org/resource/3D_modeling|Digital Geometric Modelling
 geometry|http://dbpedia.org/resource/Geometry|Digital Geometric Modelling
-Students|http://dbpedia.org/resource/Student|Digital Geometric Modelling
-study|http://dbpedia.org/resource/Research|Digital Geometric Modelling
 wide range|http://dbpedia.org/resource/Fender_Wide_Range|Digital Geometric Modelling
-applications|http://dbpedia.org/resource/Application_software|Digital Geometric Modelling
-solutions|http://dbpedia.org/resource/Equation|Digital Geometric Modelling
 computer-aided design|http://dbpedia.org/resource/Computer-aided_design|Digital Geometric Modelling
-architecture|http://dbpedia.org/resource/Computer_architecture|Digital Geometric Modelling
 reverse engineering|http://dbpedia.org/resource/Reverse_engineering|Digital Geometric Modelling
-medical|http://dbpedia.org/resource/Medicine|Digital Geometric Modelling
-applications|http://dbpedia.org/resource/Application_software|Digital Geometric Modelling
-As|http://dbpedia.org/resource/Arsenic|Digital Geometric Modelling
 triangle|http://dbpedia.org/resource/Computer_graphics|Digital Geometric Modelling
-meshes|http://dbpedia.org/resource/Polygon_mesh|Digital Geometric Modelling
-popular|http://dbpedia.org/resource/Pop_music|Digital Geometric Modelling
-representation|http://dbpedia.org/resource/Knowledge_representation_and_reasoning|Digital Geometric Modelling
-3D|http://dbpedia.org/resource/3D_modeling|Digital Geometric Modelling
-geometry|http://dbpedia.org/resource/Geometry|Digital Geometric Modelling
-focuses|http://dbpedia.org/resource/Focus_(optics)|Digital Geometric Modelling
 triangle mesh|http://dbpedia.org/resource/Triangle_mesh|Digital Geometric Modelling
-representations|http://dbpedia.org/resource/Knowledge_representation_and_reasoning|Digital Geometric Modelling
-data structures|http://dbpedia.org/resource/Data_structure|Digital Geometric Modelling
-enable|http://dbpedia.org/resource/Enabling|Digital Geometric Modelling
-efficiently|http://dbpedia.org/resource/Time_complexity|Digital Geometric Modelling
-edit|http://dbpedia.org/resource/Hyperlink|Digital Geometric Modelling
-geometry|http://dbpedia.org/resource/Geometry|Digital Geometric Modelling
-In|http://dbpedia.org/resource/Bitcoin|Digital Geometric Modelling
-addition|http://dbpedia.org/resource/Addition|Digital Geometric Modelling
-covers|http://dbpedia.org/resource/Covering_space|Digital Geometric Modelling
 spline|http://dbpedia.org/resource/Flat_spline|Digital Geometric Modelling
-modelling|http://dbpedia.org/resource/3D_modeling|Digital Geometric Modelling
-Hermite|http://dbpedia.org/resource/Charles_Hermite|Digital Geometric Modelling
-splines|http://dbpedia.org/resource/Spline_interpolation|Digital Geometric Modelling
-Bezier|http://dbpedia.org/resource/Bézier_curve|Digital Geometric Modelling
-splines|http://dbpedia.org/resource/Spline_interpolation|Digital Geometric Modelling
-B-Splines|http://dbpedia.org/resource/B-spline|Digital Geometric Modelling
-project|http://dbpedia.org/resource/Project_management|Digital Geometric Modelling
-Comparative|http://dbpedia.org/resource/Comparative|Comparative Study of Programming Languages
-Study|http://dbpedia.org/resource/Eduard_Study|Comparative Study of Programming Languages
-Programming Languages|http://dbpedia.org/resource/Programming_language|Comparative Study of Programming Languages
-Comparison|http://dbpedia.org/resource/Relational_operator|Comparative Study of Programming Languages
-high-level programming languages|http://dbpedia.org/resource/High-level_programming_language|Comparative Study of Programming Languages
-respect|http://dbpedia.org/resource/Respect|Comparative Study of Programming Languages
-application|http://dbpedia.org/resource/Computer_program|Comparative Study of Programming Languages
-areas|http://dbpedia.org/resource/Area|Comparative Study of Programming Languages
-efficiency|http://dbpedia.org/resource/Efficient_energy_use|Comparative Study of Programming Languages
-The|http://dbpedia.org/resource/The|Comparative Study of Programming Languages
-selected|http://dbpedia.org/resource/Natural_selection|Comparative Study of Programming Languages
-languages|http://dbpedia.org/resource/Programming_language|Comparative Study of Programming Languages
-demonstrate|http://dbpedia.org/resource/2010_Catalan_autonomy_protest|Comparative Study of Programming Languages
-programming paradigms|http://dbpedia.org/resource/Programming_paradigm|Comparative Study of Programming Languages
-functional|http://dbpedia.org/resource/Functional_programming|Comparative Study of Programming Languages
-logical|http://dbpedia.org/resource/Boolean_data_type|Comparative Study of Programming Languages
-scripting|http://dbpedia.org/resource/Scripting_language|Comparative Study of Programming Languages
 dynamic typing|http://dbpedia.org/resource/Type_system|Comparative Study of Programming Languages
-Compilation|http://dbpedia.org/resource/Compiler|Comparative Study of Programming Languages
-interpretation|http://dbpedia.org/resource/Language_interpretation|Comparative Study of Programming Languages
-Advanced|http://dbpedia.org/resource/GCE_Advanced_Level|Comparative Study of Programming Languages
-implementation|http://dbpedia.org/resource/Programming_language_implementation|Comparative Study of Programming Languages
-project|http://dbpedia.org/resource/Project|Comparative Study of Programming Languages
-Compiler|http://dbpedia.org/resource/Compiler|Compiler Design 
-Design|http://dbpedia.org/resource/Design|Compiler Design 
-Compiler|http://dbpedia.org/resource/Compiler|Compiler Design 
-organization|http://dbpedia.org/resource/Organization|Compiler Design 
-implementation|http://dbpedia.org/resource/Implementation|Compiler Design 
-lexical analysis|http://dbpedia.org/resource/Lexical_analysis|Compiler Design 
-parsing|http://dbpedia.org/resource/Parsing|Compiler Design 
-code optimization|http://dbpedia.org/resource/Program_optimization|Compiler Design 
-Run-time|http://dbpedia.org/resource/Run_time_(program_lifecycle_phase)|Compiler Design 
-systems|http://dbpedia.org/resource/Operating_system|Compiler Design 
-project|http://dbpedia.org/resource/Project|Compiler Design 
-Protocols|http://dbpedia.org/resource/Communications_protocol|Computer Networks and Protocols
-Direct|http://dbpedia.org/resource/Direct_flight|Computer Networks and Protocols
-link|http://dbpedia.org/resource/Data_link|Computer Networks and Protocols
-networks|http://dbpedia.org/resource/Computer_network|Computer Networks and Protocols
-encoding|http://dbpedia.org/resource/Data_compression|Computer Networks and Protocols
-framing|http://dbpedia.org/resource/Frame_synchronization|Computer Networks and Protocols
+lexical analysis|http://dbpedia.org/resource/Lexical_analysis|Compiler Design
+parsing|http://dbpedia.org/resource/Parsing|Compiler Design
+code optimization|http://dbpedia.org/resource/Program_optimization|Compiler Design
 error detection|http://dbpedia.org/resource/Error_detection_and_correction|Computer Networks and Protocols
 flow control|http://dbpedia.org/resource/Control_flow|Computer Networks and Protocols
-networks|http://dbpedia.org/resource/Computer_network|Computer Networks and Protocols
 Packet switching|http://dbpedia.org/resource/Packet_switching|Computer Networks and Protocols
-forwarding|http://dbpedia.org/resource/Port_forwarding|Computer Networks and Protocols
-bridges|http://dbpedia.org/resource/Bridge|Computer Networks and Protocols
-switches|http://dbpedia.org/resource/Network_switch|Computer Networks and Protocols
-Internetworking|http://dbpedia.org/resource/Internetworking|Computer Networks and Protocols
 Internet Protocol|http://dbpedia.org/resource/Internet_Protocol|Computer Networks and Protocols
-addressing|http://dbpedia.org/resource/Network_address|Computer Networks and Protocols
 IPv6|http://dbpedia.org/resource/IPv6|Computer Networks and Protocols
 multicasting|http://dbpedia.org/resource/Multicast|Computer Networks and Protocols
-mobile IP|http://dbpedia.org/resource/Mobile_IP|Computer Networks and Protocols
-protocols|http://dbpedia.org/resource/Communications_protocol|Computer Networks and Protocols
 UDP|http://dbpedia.org/resource/User_Datagram_Protocol|Computer Networks and Protocols
 TCP|http://dbpedia.org/resource/Transmission_Control_Protocol|Computer Networks and Protocols
 Network security|http://dbpedia.org/resource/Network_security|Computer Networks and Protocols
-concepts|http://dbpedia.org/resource/Concept_map|Computer Networks and Protocols
-protocols|http://dbpedia.org/resource/Communications_protocol|Computer Networks and Protocols
-Laboratory|http://dbpedia.org/resource/Laboratory|Computer Networks and Protocols
-week|http://dbpedia.org/resource/Week|Computer Networks and Protocols
-Advanced|http://dbpedia.org/resource/GCE_Advanced_Level|Advanced Database Technology and Applications
-Database|http://dbpedia.org/resource/Database|Advanced Database Technology and Applications
-Technology|http://dbpedia.org/resource/Technology|Advanced Database Technology and Applications
-Applications|http://dbpedia.org/resource/Application_software|Advanced Database Technology and Applications
-Review|http://dbpedia.org/resource/Review|Advanced Database Technology and Applications
-standard|http://dbpedia.org/resource/Technical_standard|Advanced Database Technology and Applications
-relational databases|http://dbpedia.org/resource/Relational_database_management_system|Advanced Database Technology and Applications
-query languages|http://dbpedia.org/resource/Query_language|Advanced Database Technology and Applications
 Query processing|http://dbpedia.org/resource/Query_optimization|Advanced Database Technology and Applications
 optimization|http://dbpedia.org/resource/Query_optimization|Advanced Database Technology and Applications
-Parallel|http://dbpedia.org/resource/Parallel_computing|Advanced Database Technology and Applications
-distributed databases|http://dbpedia.org/resource/Distributed_database|Advanced Database Technology and Applications
 Information integration|http://dbpedia.org/resource/Information_integration|Advanced Database Technology and Applications
 Data warehouse|http://dbpedia.org/resource/Data_warehouse|Advanced Database Technology and Applications
-systems|http://dbpedia.org/resource/Operating_system|Advanced Database Technology and Applications
 Data mining|http://dbpedia.org/resource/Data_mining|Advanced Database Technology and Applications
 OLAP|http://dbpedia.org/resource/Online_analytical_processing|Advanced Database Technology and Applications
-Web|http://dbpedia.org/resource/Web_application|Advanced Database Technology and Applications
-databases|http://dbpedia.org/resource/Relational_database_management_system|Advanced Database Technology and Applications
 XML|http://dbpedia.org/resource/XML|Advanced Database Technology and Applications
-Active|http://dbpedia.org/resource/Active_voice|Advanced Database Technology and Applications
-logical|http://dbpedia.org/resource/Logic|Advanced Database Technology and Applications
-databases|http://dbpedia.org/resource/Relational_database_management_system|Advanced Database Technology and Applications
-spatial|http://dbpedia.org/resource/Spatial_analysis|Advanced Database Technology and Applications
 multimedia|http://dbpedia.org/resource/Multimedia|Advanced Database Technology and Applications
 data management|http://dbpedia.org/resource/Data_management|Advanced Database Technology and Applications
-Laboratory|http://dbpedia.org/resource/Laboratory|Advanced Database Technology and Applications
-Two|http://dbpedia.org/resource/2|Advanced Database Technology and Applications
-week|http://dbpedia.org/resource/Week|Advanced Database Technology and Applications
-Foundations|http://dbpedia.org/resource/Foundations_of_mathematics|Foundations of the Semantic Web
 Semantic Web|http://dbpedia.org/resource/Semantic_Web|Foundations of the Semantic Web
-standards|http://dbpedia.org/resource/Technical_standard|Foundations of the Semantic Web
+World Wide Web Consortium (W3C)|http://dbpedia.org/resource/World_Wide_Web_Consortium|Foundations of the Semantic Web
 Extensible Markup Language (XML)|http://dbpedia.org/resource/XML|Foundations of the Semantic Web
 Resource Description Framework (RDF)|http://dbpedia.org/resource/Resource_Description_Framework|Foundations of the Semantic Web
 schema|http://dbpedia.org/resource/XML_schema|Foundations of the Semantic Web
-markup languages|http://dbpedia.org/resource/Markup_language|Foundations of the Semantic Web
-Semantic Web|http://dbpedia.org/resource/Semantic_Web|Foundations of the Semantic Web
 ontology|http://dbpedia.org/resource/Ontology_engineering|Foundations of the Semantic Web
-development|http://dbpedia.org/resource/Software_development|Foundations of the Semantic Web
-markup languages|http://dbpedia.org/resource/Markup_language|Foundations of the Semantic Web
 ontologies|http://dbpedia.org/resource/Ontology|Foundations of the Semantic Web
 Web Ontology Language (OWL)|http://dbpedia.org/resource/Web_Ontology_Language|Foundations of the Semantic Web
-logical|http://dbpedia.org/resource/Logic|Foundations of the Semantic Web
-foundations|http://dbpedia.org/resource/Foundations_of_mathematics|Foundations of the Semantic Web
-ontologies|http://dbpedia.org/resource/Ontology|Foundations of the Semantic Web
-description logics|http://dbpedia.org/resource/Description_logic|Foundations of the Semantic Web
-reasoning|http://dbpedia.org/resource/Semantic_reasoner|Foundations of the Semantic Web
-ontologies|http://dbpedia.org/resource/Ontology|Foundations of the Semantic Web
-project|http://dbpedia.org/resource/Wikipedia|Foundations of the Semantic Web
-Introduction|http://dbpedia.org/resource/Florrie_discography|Introduction to Knowledge-Base Systems
-Systems|http://dbpedia.org/resource/Information_system|Introduction to Knowledge-Base Systems
-Review|http://dbpedia.org/resource/Review|Introduction to Knowledge-Base Systems
 first-order logic|http://dbpedia.org/resource/First-order_logic|Introduction to Knowledge-Base Systems
 relational algebra|http://dbpedia.org/resource/Relational_algebra|Introduction to Knowledge-Base Systems
 relational calculus|http://dbpedia.org/resource/Relational_calculus|Introduction to Knowledge-Base Systems
 logic programming|http://dbpedia.org/resource/Logic_programming|Introduction to Knowledge-Base Systems
-Logic|http://dbpedia.org/resource/Logic|Introduction to Knowledge-Base Systems
 knowledge representation|http://dbpedia.org/resource/Knowledge_representation_and_reasoning|Introduction to Knowledge-Base Systems
-Architecture|http://dbpedia.org/resource/Enterprise_architecture|Introduction to Knowledge-Base Systems
-system|http://dbpedia.org/resource/System|Introduction to Knowledge-Base Systems
-databases|http://dbpedia.org/resource/Database|Introduction to Knowledge-Base Systems
-Top-down|http://dbpedia.org/resource/Top-down_and_bottom-up_design|Introduction to Knowledge-Base Systems
-bottom-up|http://dbpedia.org/resource/Top-down_and_bottom-up_design|Introduction to Knowledge-Base Systems
-query processing|http://dbpedia.org/resource/Query_optimization|Introduction to Knowledge-Base Systems
-Some|http://dbpedia.org/resource/Karl_Marx|Introduction to Knowledge-Base Systems
-query processing|http://dbpedia.org/resource/Query_optimization|Introduction to Knowledge-Base Systems
-strategies|http://dbpedia.org/resource/Heuristic|Introduction to Knowledge-Base Systems
-Project|http://dbpedia.org/resource/Project|Introduction to Knowledge-Base Systems
-term paper|http://dbpedia.org/resource/Term_paper|Introduction to Knowledge-Base Systems
-current|http://dbpedia.org/resource/Electric_current|Introduction to Knowledge-Base Systems
-topics|http://dbpedia.org/resource/Conversation_threading|Introduction to Knowledge-Base Systems
 Discrete Mathematics|http://dbpedia.org/resource/Discrete_mathematics|Discrete Mathematics of Paul ErdÃ¶s
-Introduction|http://dbpedia.org/resource/Florrie_discography|Discrete Mathematics of Paul ErdÃ¶s
-methods|http://dbpedia.org/resource/Scientific_method|Discrete Mathematics of Paul ErdÃ¶s
-proof|http://dbpedia.org/resource/Mathematical_proof|Discrete Mathematics of Paul ErdÃ¶s
 Computer Science|http://dbpedia.org/resource/Computer_science|Discrete Mathematics of Paul ErdÃ¶s
-Proof|http://dbpedia.org/resource/Mathematical_proof|Discrete Mathematics of Paul ErdÃ¶s
-postulate|http://dbpedia.org/resource/Axiom|Discrete Mathematics of Paul ErdÃ¶s
-The|http://dbpedia.org/resource/The_New_York_Times|Discrete Mathematics of Paul ErdÃ¶s
-theorems|http://dbpedia.org/resource/Theorem|Discrete Mathematics of Paul ErdÃ¶s
 theorem|http://dbpedia.org/resource/Theorem|Discrete Mathematics of Paul ErdÃ¶s
 Ramsey|http://dbpedia.org/resource/Ramsey_Abbey|Discrete Mathematics of Paul ErdÃ¶s
-numbers|http://dbpedia.org/resource/Number|Discrete Mathematics of Paul ErdÃ¶s
 Van|http://dbpedia.org/resource/Van|Discrete Mathematics of Paul ErdÃ¶s
-theorem|http://dbpedia.org/resource/Theorem|Discrete Mathematics of Paul ErdÃ¶s
-Van|http://dbpedia.org/resource/Van|Discrete Mathematics of Paul ErdÃ¶s
-numbers|http://dbpedia.org/resource/Number|Discrete Mathematics of Paul ErdÃ¶s
-proof|http://dbpedia.org/resource/Mathematical_proof|Discrete Mathematics of Paul ErdÃ¶s
-sz|http://dbpedia.org/resource/Sz_(digraph)|Discrete Mathematics of Paul ErdÃ¶s
 conjecture|http://dbpedia.org/resource/Conjecture|Discrete Mathematics of Paul ErdÃ¶s
-The|http://dbpedia.org/resource/The_New_York_Times|Discrete Mathematics of Paul ErdÃ¶s
-theorem|http://dbpedia.org/resource/Theorem|Discrete Mathematics of Paul ErdÃ¶s
 Extremal graph theory|http://dbpedia.org/resource/Extremal_graph_theory|Discrete Mathematics of Paul ErdÃ¶s
 Random graphs|http://dbpedia.org/resource/Random_graph|Discrete Mathematics of Paul ErdÃ¶s
 graph colouring|http://dbpedia.org/resource/Graph_coloring|Discrete Mathematics of Paul ErdÃ¶s
-The|http://dbpedia.org/resource/The_New_York_Times|Discrete Mathematics of Paul ErdÃ¶s
 probabilistic method|http://dbpedia.org/resource/Probabilistic_method|Discrete Mathematics of Paul ErdÃ¶s
-applications|http://dbpedia.org/resource/Computer_program|Discrete Mathematics of Paul ErdÃ¶s
-Computer Science|http://dbpedia.org/resource/Computer_science|Discrete Mathematics of Paul ErdÃ¶s
-project|http://dbpedia.org/resource/Project_management|Discrete Mathematics of Paul ErdÃ¶s
-Optimization|http://dbpedia.org/resource/Mathematical_optimization|Large-Scale Optimization
-linear|http://dbpedia.org/resource/Linearity|Large-Scale Optimization
-non-linear programming|http://dbpedia.org/resource/Nonlinear_programming|Large-Scale Optimization
-network|http://dbpedia.org/resource/Complex_network|Large-Scale Optimization
+Mathematical modelling|http://dbpedia.org/resource/Mathematical_model|Large-Scale Optimization
 optimization|http://dbpedia.org/resource/Mathematical_optimization|Large-Scale Optimization
+non-linear programming|http://dbpedia.org/resource/Nonlinear_programming|Large-Scale Optimization
 integer|http://dbpedia.org/resource/Integer|Large-Scale Optimization
-discrete|http://dbpedia.org/resource/Discrete_mathematics|Large-Scale Optimization
-programming|http://dbpedia.org/resource/Mathematical_optimization|Large-Scale Optimization
-Techniques|http://dbpedia.org/resource/Fishing_techniques|Large-Scale Optimization
 nonlinear|http://dbpedia.org/resource/Nonlinear_system|Large-Scale Optimization
-non-convex|http://dbpedia.org/resource/Convex_set|Large-Scale Optimization
 branch-and-bound|http://dbpedia.org/resource/Branch_and_bound|Large-Scale Optimization
-methods|http://dbpedia.org/resource/Subgradient_method|Large-Scale Optimization
 DC|http://dbpedia.org/resource/Direct_current|Large-Scale Optimization
-difference|http://dbpedia.org/resource/Recurrence_relation|Large-Scale Optimization
-convex functions|http://dbpedia.org/resource/Convex_function|Large-Scale Optimization
-programming|http://dbpedia.org/resource/Mathematical_optimization|Large-Scale Optimization
+convex|http://dbpedia.org/resource/Convex_optimization|Large-Scale Optimization
 bilinear|http://dbpedia.org/resource/Bilinear_form|Large-Scale Optimization
 Heuristics|http://dbpedia.org/resource/Heuristic|Large-Scale Optimization
-project|http://dbpedia.org/resource/Project_management|Large-Scale Optimization
-Students|http://dbpedia.org/resource/Student|Large-Scale Optimization
-received|http://dbpedia.org/resource/Sacred_tradition|Large-Scale Optimization
-topic|http://dbpedia.org/resource/Topic_and_comment|Large-Scale Optimization
-COMP|http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific|Large-Scale Optimization
-number|http://dbpedia.org/resource/Number_theory|Large-Scale Optimization
-Theory|http://dbpedia.org/resource/Theory|Theory of Computation
-Computation|http://dbpedia.org/resource/Computation|Theory of Computation
 General|http://dbpedia.org/resource/History_of_economic_thought|Theory of Computation
-algorithmic|http://dbpedia.org/resource/Algorithm|Theory of Computation
-computations|http://dbpedia.org/resource/Computation|Theory of Computation
-Turing machines|http://dbpedia.org/resource/Turing_machine|Theory of Computation
-universal|http://dbpedia.org/resource/Universal_Turing_machine|Theory of Computation
 Turing machines|http://dbpedia.org/resource/Turing_machine|Theory of Computation
 Turing computable|http://dbpedia.org/resource/Computable_function|Theory of Computation
-functions|http://dbpedia.org/resource/Subroutine|Theory of Computation
-standard|http://dbpedia.org/resource/Technical_standard|Theory of Computation
-family|http://dbpedia.org/resource/Family|Theory of Computation
-algorithms|http://dbpedia.org/resource/Algorithm|Theory of Computation
-Primitive recursive|http://dbpedia.org/resource/Primitive_recursive_function|Theory of Computation
 recursive functions|http://dbpedia.org/resource/Computable_function|Theory of Computation
-thesis|http://dbpedia.org/resource/Thesis|Theory of Computation
-recursive|http://dbpedia.org/resource/Computable_function|Theory of Computation
-sets|http://dbpedia.org/resource/Set_theory|Theory of Computation
-Recursively|http://dbpedia.org/resource/Recursion_(computer_science)|Theory of Computation
-enumerable|http://dbpedia.org/resource/Enumeration|Theory of Computation
-sets|http://dbpedia.org/resource/Set_theory|Theory of Computation
 theorem|http://dbpedia.org/resource/Theorem|Theory of Computation
 Time|http://dbpedia.org/resource/Time|Theory of Computation
-space complexity|http://dbpedia.org/resource/DSPACE|Theory of Computation
-complexity measures|http://dbpedia.org/resource/Computational_complexity_theory|Theory of Computation
-Hierarchy|http://dbpedia.org/resource/Hierarchy|Theory of Computation
 complexity measures|http://dbpedia.org/resource/Computational_complexity_theory|Theory of Computation
 complexity theory|http://dbpedia.org/resource/Computational_complexity_theory|Theory of Computation
-project|http://dbpedia.org/resource/Project_management|Theory of Computation
-Algorithm|http://dbpedia.org/resource/Algorithm|Algorithm Design Techniques
-Design|http://dbpedia.org/resource/Design|Algorithm Design Techniques
-Mathematical|http://dbpedia.org/resource/Mathematical_model|Algorithm Design Techniques
-Empirical|http://dbpedia.org/resource/Empirical_evidence|Algorithm Design Techniques
-measures|http://dbpedia.org/resource/Measurement|Algorithm Design Techniques
 algorithm|http://dbpedia.org/resource/Algorithm|Algorithm Design Techniques
-efficiencies|http://dbpedia.org/resource/Solar_cell_efficiency|Algorithm Design Techniques
-Optimization|http://dbpedia.org/resource/Mathematical_optimization|Algorithm Design Techniques
 combinatorial|http://dbpedia.org/resource/Combinatorial_optimization|Algorithm Design Techniques
-algorithms|http://dbpedia.org/resource/Algorithm|Algorithm Design Techniques
-greedy algorithms|http://dbpedia.org/resource/Greedy_algorithm|Algorithm Design Techniques
 dynamic programming|http://dbpedia.org/resource/Dynamic_programming|Algorithm Design Techniques
 branch-and-bound|http://dbpedia.org/resource/Branch_and_bound|Algorithm Design Techniques
 graph|http://dbpedia.org/resource/Graph_theory|Algorithm Design Techniques
-network|http://dbpedia.org/resource/Flow_network|Algorithm Design Techniques
-algorithms|http://dbpedia.org/resource/Algorithm|Algorithm Design Techniques
 complexity analysis|http://dbpedia.org/resource/Analysis_of_algorithms|Algorithm Design Techniques
 String matching|http://dbpedia.org/resource/String_searching_algorithm|Algorithm Design Techniques
-algorithms|http://dbpedia.org/resource/Algorithm|Algorithm Design Techniques
 NP-complete|http://dbpedia.org/resource/NP-completeness|Algorithm Design Techniques
-problems|http://dbpedia.org/resource/Computational_problem|Algorithm Design Techniques
-approximate|http://dbpedia.org/resource/Approximation_algorithm|Algorithm Design Techniques
-solutions|http://dbpedia.org/resource/Equation|Algorithm Design Techniques
-Probabilistic|http://dbpedia.org/resource/Probability_theory|Algorithm Design Techniques
-algorithms|http://dbpedia.org/resource/Algorithm|Algorithm Design Techniques
-project|http://dbpedia.org/resource/Project|Algorithm Design Techniques
-Combinatorial|http://dbpedia.org/resource/Combinatorics|Combinatorial Algorithms
-Algorithms|http://dbpedia.org/resource/Algorithm|Combinatorial Algorithms
-Representation|http://dbpedia.org/resource/Social_representation|Combinatorial Algorithms
-generation|http://dbpedia.org/resource/Generation|Combinatorial Algorithms
 combinatorial|http://dbpedia.org/resource/Combinatorics|Combinatorial Algorithms
-objects|http://dbpedia.org/resource/Object-oriented_programming|Combinatorial Algorithms
-counting|http://dbpedia.org/resource/Counting|Combinatorial Algorithms
-estimation|http://dbpedia.org/resource/Estimation_theory|Combinatorial Algorithms
-Projects|http://dbpedia.org/resource/Capital_expenditure|Combinatorial Algorithms
-selected|http://dbpedia.org/resource/Natural_selection|Combinatorial Algorithms
-applications|http://dbpedia.org/resource/Application_software|Combinatorial Algorithms
 combinatorics|http://dbpedia.org/resource/Combinatorics|Combinatorial Algorithms
 graph theory|http://dbpedia.org/resource/Graph_theory|Combinatorial Algorithms
-Computational Geometry|http://dbpedia.org/resource/Computational_geometry|Computational Geometry
-Efficient|http://dbpedia.org/resource/Kinetic_data_structure|Computational Geometry
-algorithms|http://dbpedia.org/resource/Algorithm|Computational Geometry
-data structures|http://dbpedia.org/resource/Data_structure|Computational Geometry
-solve|http://dbpedia.org/resource/Equation_solving|Computational Geometry
-geometric|http://dbpedia.org/resource/Geometry|Computational Geometry
-problems|http://dbpedia.org/resource/Computational_problem|Computational Geometry
-Problems|http://dbpedia.org/resource/Decision_problem|Computational Geometry
 convex|http://dbpedia.org/resource/Convex_set|Computational Geometry
-hulls|http://dbpedia.org/resource/Husk|Computational Geometry
 polygon triangulation|http://dbpedia.org/resource/Polygon_triangulation|Computational Geometry
 point location|http://dbpedia.org/resource/Point_location|Computational Geometry
 range searching|http://dbpedia.org/resource/Range_searching|Computational Geometry
 Voronoi|http://dbpedia.org/resource/Voronoi_diagram|Computational Geometry
-diagrams|http://dbpedia.org/resource/Diagram|Computational Geometry
 Delaunay|http://dbpedia.org/resource/Robert_Delaunay|Computational Geometry
 triangulations|http://dbpedia.org/resource/Polygon_triangulation|Computational Geometry
-interval|http://dbpedia.org/resource/Partially_ordered_set|Computational Geometry
-trees|http://dbpedia.org/resource/Tree_structure|Computational Geometry
-segment|http://dbpedia.org/resource/Line_segment|Computational Geometry
-trees|http://dbpedia.org/resource/Tree_structure|Computational Geometry
-arrangements|http://dbpedia.org/resource/Arrangement|Computational Geometry
 robot|http://dbpedia.org/resource/Robotics|Computational Geometry
 motion planning|http://dbpedia.org/resource/Motion_planning|Computational Geometry
 binary|http://dbpedia.org/resource/Binary_number|Computational Geometry
-space|http://dbpedia.org/resource/Euclidean_space|Computational Geometry
-partitions|http://dbpedia.org/resource/Partition_of_a_set|Computational Geometry
-methods|http://dbpedia.org/resource/Software_development_process|Computational Geometry
 plane sweep|http://dbpedia.org/resource/Sweep_line_algorithm|Computational Geometry
-incremental|http://dbpedia.org/resource/Backup|Computational Geometry
-insertion|http://dbpedia.org/resource/Anatomical_terms_of_muscle|Computational Geometry
-randomization|http://dbpedia.org/resource/Randomized_algorithm|Computational Geometry
-divide|http://dbpedia.org/resource/Divisor|Computational Geometry
-Emphasis|http://dbpedia.org/resource/Emphasis_(telecommunications)|Computational Geometry
-computation|http://dbpedia.org/resource/Time_complexity|Computational Geometry
-complexity|http://dbpedia.org/resource/Analysis_of_algorithms|Computational Geometry
-applications|http://dbpedia.org/resource/Computer_program|Computational Geometry
 computer graphics|http://dbpedia.org/resource/Computer_graphics|Computational Geometry
 computer aided design|http://dbpedia.org/resource/Computer-aided_design|Computational Geometry
-geographic|http://dbpedia.org/resource/Georeferencing|Computational Geometry
-systems|http://dbpedia.org/resource/Computer|Computational Geometry
-networks|http://dbpedia.org/resource/Computer_network|Computational Geometry
 mesh generation|http://dbpedia.org/resource/Mesh_generation|Computational Geometry
-databases|http://dbpedia.org/resource/Database|Computational Geometry
-robot|http://dbpedia.org/resource/Robotics|Computational Geometry
-motion planning|http://dbpedia.org/resource/Motion_planning|Computational Geometry
-project|http://dbpedia.org/resource/Project|Computational Geometry
-The|http://dbpedia.org/resource/The|Applied Artificial Intelligence 
-covers|http://dbpedia.org/resource/Cover_version|Applied Artificial Intelligence 
-heuristic|http://dbpedia.org/resource/Heuristic|Applied Artificial Intelligence 
-adversarial|http://dbpedia.org/resource/Adversarial_system|Applied Artificial Intelligence 
-concrete|http://dbpedia.org/resource/Concrete|Applied Artificial Intelligence 
-applications|http://dbpedia.org/resource/Application_software|Applied Artificial Intelligence 
-It|http://dbpedia.org/resource/Wikipedia|Applied Artificial Intelligence 
-automated reasoning|http://dbpedia.org/resource/Automated_reasoning|Applied Artificial Intelligence 
-advanced|http://dbpedia.org/resource/Developed_country|Applied Artificial Intelligence 
-knowledge representation|http://dbpedia.org/resource/Knowledge_representation_and_reasoning|Applied Artificial Intelligence 
-dealing|http://dbpedia.org/resource/Card_game|Applied Artificial Intelligence 
-Artificial Intelligence|http://dbpedia.org/resource/Artificial_intelligence|Applied Artificial Intelligence 
-applications|http://dbpedia.org/resource/Application_software|Applied Artificial Intelligence 
-Finally|http://dbpedia.org/resource/Finally_(CeCe_Peniston_album)|Applied Artificial Intelligence 
-introduces|http://dbpedia.org/resource/Exposition_(narrative)|Applied Artificial Intelligence 
-recurrent neural networks|http://dbpedia.org/resource/Recurrent_neural_network|Applied Artificial Intelligence 
-sequence|http://dbpedia.org/resource/Sequence|Applied Artificial Intelligence 
-sequence|http://dbpedia.org/resource/Sequence|Applied Artificial Intelligence 
-models|http://dbpedia.org/resource/Computer_simulation|Applied Artificial Intelligence 
-project|http://dbpedia.org/resource/Project|Applied Artificial Intelligence 
-Laboratory|http://dbpedia.org/resource/Laboratory|Applied Artificial Intelligence 
-week|http://dbpedia.org/resource/Week|Applied Artificial Intelligence 
-Pattern Recognition|http://dbpedia.org/resource/Pattern_recognition|Pattern Recognition 
-Feature extraction|http://dbpedia.org/resource/Feature_extraction|Pattern Recognition 
-selection|http://dbpedia.org/resource/Natural_selection|Pattern Recognition 
-Similarity|http://dbpedia.org/resource/Similarity_(geometry)|Pattern Recognition 
-distance|http://dbpedia.org/resource/Distance|Pattern Recognition 
-measurements|http://dbpedia.org/resource/Measurement|Pattern Recognition 
-Syntactic|http://dbpedia.org/resource/Syntax|Pattern Recognition 
-statistical|http://dbpedia.org/resource/Statistics|Pattern Recognition 
-Clustering|http://dbpedia.org/resource/Cluster_analysis|Pattern Recognition 
-analysis|http://dbpedia.org/resource/Data_analysis|Pattern Recognition 
-Bayesian decision theory|http://dbpedia.org/resource/Bayes_estimator|Pattern Recognition 
-discriminant|http://dbpedia.org/resource/Discriminant|Pattern Recognition 
-functions|http://dbpedia.org/resource/Positive-definite_kernel|Pattern Recognition 
-Clustering|http://dbpedia.org/resource/Cluster_analysis|Pattern Recognition 
-Applications|http://dbpedia.org/resource/Application_software|Pattern Recognition 
-project|http://dbpedia.org/resource/Project_management|Pattern Recognition 
-Laboratory|http://dbpedia.org/resource/Laboratory|Pattern Recognition 
-week|http://dbpedia.org/resource/Week|Pattern Recognition 
-Intelligent Systems|http://dbpedia.org/resource/Artificial_intelligence|Intelligent Systems 
-Knowledge representation|http://dbpedia.org/resource/Knowledge_representation_and_reasoning|Intelligent Systems 
-reasoning|http://dbpedia.org/resource/Artificial_intelligence|Intelligent Systems 
-Uncertainty|http://dbpedia.org/resource/Uncertainty|Intelligent Systems 
-conflict resolution|http://dbpedia.org/resource/Conflict_resolution|Intelligent Systems 
-Design|http://dbpedia.org/resource/Design|Intelligent Systems 
-intelligent systems|http://dbpedia.org/resource/Artificial_intelligence|Intelligent Systems 
-rule-based|http://dbpedia.org/resource/Logic_programming|Intelligent Systems 
-blackboard|http://dbpedia.org/resource/Blackboard|Intelligent Systems 
-architectures|http://dbpedia.org/resource/Enterprise_architecture|Intelligent Systems 
-project|http://dbpedia.org/resource/Project_management|Intelligent Systems 
-Laboratory|http://dbpedia.org/resource/Laboratory|Intelligent Systems 
-week|http://dbpedia.org/resource/Week|Intelligent Systems 
-Language|http://dbpedia.org/resource/Language|Natural Language Analysis
-Introduction|http://dbpedia.org/resource/Florrie_discography|Natural Language Analysis
+heuristic|http://dbpedia.org/resource/Heuristic|Applied Artificial Intelligence
+automated reasoning|http://dbpedia.org/resource/Automated_reasoning|Applied Artificial Intelligence
+knowledge representation|http://dbpedia.org/resource/Knowledge_representation_and_reasoning|Applied Artificial Intelligence
+Artificial Intelligence|http://dbpedia.org/resource/Artificial_intelligence|Applied Artificial Intelligence
+recurrent neural networks|http://dbpedia.org/resource/Recurrent_neural_network|Applied Artificial Intelligence
+Pattern Recognition|http://dbpedia.org/resource/Pattern_recognition|Pattern Recognition
+Feature extraction|http://dbpedia.org/resource/Feature_extraction|Pattern Recognition
+Bayesian decision theory|http://dbpedia.org/resource/Bayes_estimator|Pattern Recognition
+discriminant|http://dbpedia.org/resource/Discriminant|Pattern Recognition
+Intelligent Systems|http://dbpedia.org/resource/Artificial_intelligence|Intelligent Systems
+Knowledge representation|http://dbpedia.org/resource/Knowledge_representation_and_reasoning|Intelligent Systems
+conflict resolution|http://dbpedia.org/resource/Conflict_resolution|Intelligent Systems
+blackboard|http://dbpedia.org/resource/Blackboard|Intelligent Systems
 natural language processing|http://dbpedia.org/resource/Natural-language_processing|Natural Language Analysis
-Structure|http://dbpedia.org/resource/Structure|Natural Language Analysis
 English|http://dbpedia.org/resource/English_language|Natural Language Analysis
-Grammars|http://dbpedia.org/resource/Grammar|Natural Language Analysis
 parsing|http://dbpedia.org/resource/Parsing|Natural Language Analysis
-Lexical|http://dbpedia.org/resource/Lexicon|Natural Language Analysis
 compositional semantics|http://dbpedia.org/resource/Principle_of_compositionality|Natural Language Analysis
-Pragmatic|http://dbpedia.org/resource/Pragmatics|Natural Language Analysis
-issues|http://dbpedia.org/resource/Problem_solving|Natural Language Analysis
-Applications|http://dbpedia.org/resource/Application_software|Natural Language Analysis
 text mining|http://dbpedia.org/resource/Text_mining|Natural Language Analysis
-extraction|http://dbpedia.org/resource/Information_extraction|Natural Language Analysis
-project|http://dbpedia.org/resource/Project|Natural Language Analysis
-Students|http://dbpedia.org/resource/Student|Natural Language Analysis
-received|http://dbpedia.org/resource/Sacred_tradition|Natural Language Analysis
 COMP|http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific|Natural Language Analysis
-September|http://dbpedia.org/resource/September|Natural Language Analysis
-Advanced|http://dbpedia.org/resource/GCE_Advanced_Level|Advanced 3D Graphics for Game Programming
 3D|http://dbpedia.org/resource/3D_modeling|Advanced 3D Graphics for Game Programming
-Graphics|http://dbpedia.org/resource/Computer_graphics|Advanced 3D Graphics for Game Programming
-Game Programming|http://dbpedia.org/resource/Game_programming|Advanced 3D Graphics for Game Programming
-Fundamental|http://dbpedia.org/resource/Fundamentalism|Advanced 3D Graphics for Game Programming
-algorithms|http://dbpedia.org/resource/Algorithm|Advanced 3D Graphics for Game Programming
 software engineering|http://dbpedia.org/resource/Software_engineering|Advanced 3D Graphics for Game Programming
-principles|http://dbpedia.org/resource/Principle|Advanced 3D Graphics for Game Programming
 3D graphics|http://dbpedia.org/resource/3D_computer_graphics|Advanced 3D Graphics for Game Programming
-Introduction|http://dbpedia.org/resource/Florrie_discography|Advanced 3D Graphics for Game Programming
-real-time graphics|http://dbpedia.org/resource/Real-time_computer_graphics|Advanced 3D Graphics for Game Programming
 application architecture|http://dbpedia.org/resource/Applications_architecture|Advanced 3D Graphics for Game Programming
-basic|http://dbpedia.org/resource/Basic_research|Advanced 3D Graphics for Game Programming
-3D|http://dbpedia.org/resource/3D_modeling|Advanced 3D Graphics for Game Programming
-concepts|http://dbpedia.org/resource/Concept|Advanced 3D Graphics for Game Programming
-modelling|http://dbpedia.org/resource/3D_modeling|Advanced 3D Graphics for Game Programming
-rendering|http://dbpedia.org/resource/Real-time_computer_graphics|Advanced 3D Graphics for Game Programming
-3D graphics|http://dbpedia.org/resource/3D_computer_graphics|Advanced 3D Graphics for Game Programming
-functions|http://dbpedia.org/resource/Subroutine|Advanced 3D Graphics for Game Programming
 pipeline|http://dbpedia.org/resource/Graphics_pipeline|Advanced 3D Graphics for Game Programming
-performance|http://dbpedia.org/resource/Computer_performance|Advanced 3D Graphics for Game Programming
-Hierarchical|http://dbpedia.org/resource/Hierarchy|Advanced 3D Graphics for Game Programming
-3D graphics|http://dbpedia.org/resource/3D_computer_graphics|Advanced 3D Graphics for Game Programming
-Algorithms|http://dbpedia.org/resource/Algorithm|Advanced 3D Graphics for Game Programming
 occlusion culling|http://dbpedia.org/resource/Hidden_surface_determination|Advanced 3D Graphics for Game Programming
 collision detection|http://dbpedia.org/resource/Collision_detection|Advanced 3D Graphics for Game Programming
 photorealism|http://dbpedia.org/resource/Photorealism|Advanced 3D Graphics for Game Programming
-shadows|http://dbpedia.org/resource/Shadow_mapping|Advanced 3D Graphics for Game Programming
-textures|http://dbpedia.org/resource/Texture_mapping|Advanced 3D Graphics for Game Programming
-Current|http://dbpedia.org/resource/Electric_current|Advanced 3D Graphics for Game Programming
-graphics|http://dbpedia.org/resource/Computer_graphics|Advanced 3D Graphics for Game Programming
 physics|http://dbpedia.org/resource/Game_physics|Advanced 3D Graphics for Game Programming
-algorithms|http://dbpedia.org/resource/Algorithm|Advanced 3D Graphics for Game Programming
-Laboratory|http://dbpedia.org/resource/Laboratory|Advanced 3D Graphics for Game Programming
-week|http://dbpedia.org/resource/Week|Advanced 3D Graphics for Game Programming
-Image Processing|http://dbpedia.org/resource/Digital_image_processing|Image Processing 
-Digital image|http://dbpedia.org/resource/Digital_image|Image Processing 
-fundamentals|http://dbpedia.org/resource/Fundamental_frequency|Image Processing 
-image enhancement|http://dbpedia.org/resource/Digital_image_processing|Image Processing 
-histogram|http://dbpedia.org/resource/Histogram|Image Processing 
-processing|http://dbpedia.org/resource/Digital_image_processing|Image Processing 
-filtering|http://dbpedia.org/resource/Digital_filter|Image Processing 
-spatial|http://dbpedia.org/resource/Three-dimensional_space|Image Processing 
-domain|http://dbpedia.org/resource/Domain_of_a_function|Image Processing 
-filtering|http://dbpedia.org/resource/Digital_filter|Image Processing 
-frequency domain|http://dbpedia.org/resource/Frequency_domain|Image Processing 
-reconstruction|http://dbpedia.org/resource/Signal_reconstruction|Image Processing 
-image segmentation|http://dbpedia.org/resource/Image_segmentation|Image Processing 
-detection|http://dbpedia.org/resource/Thermography|Image Processing 
-Hough transform|http://dbpedia.org/resource/Hough_transform|Image Processing 
-edge detection|http://dbpedia.org/resource/Edge_detection|Image Processing 
-linking|http://dbpedia.org/resource/Hyperlink|Image Processing 
-thresholding|http://dbpedia.org/resource/Thresholding_(image_processing)|Image Processing 
-region|http://dbpedia.org/resource/Regions_of_France|Image Processing 
-splitting|http://dbpedia.org/resource/Crystal_field_theory|Image Processing 
-merging|http://dbpedia.org/resource/Mergers_and_acquisitions|Image Processing 
-image compression|http://dbpedia.org/resource/Image_compression|Image Processing 
-wavelet transform|http://dbpedia.org/resource/Wavelet_transform|Image Processing 
-processing|http://dbpedia.org/resource/Digital_image_processing|Image Processing 
-project|http://dbpedia.org/resource/Project|Image Processing 
-Laboratory|http://dbpedia.org/resource/Laboratory|Image Processing 
-week|http://dbpedia.org/resource/Week|Image Processing 
-applications|http://dbpedia.org/resource/Computer_program|Statistical Natural Language Processing
-manipulate|http://dbpedia.org/resource/Psychological_manipulation|Statistical Natural Language Processing
-text|http://dbpedia.org/resource/Plain_text|Statistical Natural Language Processing
-covered|http://dbpedia.org/resource/Cover_version|Statistical Natural Language Processing
-law|http://dbpedia.org/resource/Law|Statistical Natural Language Processing
-retrieval|http://dbpedia.org/resource/Information_retrieval|Statistical Natural Language Processing
+image enhancement|http://dbpedia.org/resource/Digital_image_processing|Image Processing
+histogram|http://dbpedia.org/resource/Histogram|Image Processing
+frequency domain|http://dbpedia.org/resource/Frequency_domain|Image Processing
+image segmentation|http://dbpedia.org/resource/Image_segmentation|Image Processing
+Hough transform|http://dbpedia.org/resource/Hough_transform|Image Processing
+edge detection|http://dbpedia.org/resource/Edge_detection|Image Processing
+thresholding|http://dbpedia.org/resource/Thresholding_(image_processing)|Image Processing
+image compression|http://dbpedia.org/resource/Image_compression|Image Processing
+wavelet transform|http://dbpedia.org/resource/Wavelet_transform|Image Processing
+natural language processing (NLP)|http://dbpedia.org/resource/Natural-language_processing|Statistical Natural Language Processing
 statistical machine translation|http://dbpedia.org/resource/Statistical_machine_translation|Statistical Natural Language Processing
 N-gram|http://dbpedia.org/resource/N-gram|Statistical Natural Language Processing
-language|http://dbpedia.org/resource/Natural_language|Statistical Natural Language Processing
-models|http://dbpedia.org/resource/Statistical_model|Statistical Natural Language Processing
-smoothing|http://dbpedia.org/resource/Smoothing|Statistical Natural Language Processing
 word sense disambiguation|http://dbpedia.org/resource/Word-sense_disambiguation|Statistical Natural Language Processing
 part-of-speech tagging|http://dbpedia.org/resource/Part-of-speech_tagging|Statistical Natural Language Processing
-probabilistic|http://dbpedia.org/resource/Statistical_model|Statistical Natural Language Processing
-grammars|http://dbpedia.org/resource/Formal_grammar|Statistical Natural Language Processing
 parsing|http://dbpedia.org/resource/Parsing|Statistical Natural Language Processing
-project|http://dbpedia.org/resource/Project_management|Statistical Natural Language Processing
-Information Retrieval|http://dbpedia.org/resource/Information_retrieval|Information Retrieval and Web Search 
-Web Search|http://dbpedia.org/resource/Web_search_engine|Information Retrieval and Web Search 
-Basics|http://dbpedia.org/resource/British_Association_for_Immediate_Care|Information Retrieval and Web Search 
-retrieval|http://dbpedia.org/resource/Information_retrieval|Information Retrieval and Web Search 
-IR|http://dbpedia.org/resource/Information_retrieval|Information Retrieval and Web Search 
-Boolean|http://dbpedia.org/resource/Boolean_algebra|Information Retrieval and Web Search 
-vector space|http://dbpedia.org/resource/Vector_space|Information Retrieval and Web Search 
-probabilistic|http://dbpedia.org/resource/Probability|Information Retrieval and Web Search 
-models|http://dbpedia.org/resource/Mathematical_model|Information Retrieval and Web Search 
-Tokenization|http://dbpedia.org/resource/Lexical_analysis|Information Retrieval and Web Search 
-creation|http://dbpedia.org/resource/Creation_myth|Information Retrieval and Web Search 
-inverted|http://dbpedia.org/resource/Invertible_matrix|Information Retrieval and Web Search 
-files|http://dbpedia.org/resource/Computer_file|Information Retrieval and Web Search 
-Weighting|http://dbpedia.org/resource/Weighting|Information Retrieval and Web Search 
-schemes|http://dbpedia.org/resource/Axiom_schema|Information Retrieval and Web Search 
-Evaluation|http://dbpedia.org/resource/Feedback|Information Retrieval and Web Search 
-IR|http://dbpedia.org/resource/Information_retrieval|Information Retrieval and Web Search 
-systems|http://dbpedia.org/resource/Computer|Information Retrieval and Web Search 
-precision|http://dbpedia.org/resource/Precision_and_recall|Information Retrieval and Web Search 
-recall|http://dbpedia.org/resource/Precision_and_recall|Information Retrieval and Web Search 
-Relevance feedback|http://dbpedia.org/resource/Relevance_feedback|Information Retrieval and Web Search 
-query expansion|http://dbpedia.org/resource/Query_expansion|Information Retrieval and Web Search 
-Application|http://dbpedia.org/resource/Application_software|Information Retrieval and Web Search 
-IR|http://dbpedia.org/resource/Information_retrieval|Information Retrieval and Web Search 
-Web search engines|http://dbpedia.org/resource/Web_search_engine|Information Retrieval and Web Search 
-XML|http://dbpedia.org/resource/XML|Information Retrieval and Web Search 
-link analysis|http://dbpedia.org/resource/Link_analysis|Information Retrieval and Web Search 
-PageRank|http://dbpedia.org/resource/PageRank|Information Retrieval and Web Search 
-algorithm|http://dbpedia.org/resource/Algorithm|Information Retrieval and Web Search 
-Text|http://dbpedia.org/resource/Plain_text|Information Retrieval and Web Search 
-categorization|http://dbpedia.org/resource/Categorization|Information Retrieval and Web Search 
-clustering|http://dbpedia.org/resource/Cluster_analysis|Information Retrieval and Web Search 
-spam filtering|http://dbpedia.org/resource/Anti-spam_techniques|Information Retrieval and Web Search 
-project|http://dbpedia.org/resource/Project_management|Information Retrieval and Web Search 
-Laboratory|http://dbpedia.org/resource/Laboratory|Information Retrieval and Web Search 
-week|http://dbpedia.org/resource/Week|Information Retrieval and Web Search 
+Information Retrieval|http://dbpedia.org/resource/Information_retrieval|Information Retrieval and Web Search
+Boolean|http://dbpedia.org/resource/Boolean_algebra|Information Retrieval and Web Search
+vector space|http://dbpedia.org/resource/Vector_space|Information Retrieval and Web Search
+Tokenization|http://dbpedia.org/resource/Lexical_analysis|Information Retrieval and Web Search
+Weighting|http://dbpedia.org/resource/Weighting|Information Retrieval and Web Search
+Relevance feedback|http://dbpedia.org/resource/Relevance_feedback|Information Retrieval and Web Search
+query expansion|http://dbpedia.org/resource/Query_expansion|Information Retrieval and Web Search
+XML|http://dbpedia.org/resource/XML|Information Retrieval and Web Search
+link analysis|http://dbpedia.org/resource/Link_analysis|Information Retrieval and Web Search
+PageRank|http://dbpedia.org/resource/PageRank|Information Retrieval and Web Search
+algorithm|http://dbpedia.org/resource/Algorithm|Information Retrieval and Web Search
+spam filtering|http://dbpedia.org/resource/Anti-spam_techniques|Information Retrieval and Web Search
 Bioinformatics|http://dbpedia.org/resource/Bioinformatics|Bioinformatics Algorithms
-Algorithms|http://dbpedia.org/resource/Algorithm|Bioinformatics Algorithms
-The|http://dbpedia.org/resource/The|Bioinformatics Algorithms
-principal|http://dbpedia.org/resource/Principal_bundle|Bioinformatics Algorithms
-objectives|http://dbpedia.org/resource/Project_management|Bioinformatics Algorithms
-cover|http://dbpedia.org/resource/Cover_version|Bioinformatics Algorithms
-major|http://dbpedia.org/resource/Major_scale|Bioinformatics Algorithms
-algorithms|http://dbpedia.org/resource/Algorithm|Bioinformatics Algorithms
 bioinformatics|http://dbpedia.org/resource/Bioinformatics|Bioinformatics Algorithms
 sequence alignment|http://dbpedia.org/resource/Multiple_sequence_alignment|Bioinformatics Algorithms
 multiple sequence alignment|http://dbpedia.org/resource/Multiple_sequence_alignment|Bioinformatics Algorithms
 phylogeny|http://dbpedia.org/resource/Phylogenetic_tree|Bioinformatics Algorithms
-classifying|http://dbpedia.org/resource/Statistical_classification|Bioinformatics Algorithms
-sequences|http://dbpedia.org/resource/Protein_primary_structure|Bioinformatics Algorithms
 secondary structure prediction|http://dbpedia.org/resource/Protein_structure_prediction|Bioinformatics Algorithms
 3D|http://dbpedia.org/resource/Three-dimensional_space|Bioinformatics Algorithms
-structure prediction|http://dbpedia.org/resource/Protein_structure_prediction|Bioinformatics Algorithms
 gene|http://dbpedia.org/resource/Gene|Bioinformatics Algorithms
 expression|http://dbpedia.org/resource/Gene_expression|Bioinformatics Algorithms
-data|http://dbpedia.org/resource/Data_mining|Bioinformatics Algorithms
-This|http://dbpedia.org/resource/Sathya_Sai_Baba|Bioinformatics Algorithms
 dynamic programming|http://dbpedia.org/resource/Dynamic_programming|Bioinformatics Algorithms
 machine learning|http://dbpedia.org/resource/Machine_learning|Bioinformatics Algorithms
 simulated annealing|http://dbpedia.org/resource/Simulated_annealing|Bioinformatics Algorithms
-clustering algorithms|http://dbpedia.org/resource/Cluster_analysis|Bioinformatics Algorithms
-principles|http://dbpedia.org/resource/Principle|Bioinformatics Algorithms
-project|http://dbpedia.org/resource/Project|Bioinformatics Algorithms
 Bioinformatics|http://dbpedia.org/resource/Bioinformatics|Bioinformatics Databases and Systems
-Databases|http://dbpedia.org/resource/Database|Bioinformatics Databases and Systems
-Systems|http://dbpedia.org/resource/Information_system|Bioinformatics Databases and Systems
-The|http://dbpedia.org/resource/The|Bioinformatics Databases and Systems
-principal|http://dbpedia.org/resource/Head_teacher|Bioinformatics Databases and Systems
-objectives|http://dbpedia.org/resource/Project_management|Bioinformatics Databases and Systems
 bioinformatics|http://dbpedia.org/resource/Bioinformatics|Bioinformatics Databases and Systems
 data management|http://dbpedia.org/resource/Data_management|Bioinformatics Databases and Systems
 knowledge management|http://dbpedia.org/resource/Knowledge_management|Bioinformatics Databases and Systems
-computational|http://dbpedia.org/resource/Grid_computing|Bioinformatics Databases and Systems
-support|http://dbpedia.org/resource/Technical_support|Bioinformatics Databases and Systems
-provide|http://dbpedia.org/resource/Digital_signature|Bioinformatics Databases and Systems
-kind|http://dbpedia.org/resource/Printing|Bioinformatics Databases and Systems
 database|http://dbpedia.org/resource/Database|Bioinformatics Databases and Systems
-system|http://dbpedia.org/resource/System|Bioinformatics Databases and Systems
-introduce|http://dbpedia.org/resource/Introduced_species|Bioinformatics Databases and Systems
-advanced|http://dbpedia.org/resource/Developed_country|Bioinformatics Databases and Systems
-database|http://dbpedia.org/resource/Database|Bioinformatics Databases and Systems
-technology|http://dbpedia.org/resource/Technology|Bioinformatics Databases and Systems
-software technology|http://dbpedia.org/resource/Software|Bioinformatics Databases and Systems
-relevant|http://dbpedia.org/resource/Relevance|Bioinformatics Databases and Systems
-bioinformatics|http://dbpedia.org/resource/Bioinformatics|Bioinformatics Databases and Systems
-project|http://dbpedia.org/resource/Project|Bioinformatics Databases and Systems
 Computer Science|http://dbpedia.org/resource/Computer_science|Topics in Computer Science I
-Subject|http://dbpedia.org/resource/Access_control|Topics in Computer Science I
-vary|http://dbpedia.org/resource/Measurement_uncertainty|Topics in Computer Science I
-Students|http://dbpedia.org/resource/Student|Topics in Computer Science I
-content|http://dbpedia.org/resource/Digital_content|Topics in Computer Science I
-changed|http://dbpedia.org/resource/Semantic_change|Topics in Computer Science I
-Changes|http://dbpedia.org/resource/Changes_(The_Dresden_Files)|Topics in Computer Science I
-content|http://dbpedia.org/resource/Digital_content|Topics in Computer Science I
-letter|http://dbpedia.org/resource/Grapheme|Topics in Computer Science I
-number|http://dbpedia.org/resource/Number|Topics in Computer Science I
 COMP|http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific|Topics in Computer Science I
-COMP|http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific|Topics in Computer Science I
-Graduate|http://dbpedia.org/resource/Postgraduate_education|Graduate Seminar in Computer Science
-Seminar|http://dbpedia.org/resource/Seminar|Graduate Seminar in Computer Science
 Computer Science|http://dbpedia.org/resource/Computer_science|Graduate Seminar in Computer Science
-Students|http://dbpedia.org/resource/Student|Graduate Seminar in Computer Science
-selected|http://dbpedia.org/resource/Natural_selection|Graduate Seminar in Computer Science
-departmental|http://dbpedia.org/resource/Departments_of_France|Graduate Seminar in Computer Science
-seminars|http://dbpedia.org/resource/Seminar|Graduate Seminar in Computer Science
-comprehensive|http://dbpedia.org/resource/Comprehensive_school|Graduate Seminar in Computer Science
-report|http://dbpedia.org/resource/Report|Graduate Seminar in Computer Science
-presented|http://dbpedia.org/resource/Presentation|Graduate Seminar in Computer Science
-seminars|http://dbpedia.org/resource/Seminar|Graduate Seminar in Computer Science
-This|http://dbpedia.org/resource/Philippine_Nurse_Licensure_Examination|Graduate Seminar in Computer Science
-graded|http://dbpedia.org/resource/Academic_grading_in_the_United_States|Graduate Seminar in Computer Science
 pass/fail|http://dbpedia.org/resource/Failure|Graduate Seminar in Computer Science
-basis|http://dbpedia.org/resource/Free_module|Graduate Seminar in Computer Science
-Project|http://dbpedia.org/resource/Project|Project and Report
-Report|http://dbpedia.org/resource/Report|Project and Report
-Project|http://dbpedia.org/resource/Project|Project and Report
-Students|http://dbpedia.org/resource/Student|Project and Report
-received|http://dbpedia.org/resource/Amiri_Baraka|Project and Report
+Applied Computer Science|http://dbpedia.org/resource/Computer_science|Project and Report
 SOEN|http://dbpedia.org/resource/Soen|Project and Report
-SOEN|http://dbpedia.org/resource/Soen|Project and Report
-Parallel|http://dbpedia.org/resource/Parallel_computing|Parallel Algorithms and Architectures
-Algorithms|http://dbpedia.org/resource/Algorithm|Parallel Algorithms and Architectures
-Architectures|http://dbpedia.org/resource/Enterprise_architecture|Parallel Algorithms and Architectures
-permission|http://dbpedia.org/resource/File_system_permissions|Parallel Algorithms and Architectures
-architectures|http://dbpedia.org/resource/Computer_architecture|Parallel Algorithms and Architectures
 memory|http://dbpedia.org/resource/Computer_memory|Parallel Algorithms and Architectures
-organization|http://dbpedia.org/resource/Organization|Parallel Algorithms and Architectures
-interconnection|http://dbpedia.org/resource/Interconnection|Parallel Algorithms and Architectures
-structures|http://dbpedia.org/resource/Structure|Parallel Algorithms and Architectures
-data|http://dbpedia.org/resource/Data|Parallel Algorithms and Architectures
-Parallel algorithms|http://dbpedia.org/resource/Parallel_algorithm|Parallel Algorithms and Architectures
-paradigms|http://dbpedia.org/resource/Programming_paradigm|Parallel Algorithms and Architectures
 complexity analysis|http://dbpedia.org/resource/Analysis_of_algorithms|Parallel Algorithms and Architectures
-algorithms|http://dbpedia.org/resource/Algorithm|Parallel Algorithms and Architectures
-computation|http://dbpedia.org/resource/Computation|Parallel Algorithms and Architectures
-models|http://dbpedia.org/resource/Computer_simulation|Parallel Algorithms and Architectures
-project|http://dbpedia.org/resource/Project_management|Parallel Algorithms and Architectures
-Mobile Computing|http://dbpedia.org/resource/Mobile_computing|Mobile Computing and Wireless Networks
-Wireless|http://dbpedia.org/resource/Wireless|Mobile Computing and Wireless Networks
-Networks|http://dbpedia.org/resource/Computer_network|Mobile Computing and Wireless Networks
-personal|http://dbpedia.org/resource/Personal_computer|Mobile Computing and Wireless Networks
+mobile computing|http://dbpedia.org/resource/Mobile_computing|Mobile Computing and Wireless Networks
+wireless|http://dbpedia.org/resource/Wireless_LAN|Mobile Computing and Wireless Networks
 PAN|http://dbpedia.org/resource/Personal_area_network|Mobile Computing and Wireless Networks
-metropolitan|http://dbpedia.org/resource/Metropolitan_bishop|Mobile Computing and Wireless Networks
 MAN|http://dbpedia.org/resource/Metropolitan_area_network|Mobile Computing and Wireless Networks
-ad hoc networks|http://dbpedia.org/resource/Mobile_ad_hoc_network|Mobile Computing and Wireless Networks
 sensor networks|http://dbpedia.org/resource/Wireless_sensor_network|Mobile Computing and Wireless Networks
-Algorithms|http://dbpedia.org/resource/Algorithm|Mobile Computing and Wireless Networks
-protocols|http://dbpedia.org/resource/Communications_protocol|Mobile Computing and Wireless Networks
-medium|http://dbpedia.org/resource/Transmission_medium|Mobile Computing and Wireless Networks
-access|http://dbpedia.org/resource/Access_network|Mobile Computing and Wireless Networks
 topology|http://dbpedia.org/resource/Network_topology|Mobile Computing and Wireless Networks
-control|http://dbpedia.org/resource/Control_theory|Mobile Computing and Wireless Networks
-reliable|http://dbpedia.org/resource/Reliability_engineering|Mobile Computing and Wireless Networks
-transport|http://dbpedia.org/resource/Transport_layer|Mobile Computing and Wireless Networks
-project|http://dbpedia.org/resource/Project|Mobile Computing and Wireless Networks
 Semantics|http://dbpedia.org/resource/Semantics|Semantics of Programming Languages
-Programming Languages|http://dbpedia.org/resource/Programming_language|Semantics of Programming Languages
 COMP|http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific|Semantics of Programming Languages
-The|http://dbpedia.org/resource/The|Semantics of Programming Languages
 semantic|http://dbpedia.org/resource/Semantics|Semantics of Programming Languages
-programming languages|http://dbpedia.org/resource/Programming_language|Semantics of Programming Languages
-Classification|http://dbpedia.org/resource/Statistical_classification|Semantics of Programming Languages
 semantics|http://dbpedia.org/resource/Semantics|Semantics of Programming Languages
-operational|http://dbpedia.org/resource/Operational_semantics|Semantics of Programming Languages
-axiomatic|http://dbpedia.org/resource/Axiom|Semantics of Programming Languages
 model-theoretic|http://dbpedia.org/resource/Model_theory|Semantics of Programming Languages
-algebraic|http://dbpedia.org/resource/Abstract_algebra|Semantics of Programming Languages
-denotational|http://dbpedia.org/resource/Denotational_semantics|Semantics of Programming Languages
-Classification|http://dbpedia.org/resource/Statistical_classification|Semantics of Programming Languages
-languages|http://dbpedia.org/resource/Formal_language|Semantics of Programming Languages
-procedural|http://dbpedia.org/resource/Procedural_programming|Semantics of Programming Languages
-functional|http://dbpedia.org/resource/Functional_programming|Semantics of Programming Languages
 logic|http://dbpedia.org/resource/Logic|Semantics of Programming Languages
-Applications|http://dbpedia.org/resource/Application_software|Semantics of Programming Languages
-construction|http://dbpedia.org/resource/Construction|Semantics of Programming Languages
-language|http://dbpedia.org/resource/Formal_language|Semantics of Programming Languages
-design|http://dbpedia.org/resource/Software_design|Semantics of Programming Languages
 temporal logic|http://dbpedia.org/resource/Temporal_logic|Semantics of Programming Languages
 distributed systems|http://dbpedia.org/resource/Distributed_computing|Semantics of Programming Languages
-semantics|http://dbpedia.org/resource/Semantics|Semantics of Programming Languages
-advanced|http://dbpedia.org/resource/Relative_articulation|Semantics of Programming Languages
-languages|http://dbpedia.org/resource/Formal_language|Semantics of Programming Languages
 Cryptography|http://dbpedia.org/resource/Cryptography|Cryptography and Data Security
-Data|http://dbpedia.org/resource/Plaintext|Cryptography and Data Security
-Security|http://dbpedia.org/resource/Computer_security|Cryptography and Data Security
-cryptographic algorithms|http://dbpedia.org/resource/Cryptography|Cryptography and Data Security
+COMP|http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific|Cryptography and Data Security
+cryptography|http://dbpedia.org/resource/Cryptography|Cryptography and Data Security
+Information theory|http://dbpedia.org/resource/Information_theory|Cryptography and Data Security
+symmetric-key|http://dbpedia.org/resource/Symmetric-key_algorithm|Cryptography and Data Security
+cryptographic|http://dbpedia.org/resource/Cryptography|Cryptography and Data Security
 Advanced Encryption Standard|http://dbpedia.org/resource/Advanced_Encryption_Standard|Cryptography and Data Security
 Rijndael|http://dbpedia.org/resource/Advanced_Encryption_Standard|Cryptography and Data Security
 Cryptographic hash functions|http://dbpedia.org/resource/Cryptographic_hash_function|Cryptography and Data Security
-Digital|http://dbpedia.org/resource/Digital_data|Cryptography and Data Security
-signatures|http://dbpedia.org/resource/Digital_signature|Cryptography and Data Security
 authentication|http://dbpedia.org/resource/Authentication|Cryptography and Data Security
 data integrity|http://dbpedia.org/resource/Data_integrity|Cryptography and Data Security
-Entity|http://dbpedia.org/resource/Entity|Cryptography and Data Security
-authentication|http://dbpedia.org/resource/Authentication|Cryptography and Data Security
 Key distribution|http://dbpedia.org/resource/Key_distribution|Cryptography and Data Security
-management|http://dbpedia.org/resource/Network_management|Cryptography and Data Security
-recovery|http://dbpedia.org/resource/Data_recovery|Cryptography and Data Security
-exhaustion|http://dbpedia.org/resource/Method_of_exhaustion|Cryptography and Data Security
-Authentication|http://dbpedia.org/resource/Authentication|Cryptography and Data Security
-protocols|http://dbpedia.org/resource/Cryptographic_protocol|Cryptography and Data Security
 confidentiality|http://dbpedia.org/resource/Confidentiality|Cryptography and Data Security
-authentication|http://dbpedia.org/resource/Authentication|Cryptography and Data Security
-integrity|http://dbpedia.org/resource/Data_integrity|Cryptography and Data Security
 access control|http://dbpedia.org/resource/Access_control|Cryptography and Data Security
 non-repudiation|http://dbpedia.org/resource/Non-repudiation|Cryptography and Data Security
-availability|http://dbpedia.org/resource/Information_security|Cryptography and Data Security
-encryption|http://dbpedia.org/resource/Encryption|Cryptography and Data Security
-digital signatures|http://dbpedia.org/resource/Digital_signature|Cryptography and Data Security
-keyed|http://dbpedia.org/resource/Compositing|Cryptography and Data Security
-hashes|http://dbpedia.org/resource/Cryptographic_hash_function|Cryptography and Data Security
+encryption|http://dbpedia.org/resource/Public-key_cryptography|Cryptography and Data Security
+digital|http://dbpedia.org/resource/Digital_data|Cryptography and Data Security
 challenge-response authentication|http://dbpedia.org/resource/Challenge–response_authentication|Cryptography and Data Security
-traffic|http://dbpedia.org/resource/Traffic_analysis|Cryptography and Data Security
-padding|http://dbpedia.org/resource/Data_structure_alignment|Cryptography and Data Security
-control|http://dbpedia.org/resource/Control_system|Cryptography and Data Security
-Projects|http://dbpedia.org/resource/Capital_expenditure|Cryptography and Data Security
-selected|http://dbpedia.org/resource/Natural_selection|Cryptography and Data Security
-topics|http://dbpedia.org/resource/Conversation_threading|Cryptography and Data Security
-cryptography|http://dbpedia.org/resource/Cryptography|Cryptography and Data Security
-Database|http://dbpedia.org/resource/Database|Database Systems Principles
-Systems|http://dbpedia.org/resource/System|Database Systems Principles
-Principles|http://dbpedia.org/resource/Principle|Database Systems Principles
-Database|http://dbpedia.org/resource/Database|Database Systems Principles
-models|http://dbpedia.org/resource/Computer_simulation|Database Systems Principles
-logical|http://dbpedia.org/resource/Logic|Database Systems Principles
-languages|http://dbpedia.org/resource/Formal_language|Database Systems Principles
-Query|http://dbpedia.org/resource/Query_optimization|Database Systems Principles
 optimization|http://dbpedia.org/resource/Query_optimization|Database Systems Principles
-Query|http://dbpedia.org/resource/Query_optimization|Database Systems Principles
-rewriting|http://dbpedia.org/resource/Rewriting|Database Systems Principles
-integration|http://dbpedia.org/resource/Integral|Database Systems Principles
-data exchange|http://dbpedia.org/resource/Data_exchange|Database Systems Principles
 Incomplete|http://dbpedia.org/resource/Incomplete_(Backstreet_Boys_song)|Database Systems Principles
-complex values|http://dbpedia.org/resource/Complex_number|Database Systems Principles
-Introduction|http://dbpedia.org/resource/Florrie_discography|Database Systems Principles
-current|http://dbpedia.org/resource/Electric_current|Database Systems Principles
-topics|http://dbpedia.org/resource/Conversation_threading|Database Systems Principles
-project|http://dbpedia.org/resource/Project_management|Database Systems Principles
-Advanced|http://dbpedia.org/resource/GCE_Advanced_Level|Advanced Analysis of Algorithms
-Analysis|http://dbpedia.org/resource/Mathematical_analysis|Advanced Analysis of Algorithms
-Algorithms|http://dbpedia.org/resource/Algorithm|Advanced Analysis of Algorithms
 COMP|http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific|Advanced Analysis of Algorithms
 Amortized analysis|http://dbpedia.org/resource/Amortized_analysis|Advanced Analysis of Algorithms
-algorithms|http://dbpedia.org/resource/Algorithm|Advanced Analysis of Algorithms
-NP-hardness|http://dbpedia.org/resource/NP-hardness|Advanced Analysis of Algorithms
-approximation algorithms|http://dbpedia.org/resource/Approximation_algorithm|Advanced Analysis of Algorithms
-online algorithms|http://dbpedia.org/resource/Online_algorithm|Advanced Analysis of Algorithms
-randomized algorithms|http://dbpedia.org/resource/Randomized_algorithm|Advanced Analysis of Algorithms
-topics|http://dbpedia.org/resource/Conversation_threading|Advanced Analysis of Algorithms
-current|http://dbpedia.org/resource/Electric_current|Advanced Analysis of Algorithms
-Project|http://dbpedia.org/resource/Project|Advanced Analysis of Algorithms
-term paper|http://dbpedia.org/resource/Term_paper|Advanced Analysis of Algorithms
-Advanced|http://dbpedia.org/resource/GCE_Advanced_Level|Advanced Rendering and Animation
-Rendering|http://dbpedia.org/resource/3D_rendering|Advanced Rendering and Animation
-Animation|http://dbpedia.org/resource/Animation|Advanced Rendering and Animation
 COMP|http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific|Advanced Rendering and Animation
-Advanced|http://dbpedia.org/resource/GCE_Advanced_Level|Advanced Rendering and Animation
-concepts|http://dbpedia.org/resource/Concept|Advanced Rendering and Animation
-rendering|http://dbpedia.org/resource/High-dynamic-range_rendering|Advanced Rendering and Animation
-animation|http://dbpedia.org/resource/Animation|Advanced Rendering and Animation
-computational|http://dbpedia.org/resource/Computer_simulation|Advanced Rendering and Animation
-synthesizing|http://dbpedia.org/resource/Organic_synthesis|Advanced Rendering and Animation
-complex|http://dbpedia.org/resource/Complex_number|Advanced Rendering and Animation
-realistic|http://dbpedia.org/resource/Philosophical_realism|Advanced Rendering and Animation
-images|http://dbpedia.org/resource/Digital_image_processing|Advanced Rendering and Animation
-static|http://dbpedia.org/resource/Static_program_analysis|Advanced Rendering and Animation
-dynamic|http://dbpedia.org/resource/Type_system|Advanced Rendering and Animation
 computer graphics|http://dbpedia.org/resource/Computer_graphics|Advanced Rendering and Animation
-techniques|http://dbpedia.org/resource/List_of_art_media|Advanced Rendering and Animation
-games|http://dbpedia.org/resource/PC_game|Advanced Rendering and Animation
 cinema|http://dbpedia.org/resource/Movie_theater|Advanced Rendering and Animation
-realistic|http://dbpedia.org/resource/Philosophical_realism|Advanced Rendering and Animation
-rendering|http://dbpedia.org/resource/High-dynamic-range_rendering|Advanced Rendering and Animation
-methods|http://dbpedia.org/resource/Software_development_process|Advanced Rendering and Animation
-real time|http://dbpedia.org/resource/Real-time_computing|Advanced Rendering and Animation
-animation|http://dbpedia.org/resource/Animation|Advanced Rendering and Animation
-animation|http://dbpedia.org/resource/Animation|Advanced Rendering and Animation
-project|http://dbpedia.org/resource/Project_management|Advanced Rendering and Animation
-Advanced|http://dbpedia.org/resource/GCE_Advanced_Level|Advanced Pattern Recognition
 Pattern Recognition|http://dbpedia.org/resource/Pattern_recognition|Advanced Pattern Recognition
 Pattern recognition|http://dbpedia.org/resource/Pattern_recognition|Advanced Pattern Recognition
-principles|http://dbpedia.org/resource/Standard_accounting_practice|Advanced Pattern Recognition
-modern methods|http://dbpedia.org/resource/Tongue-in-cheek|Advanced Pattern Recognition
-digitization|http://dbpedia.org/resource/Digitizing|Advanced Pattern Recognition
 data acquisition|http://dbpedia.org/resource/Data_acquisition|Advanced Pattern Recognition
-advanced|http://dbpedia.org/resource/Metastasis|Advanced Pattern Recognition
-topics|http://dbpedia.org/resource/Conversation_threading|Advanced Pattern Recognition
 feature extraction|http://dbpedia.org/resource/Feature_extraction|Advanced Pattern Recognition
-selection|http://dbpedia.org/resource/Selection_bias|Advanced Pattern Recognition
 principal component analysis|http://dbpedia.org/resource/Principal_component_analysis|Advanced Pattern Recognition
-clustering|http://dbpedia.org/resource/Cluster_analysis|Advanced Pattern Recognition
-multiple|http://dbpedia.org/resource/Star_system|Advanced Pattern Recognition
-classifiers|http://dbpedia.org/resource/Statistical_classification|Advanced Pattern Recognition
 expert systems|http://dbpedia.org/resource/Expert_system|Advanced Pattern Recognition
-advanced|http://dbpedia.org/resource/Metastasis|Advanced Pattern Recognition
-topics|http://dbpedia.org/resource/Conversation_threading|Advanced Pattern Recognition
 neural networks|http://dbpedia.org/resource/Artificial_neural_network|Advanced Pattern Recognition
 pattern recognition|http://dbpedia.org/resource/Pattern_recognition|Advanced Pattern Recognition
-performance evaluation|http://dbpedia.org/resource/Performance_appraisal|Advanced Pattern Recognition
-reduction|http://dbpedia.org/resource/Reductionism|Advanced Pattern Recognition
-Applications|http://dbpedia.org/resource/Application_software|Advanced Pattern Recognition
-project|http://dbpedia.org/resource/Project_management|Advanced Pattern Recognition
+image processing|http://dbpedia.org/resource/Digital_image_processing|Advanced Image Processing
+morphological|http://dbpedia.org/resource/Shape|Advanced Image Processing
+wavelet|http://dbpedia.org/resource/Wavelet|Advanced Image Processing
+multi-resolution analysis|http://dbpedia.org/resource/Multiresolution_analysis|Advanced Image Processing
+partial differential equation|http://dbpedia.org/resource/Partial_differential_equation|Advanced Image Processing
+variational methods|http://dbpedia.org/resource/Calculus_of_variations|Advanced Image Processing
+diffusion|http://dbpedia.org/resource/Diffusion_equation|Advanced Image Processing
+Markov random field|http://dbpedia.org/resource/Markov_random_field|Advanced Image Processing
+Bayesian inference|http://dbpedia.org/resource/Bayesian_inference|Advanced Image Processing
+energy|http://dbpedia.org/resource/Energy|Advanced Image Processing
+level set method|http://dbpedia.org/resource/Level-set_method|Advanced Image Processing
+inpainting|http://dbpedia.org/resource/Inpainting|Advanced Image Processing
 Computer Science|http://dbpedia.org/resource/Computer_science|Topics in Computer Science II
-II|http://dbpedia.org/resource/World_War_II|Topics in Computer Science II
-Subject|http://dbpedia.org/resource/Access_control|Topics in Computer Science II
-vary|http://dbpedia.org/resource/Measurement_uncertainty|Topics in Computer Science II
-Students|http://dbpedia.org/resource/Student|Topics in Computer Science II
-content|http://dbpedia.org/resource/Digital_content|Topics in Computer Science II
-changed|http://dbpedia.org/resource/Semantic_change|Topics in Computer Science II
-Changes|http://dbpedia.org/resource/Changes_(The_Dresden_Files)|Topics in Computer Science II
-content|http://dbpedia.org/resource/Digital_content|Topics in Computer Science II
-letter|http://dbpedia.org/resource/Grapheme|Topics in Computer Science II
-number|http://dbpedia.org/resource/Number|Topics in Computer Science II
 COMP|http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific|Topics in Computer Science II
-COMP|http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific|Topics in Computer Science II
-Research|http://dbpedia.org/resource/Research|Masterâ€™s Research and Thesis
-Thesis|http://dbpedia.org/resource/Thesis|Masterâ€™s Research and Thesis
-Students|http://dbpedia.org/resource/Student|Masterâ€™s Research and Thesis
-thesis|http://dbpedia.org/resource/Thesis|Masterâ€™s Research and Thesis
-faculty member|http://dbpedia.org/resource/Teacher|Masterâ€™s Research and Thesis
-appointed|http://dbpedia.org/resource/Hillary_Clinton|Masterâ€™s Research and Thesis
-Graduate|http://dbpedia.org/resource/Postgraduate_education|Masterâ€™s Research and Thesis
-Studies|http://dbpedia.org/resource/Research|Masterâ€™s Research and Thesis
-Committee|http://dbpedia.org/resource/Committee|Masterâ€™s Research and Thesis
-The thesis|http://dbpedia.org/resource/The_Ambassador_(rapper)|Masterâ€™s Research and Thesis
-represent|http://dbpedia.org/resource/Collective_bargaining|Masterâ€™s Research and Thesis
-result|http://dbpedia.org/resource/Return_statement|Masterâ€™s Research and Thesis
-independent|http://dbpedia.org/resource/Independent_politician|Masterâ€™s Research and Thesis
-admission|http://dbpedia.org/resource/University_and_college_admission|Masterâ€™s Research and Thesis
-program|http://dbpedia.org/resource/Computer_program|Masterâ€™s Research and Thesis
-The thesis|http://dbpedia.org/resource/The_Ambassador_(rapper)|Masterâ€™s Research and Thesis
-evaluated|http://dbpedia.org/resource/Program_evaluation|Masterâ€™s Research and Thesis
-committee|http://dbpedia.org/resource/Committee|Masterâ€™s Research and Thesis
-Graduate|http://dbpedia.org/resource/Postgraduate_education|Masterâ€™s Research and Thesis
-Studies|http://dbpedia.org/resource/Research|Masterâ€™s Research and Thesis
-Committee|http://dbpedia.org/resource/Committee|Masterâ€™s Research and Thesis
-Doctoral|http://dbpedia.org/resource/Doctorate|Doctoral Research and Thesis
-Research|http://dbpedia.org/resource/Research|Doctoral Research and Thesis
-Thesis|http://dbpedia.org/resource/Thesis|Doctoral Research and Thesis
 Software Engineering|http://dbpedia.org/resource/Software_engineering|Software Engineering Processes
-Processes|http://dbpedia.org/resource/Software_development_process|Software Engineering Processes
-Introduction|http://dbpedia.org/resource/Florrie_discography|Software Engineering Processes
 software engineering|http://dbpedia.org/resource/Software_engineering|Software Engineering Processes
-concepts|http://dbpedia.org/resource/Concept|Software Engineering Processes
-modern|http://dbpedia.org/resource/Modernity|Software Engineering Processes
-management|http://dbpedia.org/resource/Product_lifecycle|Software Engineering Processes
-processes|http://dbpedia.org/resource/Systems_engineering|Software Engineering Processes
-software|http://dbpedia.org/resource/Software|Software Engineering Processes
-lifecycles|http://dbpedia.org/resource/Biological_life_cycle|Software Engineering Processes
-Tracking|http://dbpedia.org/resource/Tracking_(hunting)|Software Engineering Processes
-software requirements|http://dbpedia.org/resource/Requirement|Software Engineering Processes
-development|http://dbpedia.org/resource/Software_development|Software Engineering Processes
-issue|http://dbpedia.org/resource/Issue_tracking_system|Software Engineering Processes
-trackers|http://dbpedia.org/resource/Music_tracker|Software Engineering Processes
 Version control|http://dbpedia.org/resource/Version_control|Software Engineering Processes
-integration|http://dbpedia.org/resource/System_integration|Software Engineering Processes
-feature|http://dbpedia.org/resource/Software_feature|Software Engineering Processes
-Validation|http://dbpedia.org/resource/Verification_and_validation|Software Engineering Processes
-testing frameworks|http://dbpedia.org/resource/List_of_unit_testing_frameworks|Software Engineering Processes
 code review|http://dbpedia.org/resource/Code_review|Software Engineering Processes
 Continuous integration|http://dbpedia.org/resource/Continuous_integration|Software Engineering Processes
-environments|http://dbpedia.org/resource/Desktop_environment|Software Engineering Processes
-development environment|http://dbpedia.org/resource/Integrated_development_environment|Software Engineering Processes
-professional|http://dbpedia.org/resource/Professional_degree|Software Engineering Processes
-environments|http://dbpedia.org/resource/Desktop_environment|Software Engineering Processes
-Case studies|http://dbpedia.org/resource/Case_study|Software Engineering Processes
-successful|http://dbpedia.org/resource/Hit_record|Software Engineering Processes
-management|http://dbpedia.org/resource/Product_lifecycle|Software Engineering Processes
-processes|http://dbpedia.org/resource/Systems_engineering|Software Engineering Processes
 open source|http://dbpedia.org/resource/Open-source_model|Software Engineering Processes
-projects|http://dbpedia.org/resource/Project|Software Engineering Processes
-industry|http://dbpedia.org/resource/Industry|Software Engineering Processes
-project|http://dbpedia.org/resource/Project_management|Software Engineering Processes
-Semantic|http://dbpedia.org/resource/Semantic_Web|Semantic Computing
-Computing|http://dbpedia.org/resource/Computer_science|Semantic Computing
-Design|http://dbpedia.org/resource/Software_design|Semantic Computing
+SOEN|http://dbpedia.org/resource/Soen|Software Re-engineering
+reengineering|http://dbpedia.org/resource/Code_refactoring|Software Re-engineering
+software metrics|http://dbpedia.org/resource/Software_metric|Software Re-engineering
+System analysis|http://dbpedia.org/resource/System_analysis|Semantic Computing
+semantic|http://dbpedia.org/resource/Semantic_Web|Semantic Computing
+Text Mining|http://dbpedia.org/resource/Text_mining|Semantic Computing
+Collaborative Filtering|http://dbpedia.org/resource/Collaborative_filtering|Semantic Computing
+Blogosphere|http://dbpedia.org/resource/Blogosphere|Semantic Computing
+Machine Learning|http://dbpedia.org/resource/Machine_learning|Semantic Computing
+The Web|http://dbpedia.org/resource/World_Wide_Web|Semantic Computing
 Semantic Web|http://dbpedia.org/resource/Semantic_Web|Semantic Computing
+RDF|http://dbpedia.org/resource/Resource_Description_Framework|Semantic Computing
+RDFS|http://dbpedia.org/resource/RDF_Schema|Semantic Computing
+SPARQL|http://dbpedia.org/resource/SPARQL|Semantic Computing
+Linked Open Data|http://dbpedia.org/resource/Linked_data|Semantic Computing
+LOD|http://dbpedia.org/resource/Linked_data|Semantic Computing
 Ontologies|http://dbpedia.org/resource/Ontology|Semantic Computing
-Semantic|http://dbpedia.org/resource/Semantic_Web|Semantic Computing
-Semantic Web|http://dbpedia.org/resource/Semantic_Web|Semantic Computing
-Information Systems|http://dbpedia.org/resource/Information_system|Semantic Computing
-Semantic|http://dbpedia.org/resource/Semantic_Web|Semantic Computing
-Application Development|http://dbpedia.org/resource/Software_development|Semantic Computing
-Application|http://dbpedia.org/resource/Application_software|Semantic Computing
-case studies|http://dbpedia.org/resource/Case_study|Semantic Computing
-biomedical|http://dbpedia.org/resource/Health_informatics|Semantic Computing
 software development|http://dbpedia.org/resource/Software_development|Semantic Computing
 business intelligence|http://dbpedia.org/resource/Business_intelligence|Semantic Computing
-online gaming|http://dbpedia.org/resource/Online_game|Semantic Computing
 e-commerce|http://dbpedia.org/resource/E-commerce|Semantic Computing
 e-science|http://dbpedia.org/resource/E-Science|Semantic Computing
-seminar|http://dbpedia.org/resource/Seminar|Semantic Computing
-Empirical|http://dbpedia.org/resource/Empirical_evidence|Semantic Computing
-evaluation|http://dbpedia.org/resource/Evaluation|Semantic Computing
-methodologies|http://dbpedia.org/resource/Methodology|Semantic Computing
-semantic|http://dbpedia.org/resource/Semantic_Web|Semantic Computing
-systems|http://dbpedia.org/resource/Systems_engineering|Semantic Computing
-project|http://dbpedia.org/resource/Project_management|Semantic Computing
-Students|http://dbpedia.org/resource/Student|Semantic Computing
-received|http://dbpedia.org/resource/Sacred_tradition|Semantic Computing
-topic|http://dbpedia.org/resource/Index_term|Semantic Computing
 SOEN|http://dbpedia.org/resource/Soen|Semantic Computing
-number|http://dbpedia.org/resource/Number|Semantic Computing
 Formal Methods|http://dbpedia.org/resource/Formal_methods|Formal Methods
-formal systems|http://dbpedia.org/resource/Formal_system|Formal Methods
-formal methods|http://dbpedia.org/resource/Formal_methods|Formal Methods
-levels|http://dbpedia.org/resource/Experience_point|Formal Methods
-formalism|http://dbpedia.org/resource/Formal_system|Formal Methods
-Integrating|http://dbpedia.org/resource/Integral|Formal Methods
 formal methods|http://dbpedia.org/resource/Formal_methods|Formal Methods
 software life-cycle|http://dbpedia.org/resource/Software_release_life_cycle|Formal Methods
 process model|http://dbpedia.org/resource/Software_development_process|Formal Methods
-project|http://dbpedia.org/resource/Project|Formal Methods
-Attributes|http://dbpedia.org/resource/Saint_symbolism|Formal Methods
 formal specification|http://dbpedia.org/resource/Formal_specification|Formal Methods
-language|http://dbpedia.org/resource/Programming_language|Formal Methods
-Formal|http://dbpedia.org/resource/Formal_science|Formal Methods
-notations|http://dbpedia.org/resource/Mathematical_notation|Formal Methods
-based|http://dbpedia.org/resource/Radix|Formal Methods
 finite-state|http://dbpedia.org/resource/Finite-state_machine|Formal Methods
-machines|http://dbpedia.org/resource/Virtual_machine|Formal Methods
-case studies|http://dbpedia.org/resource/Case_study|Formal Methods
-user interfaces|http://dbpedia.org/resource/User_interface|Formal Methods
-reactive|http://dbpedia.org/resource/AC_power|Formal Methods
-systems|http://dbpedia.org/resource/Operating_system|Formal Methods
-concurrent systems|http://dbpedia.org/resource/Concurrency_(computer_science)|Formal Methods
 Software development|http://dbpedia.org/resource/Software_development|Formal Methods
-formal methods|http://dbpedia.org/resource/Formal_methods|Formal Methods
-tools|http://dbpedia.org/resource/Programming_tool|Formal Methods
 type checking|http://dbpedia.org/resource/Type_system|Formal Methods
 debugging|http://dbpedia.org/resource/Debugging|Formal Methods
-validation|http://dbpedia.org/resource/Verification_and_validation|Formal Methods
 code generation|http://dbpedia.org/resource/Automatic_programming|Formal Methods
-project|http://dbpedia.org/resource/Project|Formal Methods
-Software|http://dbpedia.org/resource/Software_engineering|Software Comprehension and Maintenance
-Comprehension|http://dbpedia.org/resource/Reading_comprehension|Software Comprehension and Maintenance
-The|http://dbpedia.org/resource/The|Software Comprehension and Maintenance
-addresses|http://dbpedia.org/resource/IP_address|Software Comprehension and Maintenance
-technical|http://dbpedia.org/resource/Technical_analysis|Software Comprehension and Maintenance
-managerial|http://dbpedia.org/resource/Management|Software Comprehension and Maintenance
-software|http://dbpedia.org/resource/Software_system|Software Comprehension and Maintenance
-comprehension|http://dbpedia.org/resource/Reading_comprehension|Software Comprehension and Maintenance
 software maintenance|http://dbpedia.org/resource/Software_maintenance|Software Comprehension and Maintenance
-issues|http://dbpedia.org/resource/Software_project_management|Software Comprehension and Maintenance
-covered|http://dbpedia.org/resource/Cover_version|Software Comprehension and Maintenance
 cognitive|http://dbpedia.org/resource/Cognition|Software Comprehension and Maintenance
-models|http://dbpedia.org/resource/Computer_simulation|Software Comprehension and Maintenance
 software visualization|http://dbpedia.org/resource/Software_visualization|Software Comprehension and Maintenance
 CASE|http://dbpedia.org/resource/Computer-aided_software_engineering|Software Comprehension and Maintenance
-tools|http://dbpedia.org/resource/Programming_tool|Software Comprehension and Maintenance
 reverse engineering|http://dbpedia.org/resource/Reverse_engineering|Software Comprehension and Maintenance
-static|http://dbpedia.org/resource/Static_program_analysis|Software Comprehension and Maintenance
-dynamic|http://dbpedia.org/resource/IP_address|Software Comprehension and Maintenance
-source code|http://dbpedia.org/resource/Source_code|Software Comprehension and Maintenance
 code analysis|http://dbpedia.org/resource/Static_program_analysis|Software Comprehension and Maintenance
 software configuration management|http://dbpedia.org/resource/Software_configuration_management|Software Comprehension and Maintenance
-current|http://dbpedia.org/resource/Electric_current|Software Comprehension and Maintenance
-topics|http://dbpedia.org/resource/Conversation_threading|Software Comprehension and Maintenance
-software maintenance|http://dbpedia.org/resource/Software_maintenance|Software Comprehension and Maintenance
-project|http://dbpedia.org/resource/Project_management|Software Comprehension and Maintenance
-Students|http://dbpedia.org/resource/Student|Software Comprehension and Maintenance
-received|http://dbpedia.org/resource/Sacred_tradition|Software Comprehension and Maintenance
 COMP|http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific|Software Comprehension and Maintenance
-Software Design|http://dbpedia.org/resource/Software_design|Software Design Methodologies
-Methodologies|http://dbpedia.org/resource/Accounting_research|Software Design Methodologies
-Introduction|http://dbpedia.org/resource/Florrie_discography|Software Design Methodologies
+Self-documenting code|http://dbpedia.org/resource/Self-documenting_code|Advanced Programming Practices
+Software configuration management|http://dbpedia.org/resource/Software_configuration_management|Advanced Programming Practices
+unit tests|http://dbpedia.org/resource/Unit_testing|Advanced Programming Practices
+multi-threading|http://dbpedia.org/resource/Thread_(computing)|Advanced Programming Practices
+concurrency|http://dbpedia.org/resource/Parallel_computing|Advanced Programming Practices
+code reuse|http://dbpedia.org/resource/Code_reuse|Advanced Programming Practices
+fault tolerance|http://dbpedia.org/resource/Fault_tolerance|Advanced Programming Practices
 software design|http://dbpedia.org/resource/Software_design|Software Design Methodologies
-processes|http://dbpedia.org/resource/Business_process|Software Design Methodologies
-models|http://dbpedia.org/resource/Computer_simulation|Software Design Methodologies
-Representations|http://dbpedia.org/resource/Representations|Software Design Methodologies
-architecture|http://dbpedia.org/resource/Software_architecture|Software Design Methodologies
-Software|http://dbpedia.org/resource/Software_design|Software Design Methodologies
-architectures|http://dbpedia.org/resource/Enterprise_architecture|Software Design Methodologies
-plans|http://dbpedia.org/resource/Plan|Software Design Methodologies
 Design methods|http://dbpedia.org/resource/Design_methods|Software Design Methodologies
 object-oriented|http://dbpedia.org/resource/Object-oriented_design|Software Design Methodologies
-application|http://dbpedia.org/resource/Application_software|Software Design Methodologies
-frameworks|http://dbpedia.org/resource/Software_framework|Software Design Methodologies
 design patterns|http://dbpedia.org/resource/Software_design_pattern|Software Design Methodologies
-assurance|http://dbpedia.org/resource/Quality_assurance|Software Design Methodologies
-cohesion|http://dbpedia.org/resource/Group_cohesiveness|Software Design Methodologies
-measurements|http://dbpedia.org/resource/Measurement|Software Design Methodologies
-design verification|http://dbpedia.org/resource/Functional_verification|Software Design Methodologies
-documentation|http://dbpedia.org/resource/Documentation|Software Design Methodologies
-Students|http://dbpedia.org/resource/Student|Software Design Methodologies
-received|http://dbpedia.org/resource/Sacred_tradition|Software Design Methodologies
-September|http://dbpedia.org/resource/September|Software Design Methodologies
-Software Systems|http://dbpedia.org/resource/Software_system|Software Systems Requirements Specification
-Requirements|http://dbpedia.org/resource/Requirement|Software Systems Requirements Specification
-Specification|http://dbpedia.org/resource/List_of_Air_Ministry_specifications|Software Systems Requirements Specification
-process|http://dbpedia.org/resource/Business_process|Software Systems Requirements Specification
+design patterns|http://dbpedia.org/resource/Software_design_pattern|Advanced Software Architectures
+Model Driven Architecture (MDA)|http://dbpedia.org/resource/Model-driven_architecture|Advanced Software Architectures
+Service Oriented Architecture|http://dbpedia.org/resource/Service-oriented_architecture|Advanced Software Architectures
+SOA|http://dbpedia.org/resource/Service-oriented_architecture|Advanced Software Architectures
+cloud computing|http://dbpedia.org/resource/Cloud_computing|Advanced Software Architectures
+requirements engineering|http://dbpedia.org/resource/Requirements_engineering|Software Systems Requirements Specification
 Requirements engineering|http://dbpedia.org/resource/Requirements_engineering|Software Systems Requirements Specification
 software lifecycle|http://dbpedia.org/resource/Software_development_process|Software Systems Requirements Specification
-models|http://dbpedia.org/resource/Conceptual_model|Software Systems Requirements Specification
-Problem|http://dbpedia.org/resource/Problem_solving|Software Systems Requirements Specification
-analysis|http://dbpedia.org/resource/Data_analysis|Software Systems Requirements Specification
-Requirements|http://dbpedia.org/resource/Requirement|Software Systems Requirements Specification
-evaluation|http://dbpedia.org/resource/Program_evaluation|Software Systems Requirements Specification
-Inconsistency|http://dbpedia.org/resource/Consistency|Software Systems Requirements Specification
-management|http://dbpedia.org/resource/Product_lifecycle|Software Systems Requirements Specification
 Risk analysis|http://dbpedia.org/resource/Risk_analysis|Software Systems Requirements Specification
-Requirements|http://dbpedia.org/resource/Requirement|Software Systems Requirements Specification
-negotiation|http://dbpedia.org/resource/Negotiation|Software Systems Requirements Specification
-natural language|http://dbpedia.org/resource/Natural-language_processing|Software Systems Requirements Specification
 language documentation|http://dbpedia.org/resource/Language_documentation|Software Systems Requirements Specification
 IEEE|http://dbpedia.org/resource/Institute_of_Electrical_and_Electronics_Engineers|Software Systems Requirements Specification
 ISO|http://dbpedia.org/resource/International_Organization_for_Standardization|Software Systems Requirements Specification
-standards|http://dbpedia.org/resource/Technical_standard|Software Systems Requirements Specification
-Use|http://dbpedia.org/resource/Land_use|Software Systems Requirements Specification
-cases|http://dbpedia.org/resource/Precedent|Software Systems Requirements Specification
 Agile|http://dbpedia.org/resource/Agile_software_development|Software Systems Requirements Specification
-processes|http://dbpedia.org/resource/Business_process|Software Systems Requirements Specification
 user stories|http://dbpedia.org/resource/User_story|Software Systems Requirements Specification
-Introduction|http://dbpedia.org/resource/Florrie_discography|Software Systems Requirements Specification
 formal specification|http://dbpedia.org/resource/Formal_specification|Software Systems Requirements Specification
-logics|http://dbpedia.org/resource/Logic|Software Systems Requirements Specification
 formal languages|http://dbpedia.org/resource/Formal_language|Software Systems Requirements Specification
-Requirements|http://dbpedia.org/resource/Requirement|Software Systems Requirements Specification
 quality assurance|http://dbpedia.org/resource/Quality_assurance|Software Systems Requirements Specification
-RE|http://dbpedia.org/resource/Renewable_energy|Software Systems Requirements Specification
-tools|http://dbpedia.org/resource/Programming_tool|Software Systems Requirements Specification
-Requirements|http://dbpedia.org/resource/Requirement|Software Systems Requirements Specification
 evolution|http://dbpedia.org/resource/Evolution|Software Systems Requirements Specification
-Traceability|http://dbpedia.org/resource/Traceability|Software Systems Requirements Specification
-Domain|http://dbpedia.org/resource/Application_domain|Software Systems Requirements Specification
-modelling|http://dbpedia.org/resource/Modeling_language|Software Systems Requirements Specification
 UML|http://dbpedia.org/resource/Unified_Modeling_Language|Software Systems Requirements Specification
 ontologies|http://dbpedia.org/resource/Upper_ontology|Software Systems Requirements Specification
-domain-specific languages|http://dbpedia.org/resource/Domain-specific_language|Software Systems Requirements Specification
-Modelling|http://dbpedia.org/resource/Model-driven_engineering|Software Systems Requirements Specification
-behaviour|http://dbpedia.org/resource/Behavior|Software Systems Requirements Specification
-Acceptance|http://dbpedia.org/resource/Acceptance|Software Systems Requirements Specification
+domain-specific|http://dbpedia.org/resource/Domain-specific_language|Software Systems Requirements Specification
 Test|http://dbpedia.org/resource/Test_cricket|Software Systems Requirements Specification
-cases|http://dbpedia.org/resource/Precedent|Software Systems Requirements Specification
-Cost|http://dbpedia.org/resource/Cost|Software Systems Requirements Specification
-models|http://dbpedia.org/resource/Conceptual_model|Software Systems Requirements Specification
-project|http://dbpedia.org/resource/Project_management|Software Systems Requirements Specification
-Students|http://dbpedia.org/resource/Student|Software Systems Requirements Specification
-received|http://dbpedia.org/resource/Sacred_tradition|Software Systems Requirements Specification
-Role|http://dbpedia.org/resource/Role|Software Measurement
-measurement|http://dbpedia.org/resource/Measurement|Software Measurement
-Software Engineering|http://dbpedia.org/resource/Software_engineering|Software Measurement
-technical|http://dbpedia.org/resource/Technical_analysis|Software Measurement
-managerial|http://dbpedia.org/resource/Management|Software Measurement
-theory|http://dbpedia.org/resource/Theory|Software Measurement
-measurement|http://dbpedia.org/resource/Measurement|Software Measurement
-Theoretical|http://dbpedia.org/resource/Theory|Software Measurement
-validation|http://dbpedia.org/resource/Verification_and_validation|Software Measurement
-measurement|http://dbpedia.org/resource/Measurement|Software Measurement
-Collecting|http://dbpedia.org/resource/Collecting|Software Measurement
-software engineering|http://dbpedia.org/resource/Software_engineering|Software Measurement
-data|http://dbpedia.org/resource/Data|Software Measurement
-Software|http://dbpedia.org/resource/Software_engineering|Software Measurement
-quality|http://dbpedia.org/resource/Quality_management|Software Measurement
-modelling|http://dbpedia.org/resource/Modeling_language|Software Measurement
-measuring|http://dbpedia.org/resource/Measurement|Software Measurement
-Testing|http://dbpedia.org/resource/Software_testing|Software Measurement
-measurement|http://dbpedia.org/resource/Measurement|Software Measurement
-Reliability|http://dbpedia.org/resource/Reliability_engineering|Software Measurement
-models|http://dbpedia.org/resource/Statistical_model|Software Measurement
-Functional|http://dbpedia.org/resource/Functional_programming|Software Measurement
-size|http://dbpedia.org/resource/Effect_size|Software Measurement
-measurement|http://dbpedia.org/resource/Measurement|Software Measurement
-methods|http://dbpedia.org/resource/Software_development_process|Software Measurement
-Effort|http://dbpedia.org/resource/Laban_movement_analysis|Software Measurement
-estimation|http://dbpedia.org/resource/Estimation_theory|Software Measurement
-models|http://dbpedia.org/resource/Statistical_model|Software Measurement
-project management|http://dbpedia.org/resource/Project_management|Software Measurement
-standards|http://dbpedia.org/resource/Technical_standard|Software Measurement
-support|http://dbpedia.org/resource/Technical_support|Software Measurement
-Case studies|http://dbpedia.org/resource/Case_study|Software Measurement
-project|http://dbpedia.org/resource/Project|Software Measurement
-Software|http://dbpedia.org/resource/Software_engineering|Software Project Management
-Project Management|http://dbpedia.org/resource/Project_management|Software Project Management
-Fundamental|http://dbpedia.org/resource/Fundamentalism|Software Project Management
-concepts|http://dbpedia.org/resource/Concept|Software Project Management
-management|http://dbpedia.org/resource/Management|Software Project Management
-activities|http://dbpedia.org/resource/Activity_diagram|Software Project Management
-demonstrating|http://dbpedia.org/resource/Demonstration_(protest)|Software Project Management
-relate|http://dbpedia.org/resource/Relate|Software Project Management
-software engineering|http://dbpedia.org/resource/Software_engineering|Software Project Management
-mutually|http://dbpedia.org/resource/Mutual_recursion|Software Project Management
-supportive|http://dbpedia.org/resource/Therapy|Software Project Management
-software development|http://dbpedia.org/resource/Software_development|Software Project Management
-Overview|http://dbpedia.org/resource/Mathematical_formulation_of_quantum_mechanics|Software Project Management
-object-oriented|http://dbpedia.org/resource/Object-oriented_programming|Software Project Management
-development|http://dbpedia.org/resource/Software_development|Software Project Management
-software development|http://dbpedia.org/resource/Software_development|Software Project Management
-processes|http://dbpedia.org/resource/Business_process|Software Project Management
-activity|http://dbpedia.org/resource/Activity_theory|Software Project Management
-risk management|http://dbpedia.org/resource/Risk_management|Software Project Management
-monitoring|http://dbpedia.org/resource/Surveillance|Software Project Management
-control|http://dbpedia.org/resource/Statistical_process_control|Software Project Management
-evolution|http://dbpedia.org/resource/Evolution|Software Project Management
-issues|http://dbpedia.org/resource/Software_project_management|Software Project Management
-professional ethics|http://dbpedia.org/resource/Professional_ethics|Software Project Management
-legal|http://dbpedia.org/resource/Law|Software Project Management
-issues|http://dbpedia.org/resource/Software_project_management|Software Project Management
-project|http://dbpedia.org/resource/Project|Software Project Management
-Advanced|http://dbpedia.org/resource/GCE_Advanced_Level|6471 Advanced Software Architectures
-Software|http://dbpedia.org/resource/Software|6471 Advanced Software Architectures
-Architectures|http://dbpedia.org/resource/Enterprise_architecture|6471 Advanced Software Architectures
-Services|http://dbpedia.org/resource/Services_cricket_team|6861 Services Computing: Foundations, Design and Implementations
-Computing|http://dbpedia.org/resource/Computer_science|6861 Services Computing: Foundations, Design and Implementations
-Foundations|http://dbpedia.org/resource/Glossary_of_patience_terms|6861 Services Computing: Foundations, Design and Implementations
-Design|http://dbpedia.org/resource/Design|6861 Services Computing: Foundations, Design and Implementations
-Software|http://dbpedia.org/resource/Software|6491 Software Refactoring
-Refactoring|http://dbpedia.org/resource/Code_refactoring|6491 Software Refactoring
-Software|http://dbpedia.org/resource/Software|7481 Software Verification and Testing
-Verification|http://dbpedia.org/resource/Verification_and_validation|7481 Software Verification and Testing
-Testing|http://dbpedia.org/resource/Software_testing|7481 Software Verification and Testing
-Software|http://dbpedia.org/resource/Software|6021 Software Re-engineering
-Re-engineering|http://dbpedia.org/resource/Business_process_reengineering|6021 Software Re-engineering
+Refactoring|http://dbpedia.org/resource/Code_refactoring|Software Refactoring
+SOEN|http://dbpedia.org/resource/Soen|Software Refactoring
+preventive maintenance|http://dbpedia.org/resource/Preventive_maintenance|Software Refactoring
+evolution|http://dbpedia.org/resource/Evolution|Software Refactoring
+code analysis|http://dbpedia.org/resource/Static_program_analysis|Software Refactoring
+Test|http://dbpedia.org/resource/Test_cricket|Programming Competency Test
+Applied Computer Science|http://dbpedia.org/resource/Computer_science|Programming Competency Test
+Software Engineering|http://dbpedia.org/resource/Software_engineering|Programming Competency Test
+Software Engineering|http://dbpedia.org/resource/Software_engineering|Topics in Software Engineering
+SOEN|http://dbpedia.org/resource/Soen|Topics in Software Engineering
+Software Engineering|http://dbpedia.org/resource/Software_engineering|Topics in Software Engineering II
+SOEN|http://dbpedia.org/resource/Soen|Topics in Software Engineering II

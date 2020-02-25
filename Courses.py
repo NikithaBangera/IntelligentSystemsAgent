@@ -7,117 +7,49 @@ import csv
 
 graph = Graph()
 graph.parse("Classes.rdf", format="application/rdf+xml")
-
-
-def webPageScraping(comp_grad_page):
-    page = requests.get(comp_grad_page)
-    soup = BeautifulSoup(page.content, "html.parser")
-    #print(soap)
-    section = soup.find(id="content-main")
-    course_details = section.find_all(class_="wysiwyg parbase section")
-    courses = course_details[2].find_all("p")
-    course_name_list = course_details[0].find_all(class_="large-text")
-    #print(course_name_list)
-
-    course_name = []
-    course_subject = []
-    course_number = []
-    course_desc = []
-    for i in range(2, len(courses)):
-        courses_split = courses[i].find(class_="large-text").getText(strip=True).replace(u"\xa0", u" ").split(")", 2)
-        # print (courses_split)
-        cname_split = courses_split[0].split("(")[0]
-        courses_split.pop(0)
-        #print(courses_split)
-        if len(courses_split)>1:
-          x=courses_split[1]
-        else:
-          x=courses_split[0]
-        course_desc.append(x)
-        course_subject.append(cname_split.strip().split(" ", 2)[0])
-        course_number.append(cname_split.strip().split(" ", 2)[1])
-        course_name.append(cname_split.strip().split(" ", 2)[2])
-
-    courses_list = []
-    for j in range(1, len(course_name_list), 2):
-        courses = course_name_list[j].find_all("b")
-        #print(courses)
-        for k in courses:
-            data = k.getText().replace(u"\xa0", u" ").strip()
-            if "\n" in data:
-                data_split = data.split("\n")
-                for l in data_split:
-                    courses_list.append(l)
-            else:
-                courses_list.append(data)
-
-    #print(courses_list)
-    for items in courses_list:
-        if "(" in items:
-            item_spl = items.split("(", 1)
-        else:
-            item_spl = items.split("\n",1)
-        items_split = item_spl[0].strip().split(" ", 2)
-        #print(items_split[2])
-        if items_split[2] in course_name:
-            #print("yes")
-            continue
-        else:
-            course_desc.append("")
-            course_subject.append(items_split[0])
-            course_number.append(items_split[1])
-            course_name.append(items_split[2])
-
-    '''print(course_subject)
-    print(course_number)
-    print(course_name)
-    print(course_desc)'''
-
-    df = pd.DataFrame(
-        {'course_number': course_number,
-         'course_name': course_name,
-         'course_subject': course_subject,
-         'course_desc': course_desc
-        })
-    df.to_csv('Courses.csv', index=False, sep='|')
-
+comp_grad_page = "https://www.concordia.ca/academics/graduate/calendar/current/encs/computer-science-courses.html#course-descriptions"
+grad_page = "https://www.concordia.ca/academics/graduate/calendar/current/encs/engineering-courses.html#topicsinengineering"
 
 def universityTripleGenerator(university_class):
     university_ns = Namespace("http://example.org/university/")
-    university_graph = Graph()
+    #university_graph = Graph()
     university_list = ["Concordia_University"]
     university = university_ns[university_list[0]]
-    university_graph.add((university, RDF.type, university_class))
-    university_graph.add((university, FOAF.name, Literal("Concordia University")))
-    university_graph.add((university, RDFS.seeAlso, Literal("http://dbpedia.org/resource/Concordia_University")))
-    # print(university_graph.serialize(format='turtle'))
+    graph.add((university, RDF.type, university_class))
+    graph.add((university, FOAF.name, Literal("Concordia University")))
+    graph.add((university, RDFS.seeAlso, Literal("http://dbpedia.org/resource/Concordia_University")))
+    #print(graph.serialize(format='turtle'))
+    graph.serialize(format='turtle')
     return university
 
 
-def courseTripleGenerator(course_class, comp_grad_page, is_offered_by, university):
+def courseTripleGenerator(course_class, comp_grad_page, grad_page, is_offered_by, university):
     course_ns = Namespace("http://example.org/course/")
-    course_graph = Graph()
+    #course_graph = Graph()
     with open("Courses.csv", 'r') as csv_file:
         file_reader = csv.reader(csv_file, delimiter="|")
         next(file_reader)
         for course_list in file_reader:
             #print(course_list)
             course = course_ns[course_list[2]+"_"+course_list[0]]
-            course_graph.add((course, RDF.type, course_class))
-            course_graph.add((course, DC.identifier, Literal(course_list[0])))
-            course_graph.add((course, DC.title, Literal(course_list[1])))
-            course_graph.add((course, DC.subject, Literal(course_list[2])))
-            course_graph.add((course, DC.description, Literal(course_list[3])))
-            course_graph.add((course, RDFS.seeAlso, Literal(comp_grad_page)))
-            course_graph.add((course, is_offered_by, Literal(university)))
-
+            graph.add((course, RDF.type, course_class))
+            graph.add((course, DC.identifier, Literal(course_list[0])))
+            graph.add((course, DC.title, Literal(course_list[1])))
+            graph.add((course, DC.subject, Literal(course_list[2])))
+            graph.add((course, DC.description, Literal(course_list[3])))
+            graph.add((course, is_offered_by, Literal(university)))
+            if course_list[2] == 'COMP' or course_list[2] == 'SOEN':
+                graph.add((course, RDFS.seeAlso, Literal(comp_grad_page)))
+            else:
+                graph.add((course, RDFS.seeAlso, Literal(grad_page)))
 
     #print(course_graph.serialize(format='turtle'))
+    graph.serialize(format='turtle')
 
 
 def topicsTripleGenerator(topic_class):
     topic_ns = Namespace("http://example.org/topics/")
-    topic_graph = Graph()
+    #topic_graph = Graph()
     with open("topic.csv", 'r') as csv_file:
         file_reader = csv.reader(csv_file, delimiter="|")
         next(file_reader)
@@ -127,56 +59,115 @@ def topicsTripleGenerator(topic_class):
             else:
                 topic_name = topic_list[0]
             topic = topic_ns[topic_name]
-            topic_graph.add((topic, RDF.type, topic_class))
-            topic_graph.add((topic, DC.title, Literal(topic_list[0])))
-            topic_graph.add((topic, RDFS.seeAlso, Literal(topic_list[1])))
-            topic_graph.add((topic, FOAF.isPrimaryTopicOf, Literal(topic_list[2])))
+            graph.add((topic, RDF.type, topic_class))
+            graph.add((topic, DC.title, Literal(topic_list[0])))
+            graph.add((topic, RDFS.seeAlso, Literal(topic_list[1])))
+            graph.add((topic, FOAF.isPrimaryTopicOf, Literal(topic_list[2])))
 
     #print(topic_graph.serialize(format='turtle'))
+    graph.serialize(format='turtle')
 
 
 def studentTripleGenerator(student_class, enrolled_property, takes_course_property, is_awarded, university, has_transcript, transcript):
     student_ns = Namespace("http://example.org/people/")
-    student_graph = Graph()
+    #student_graph = Graph()
     with open("StudentsRecord.csv", 'r') as csv_file:
         file_reader = csv.reader(csv_file, delimiter="|")
         next(file_reader)
         for student_list in file_reader:
             #print(student_list)
             student = student_ns[student_list[0]]
-            student_graph.add((student, RDF.type, student_class))
-            student_graph.add((student, FOAF.studentId, Literal(student_list[0])))
-            student_graph.add((student, FOAF.givenName, Literal(student_list[1])))
-            student_graph.add((student, FOAF.familyName, Literal(student_list[2])))
-            student_graph.add((student, FOAF.mbox, Literal(student_list[3])))
-            student_graph.add((student, takes_course_property, Literal(student_list[4])))
-            student_graph.add((student, is_awarded, Literal(student_list[5])))
-            student_graph.add((student, enrolled_property, university))
-            student_graph.add((student, has_transcript, transcript))
+            graph.add((student, RDF.type, student_class))
+            graph.add((student, FOAF.studentId, Literal(student_list[0])))
+            graph.add((student, FOAF.givenName, Literal(student_list[1])))
+            graph.add((student, FOAF.familyName, Literal(student_list[2])))
+            graph.add((student, FOAF.mbox, Literal(student_list[3])))
+            graph.add((student, takes_course_property, Literal(student_list[4])))
+            graph.add((student, is_awarded, Literal(student_list[5])))
+            graph.add((student, enrolled_property, university))
+            graph.add((student, has_transcript, transcript))
 
     #print(student_graph.serialize(format='turtle'))
-
+    graph.serialize(destination='FinalKnowledgeGraph.ttl', format='turtle')
 
 def transcriptTripleGenerator(transcript_class):
     transcript_ns = Namespace("http://example.org/transcript/")
-    transcript_graph = Graph()
+    #transcript_graph = Graph()
     with open("transcript.csv", 'r') as csv_file:
         file_reader = csv.reader(csv_file, delimiter="|")
         next(file_reader)
         for transcript_list in file_reader:
             # print(student_list)
             transcript = transcript_ns[transcript_list[0]]
-            transcript_graph.add((transcript, RDF.type, transcript_class))
-            transcript_graph.add((transcript, DC.identifier, Literal(transcript_list[0])))
-            transcript_graph.add((transcript, DC.title, Literal(transcript_list[1])))
-            transcript_graph.add((transcript, OWL.hasValue, Literal(transcript_list[2])))
-            transcript_graph.add((transcript, DC.PeriodOfTime, Literal(transcript_list[3])))
+            graph.add((transcript, RDF.type, transcript_class))
+            graph.add((transcript, DC.identifier, Literal(transcript_list[0])))
+            graph.add((transcript, DC.title, Literal(transcript_list[1])))
+            graph.add((transcript, OWL.hasValue, Literal(transcript_list[2])))
+            graph.add((transcript, DC.PeriodOfTime, Literal(transcript_list[3])))
 
     #print(transcript_graph.serialize(format='turtle'))
+    graph.serialize(format='turtle')
     return transcript
 
-comp_grad_page = "https://www.concordia.ca/academics/graduate/calendar/current/encs/computer-science-courses.html#course-descriptions"
-webPageScraping(comp_grad_page)
+
+def sparql_query_1(graph_file):
+
+
+    query1 = query_graph.query(
+        """SELECT (count(*) AS ?Triples) 
+        WHERE{
+            ?sub ?p ?o .
+    }"""
+    )
+
+    for row in query1:
+        print("Total number of Triples:%s" % row)
+
+    query2 = query_graph.query(
+        """SELECT ?studentCount ?courseCount ?topicCount {
+         {
+            SELECT (count(DISTINCT ?firstName) AS ?studentCount) 
+                WHERE{
+                    ?studentSub a focu:Student .
+                    ?studentSub foaf:givenName ?firstName .}
+         }
+         {
+            SELECT (count(?courseTitle) AS ?courseCount)
+                WHERE{   
+                    ?courseSub a focu:Courses .
+                    ?courseSub ns1:title ?courseTitle .}
+         }
+         {
+            SELECT (count(?topicTitle) AS ?topicCount)
+                WHERE{   
+                    ?topicSub a focu:Topics .
+                    ?topicSub ns1:title ?topicTitle .}
+         }
+        }"""
+    )
+
+    for row in query2:
+        print("Total number of students:%s, total number of courses:%s and total number of topics:%s" % row)
+
+
+def sparql_query_course(query_graph, question):
+    query3 = query_graph.query(f"SELECT ?topicTitle ?topicUri WHERE{{?topicSub foaf:isPrimaryTopicOf '{question}' . ?topicSub ns1:title ?topicTitle . ?topicSub rdfs:seeAlso ?topicUri}}")
+
+    for row in query3:
+        print("Topic title:%s and Topic URI:%s" % row)
+
+
+def sparql_query_student(query_graph, question):
+    query3 = query_graph.query(f"SELECT ?courseName ?grade WHERE{{?studentSub foaf:givenName '{question}' . ?studentSub focu:takesCourse ?courseName . ?studentSub focu:isAwarded ?grade}}")
+
+    for row in query3:
+        print("Completed Course name:%s and Grade:%s" % row)
+
+def sparql_query_studentAndTopic(query_graph, question):
+    query4 = query_graph.query(f"SELECT ?studentId WHERE {{ ?transcriptSub a focu:Transcript . ?transcriptSub ns1:title ?courseName . {{SELECT ?courseName WHERE{{ ?topicSub ns1:title '{question}' . ?topicSub foaf:isPrimaryTopicOf ?courseName .}}}} . ?transcriptSub ns1:identifier ?studentId .}}")
+
+    for row in query4:
+        print("Student name:%s" % row)
 
 subject = list(graph.subjects(RDF.type, RDFS.Class))
 #print(subject)
@@ -208,7 +199,14 @@ for row in properties:
 
 university = universityTripleGenerator(university_class)
 #print(university)
-courseTripleGenerator(course_class, comp_grad_page, is_offered_by, university)
+courseTripleGenerator(course_class, comp_grad_page, grad_page, is_offered_by, university)
 topicsTripleGenerator(topic_class)
 transcript = transcriptTripleGenerator(transcript_class)
 studentTripleGenerator(student_class, enrolled_property, takes_course_property, is_awarded, university, has_transcript, transcript)
+query_graph = Graph()
+query_graph.parse("FinalKnowledgeGraph.ttl", format="ttl")
+sparql_query_1(query_graph)
+question = input("Hello, I am your smart university agent. How can I help you?")
+#sparql_query_course(query_graph, question)
+#sparql_query_student(query_graph, question)
+sparql_query_studentAndTopic(query_graph, question)

@@ -2,7 +2,6 @@ import csv
 import spotlight
 import pandas as pd
 
-
 topic_name = []
 topic_url = []
 course_name = []
@@ -14,7 +13,7 @@ with open("Courses.csv", "r") as course_file:
         #print(text)
         if text != "":
           try:
-            annotations = spotlight.annotate('https://api.dbpedia-spotlight.org/en/annotate', text=text, confidence=0.3, support=20)
+            annotations = spotlight.annotate('https://api.dbpedia-spotlight.org/en/annotate', text=text, confidence=0.5, support=20)
             # file_annotations.append(annotations)
             for data in annotations:
                 #print(data)
@@ -33,7 +32,7 @@ topicdf = pd.DataFrame(
     })
 
 final_topicdf = topicdf.drop_duplicates()
-topicdf.to_csv('topic.csv', index=False , sep='|')
+final_topicdf.to_csv('topic.csv', index=False , sep='|', encoding="utf8")
 
 
 

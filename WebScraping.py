@@ -4,6 +4,79 @@ import pandas as pd
 import re
 
 
+def compWebPageScraping(comp_grad_page):
+    page = requests.get(comp_grad_page)
+    soup = BeautifulSoup(page.content, "html.parser")
+    #print(soap)
+    section = soup.find(id="content-main")
+    course_details = section.find_all(class_="wysiwyg parbase section")
+    courses = course_details[2].find_all("p")
+    course_name_list = course_details[0].find_all(class_="large-text")
+    #print(course_name_list)
+
+    course_name = []
+    course_subject = []
+    course_number = []
+    course_desc = []
+    for i in range(2, len(courses)):
+        courses_split = courses[i].find(class_="large-text").getText(strip=True).replace(u"\xa0", u" ").split(")", 1)
+        print (courses_split)
+        cname_split = courses_split[0].split("(")[0]
+        courses_split.pop(0)
+        #print(courses_split)
+        if len(courses_split)>1:
+          x=courses_split[1]
+        else:
+          x=courses_split[0]
+        course_desc.append(x)
+        course_subject.append(cname_split.strip().split(" ", 2)[0])
+        course_number.append(cname_split.strip().split(" ", 2)[1])
+        course_name.append(cname_split.strip().split(" ", 2)[2])
+
+    courses_list = []
+    for j in range(1, len(course_name_list), 2):
+        courses = course_name_list[j].find_all("b")
+        #print(courses)
+        for k in courses:
+            data = k.getText().replace(u"\xa0", u" ").strip()
+            if "\n" in data:
+                data_split = data.split("\n")
+                for l in data_split:
+                    courses_list.append(l)
+            else:
+                courses_list.append(data)
+
+    #print(courses_list)
+    for items in courses_list:
+        if "(" in items:
+            item_spl = items.split("(", 1)
+        else:
+            item_spl = items.split("\n",1)
+        items_split = item_spl[0].strip().split(" ", 2)
+        #print(items_split[2])
+        if items_split[2] in course_name:
+            #print("yes")
+            continue
+        else:
+            course_desc.append("")
+            course_subject.append(items_split[0])
+            course_number.append(items_split[1])
+            course_name.append(items_split[2])
+
+    '''print(course_subject)
+    print(course_number)
+    print(course_name)
+    print(course_desc)'''
+
+    df = pd.DataFrame(
+        {'course_number': course_number,
+         'course_name': course_name,
+         'course_subject': course_subject,
+         'course_desc': course_desc
+        })
+    df.to_csv('Courses.csv', index=False, sep='|')
+
+
 def course_name_extract(courses, course_number, course_subject, course_name, course_desc):
     #print(courses)
     reg_pattern = re.compile(r'[A-Z]\d\d -')
@@ -77,7 +150,7 @@ def courses_with_desc(courses, course_number, course_subject, course_name, cours
                 course_name.append(name_split.strip().split(" ", 2)[2])
                 course_desc.append(desc.strip())
 
-def webPageScraping(grad_page):
+def engWebPageScraping(grad_page):
     course_name = []
     course_subject = []
     course_number = []
@@ -97,10 +170,10 @@ def webPageScraping(grad_page):
         #print(courses)
         courses_with_desc(courses, course_number, course_subject, course_name, course_desc)
 
-    print(course_number)
+    '''print(course_number)
     print(course_subject)
     print(course_name)
-    print(course_desc)
+    print(course_desc)'''
 
     df = pd.DataFrame(
         {'course_number': course_number,
@@ -111,5 +184,7 @@ def webPageScraping(grad_page):
     df.to_csv('Courses.csv', mode='a', index=False, sep='|', header=False)
 
 
-grad_page = "https://www.concordia.ca/academics/graduate/calendar/current/encs/engineering-courses.html#topicsinengineering"
-webPageScraping(grad_page)
+comp_grad_page = "https://www.concordia.ca/academics/graduate/calendar/current/encs/computer-science-courses.html#course-descriptions"
+compWebPageScraping(comp_grad_page)
+#grad_page = "https://www.concordia.ca/academics/graduate/calendar/current/encs/engineering-courses.html#topicsinengineering"
+#engWebPageScraping(grad_page)
