@@ -2,7 +2,6 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix focu: <http://focu.io/schema#> .
 @prefix ns1: <http://purl.org/dc/elements/1.1/> .
-@prefix ns2: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
@@ -659,20 +658,18 @@ focu:University a rdfs:Class ;
     rdfs:seeAlso "https://www.concordia.ca/academics/graduate/calendar/current/encs/computer-science-courses.html#course-descriptions" .
 
 <http://example.org/people/10088393> a focu:Student ;
-    focu:hasTranscript <http://example.org/transcript/10089473> ;
-    focu:isAwarded "B" ;
+    focu:hasTranscript <http://example.org/transcript/T1S10088393>,
+        <http://example.org/transcript/T2S10088393> ;
     focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
-    focu:takesCourse "Distributed System Design" ;
     foaf:familyName "Bangera" ;
     foaf:givenName "Nikitha" ;
     foaf:mbox "nikitha.bangera@gmail.com" ;
     foaf:studentId "10088393" .
 
 <http://example.org/people/10089473> a focu:Student ;
-    focu:hasTranscript <http://example.org/transcript/10089473> ;
-    focu:isAwarded "A" ;
+    focu:hasTranscript <http://example.org/transcript/T1S10089473>,
+        <http://example.org/transcript/T2S10089473> ;
     focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
-    focu:takesCourse "Parallel Programming" ;
     foaf:familyName "Bhayana" ;
     foaf:givenName "Aditi" ;
     foaf:mbox "aditi.bhayana@gmail.com" ;
@@ -2478,12 +2475,6 @@ focu:University a rdfs:Class ;
     rdfs:seeAlso "http://dbpedia.org/resource/Word-sense_disambiguation" ;
     foaf:isPrimaryTopicOf "Statistical Natural Language Processing" .
 
-<http://example.org/transcript/10088393> a focu:Transcript ;
-    ns1:PeriodOfTime "Fall 2019" ;
-    ns1:identifier "10088393" ;
-    ns1:title "Distributed System Design" ;
-    ns2:hasValue "B" .
-
 focu:containsTopic a rdf:Property ;
     rdfs:label "containsTopic"@en ;
     rdfs:comment "Course contains topic" .
@@ -2515,11 +2506,29 @@ focu:takesCourse a rdf:Property ;
     rdfs:domain focu:Courses ;
     rdfs:range focu:Student .
 
-<http://example.org/transcript/10089473> a focu:Transcript ;
-    ns1:PeriodOfTime "Summer 2019" ;
-    ns1:identifier "10089473" ;
-    ns1:title "Parallel Programming" ;
-    ns2:hasValue "A" .
+<http://example.org/transcript/T1S10088393> a focu:Transcript ;
+    focu:isAwarded "B" ;
+    focu:takesCourse "Distributed System Design" ;
+    ns1:PeriodOfTime "Fall2019" ;
+    ns1:identifier "10088393" .
+
+<http://example.org/transcript/T1S10089473> a focu:Transcript ;
+    focu:isAwarded "B" ;
+    focu:takesCourse "Parallel Programming" ;
+    ns1:PeriodOfTime "Fall2019" ;
+    ns1:identifier "10089473" .
+
+<http://example.org/transcript/T2S10088393> a focu:Transcript ;
+    focu:isAwarded "A" ;
+    focu:takesCourse "Parallel Programming" ;
+    ns1:PeriodOfTime "Winter2020" ;
+    ns1:identifier "10088393" .
+
+<http://example.org/transcript/T2S10089473> a focu:Transcript ;
+    focu:isAwarded "A" ;
+    focu:takesCourse "Parallel Programming" ;
+    ns1:PeriodOfTime "Winter2020" ;
+    ns1:identifier "10089473" .
 
 <http://example.org/university/Concordia_University> a focu:University ;
     rdfs:seeAlso "http://dbpedia.org/resource/Concordia_University" ;

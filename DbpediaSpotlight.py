@@ -5,7 +5,7 @@ import pandas as pd
 topic_name = []
 topic_url = []
 course_name = []
-with open("Courses.csv", "r") as course_file:
+with open("Grad_courses.csv", "r") as course_file:
     file_reader = csv.reader(course_file, delimiter="|")
     next(file_reader)
     for row in file_reader:
@@ -32,7 +32,7 @@ topicdf = pd.DataFrame(
     })
 
 final_topicdf = topicdf.drop_duplicates()
-final_topicdf.to_csv('topic.csv', index=False , sep='|', encoding="utf8")
+final_topicdf.to_csv('topic_new.csv', index=False , sep='|', encoding="utf8")
 
 
 

@@ -186,5 +186,5 @@ def engWebPageScraping(grad_page):
 
 comp_grad_page = "https://www.concordia.ca/academics/graduate/calendar/current/encs/computer-science-courses.html#course-descriptions"
 compWebPageScraping(comp_grad_page)
-#grad_page = "https://www.concordia.ca/academics/graduate/calendar/current/encs/engineering-courses.html#topicsinengineering"
-#engWebPageScraping(grad_page)
+grad_page = "https://www.concordia.ca/academics/graduate/calendar/current/encs/engineering-courses.html#topicsinengineering"
+engWebPageScraping(grad_page)
