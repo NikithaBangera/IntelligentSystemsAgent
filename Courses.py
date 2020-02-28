@@ -150,23 +150,97 @@ def sparql_query_1(query_graph):
 
 
 def sparql_query_course(query_graph, question):
-    query3 = query_graph.query(f"SELECT ?topicTitle ?topicUri WHERE{{ ?topicSub foaf:isPrimaryTopicOf '{question}' . ?topicSub ns1:title ?topicTitle . ?topicSub rdfs:seeAlso ?topicUri}}")
+    query3 = query_graph.query(
+                f"""SELECT ?topicTitle ?topicUri 
+                    WHERE {{ 
+                        ?topicSub foaf:isPrimaryTopicOf '{question}' . 
+                        ?topicSub ns1:title ?topicTitle . 
+                        ?topicSub rdfs:seeAlso ?topicUri
+                }}""")
 
     for row in query3:
         print("Topic title:%s and Topic URI:%s" % row)
 
 
 def sparql_query_student(query_graph, studentName):
-    query4 = query_graph.query(f"SELECT ?courseName ?grade WHERE{{ ?transcriptSub a focu:Transcript . ?transcriptSub ns1:identifier ?studentId . {{SELECT ?studentId WHERE {{ ?studentSub foaf:givenName '{studentName}' . ?studentSub foaf:studentId ?studentId}} }} ?transcriptSub focu:takesCourse ?courseName . ?transcriptSub focu:isAwarded ?grade .}}")
+    query4 = query_graph.query(
+        f"""SELECT ?courseName ?grade 
+            WHERE {{ 
+                ?transcriptSub a focu:Transcript . 
+                ?transcriptSub ns1:identifier ?studentId . 
+                {{
+                    SELECT ?studentId 
+                    WHERE {{ 
+                        ?studentSub foaf:givenName '{studentName}' . 
+                        ?studentSub foaf:studentId ?studentId
+                    }} 
+                }} . 
+                ?transcriptSub focu:takesCourse ?courseName . 
+                ?transcriptSub focu:isAwarded ?grade .
+        }}""")
 
     for row in query4:
         print(studentName, "has completed the Course %s with the Grade:%s" % row)
 
 def sparql_query_studentAndTopic(query_graph, question):
-    query5 = query_graph.query(f"SELECT ?studentId WHERE {{ ?transcriptSub a focu:Transcript . ?transcriptSub ns1:title ?courseName . {{SELECT ?courseName WHERE{{ ?topicSub ns1:title '{question}' . ?topicSub foaf:isPrimaryTopicOf ?courseName .}}}} . ?transcriptSub ns1:identifier ?studentId .}}")
+    query5 = query_graph.query(
+        f"""SELECT ?studentId ?firstName ?lastName
+            WHERE {{
+                ?studentSub a focu:Student .
+                ?studentSub foaf:studentId ?studentId .
+                {{
+                SELECT ?studentId
+                    WHERE {{ 
+                        ?transcriptSub a focu:Transcript . 
+                        ?transcriptSub focu:takesCourse ?courseName . 
+                        {{
+                            SELECT ?courseName 
+                            WHERE{{ 
+                                ?topicSub ns1:title '{question}' . 
+                                ?topicSub foaf:isPrimaryTopicOf ?courseName .
+                            }}
+                        }} . 
+                        ?transcriptSub ns1:identifier ?studentId .
+                        FILTER NOT EXISTS {{ ?transcriptSub focu:isAwarded "F"}} .
+                    }}
+                }} .
+                ?studentSub foaf:givenName ?firstName .
+                ?studentSub foaf:familyName ?lastName .
+        }}""" )
 
     for row in query5:
-        print("Student name:%s" % row)
+        print("Student id:%s Student Name:%s %s" % row)
+
+
+def sparql_query_topicAndStudent(query_graph, studentId):
+    query6 = query_graph.query(
+        f"""SELECT DISTINCT ?topicName
+            WHERE {{
+                ?topicSub a focu:Topics .
+                ?topicSub foaf:isPrimaryTopicOf ?courseName .
+                {{
+                    SELECT ?courseName
+                        WHERE {{ 
+                            ?transcriptSub a focu:Transcript . 
+                            ?transcriptSub ns1:identifier ?studentId . 
+                            {{
+                                SELECT ?studentId 
+                                WHERE{{ 
+                                    ?studentSub a focu:Student .
+                                    ?studentSub foaf:studentId '{studentId}' .
+                                    ?studentSub foaf:studentId ?studentId .  
+                                }}
+                            }} . 
+                            ?transcriptSub focu:takesCourse ?courseName .
+                            FILTER NOT EXISTS {{ ?transcriptSub focu:isAwarded "F"}} .
+                        }}
+                }} .
+                ?topicSub ns1:title ?topicName .
+        }}""" )
+
+    for row in query6:
+        print("Topic Name:%s" % row)
+
 
 subject = list(graph.subjects(RDF.type, RDFS.Class))
 #print(subject)
@@ -208,3 +282,4 @@ question = input("Hello, I am your smart university agent. How can I help you?")
 #sparql_query_course(query_graph, question)
 sparql_query_student(query_graph, question)
 #sparql_query_studentAndTopic(query_graph, question)
+#sparql_query_topicAndStudent(query_graph, question)

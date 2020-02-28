@@ -666,6 +666,14 @@ focu:University a rdfs:Class ;
     foaf:mbox "nikitha.bangera@gmail.com" ;
     foaf:studentId "10088393" .
 
+<http://example.org/people/10089346> a focu:Student ;
+    focu:hasTranscript <http://example.org/transcript/T1S10089346> ;
+    focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    foaf:familyName "Smith" ;
+    foaf:givenName "Joe" ;
+    foaf:mbox "joe.smith@gmail.com" ;
+    foaf:studentId "10089346" .
+
 <http://example.org/people/10089473> a focu:Student ;
     focu:hasTranscript <http://example.org/transcript/T1S10089473>,
         <http://example.org/transcript/T2S10089473> ;
@@ -2511,6 +2519,12 @@ focu:takesCourse a rdf:Property ;
     focu:takesCourse "Distributed System Design" ;
     ns1:PeriodOfTime "Fall2019" ;
     ns1:identifier "10088393" .
+
+<http://example.org/transcript/T1S10089346> a focu:Transcript ;
+    focu:isAwarded "B" ;
+    focu:takesCourse "Distributed System Design" ;
+    ns1:PeriodOfTime "Summer2019" ;
+    ns1:identifier "10089346" .
 
 <http://example.org/transcript/T1S10089473> a focu:Transcript ;
     focu:isAwarded "B" ;
