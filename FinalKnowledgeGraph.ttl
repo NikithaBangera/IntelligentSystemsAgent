@@ -669,10 +669,59 @@ focu:University a rdfs:Class ;
 <http://example.org/people/10089346> a focu:Student ;
     focu:hasTranscript <http://example.org/transcript/T1S10089346> ;
     focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    foaf:familyName "Simon" ;
+    foaf:givenName "Jude" ;
+    foaf:mbox "jude.simon@gmail.com" ;
+    foaf:studentId "10089346" .
+
+<http://example.org/people/10089347> a focu:Student ;
+    focu:hasTranscript <http://example.org/transcript/T1S10089347> ;
+    focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    foaf:familyName "Olive" ;
+    foaf:givenName "Jane" ;
+    foaf:mbox "jane.olive@gmail.com" ;
+    foaf:studentId "10089347" .
+
+<http://example.org/people/10089348> a focu:Student ;
+    focu:hasTranscript <http://example.org/transcript/T1S10089348>,
+        <http://example.org/transcript/T2S10089348> ;
+    focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    foaf:familyName "Sagar" ;
+    foaf:givenName "Aditya" ;
+    foaf:mbox "aditya29@gmail.com" ;
+    foaf:studentId "10089348" .
+
+<http://example.org/people/10089349> a focu:Student ;
+    focu:hasTranscript <http://example.org/transcript/T1S10089349> ;
+    focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    foaf:familyName "Gupta" ;
+    foaf:givenName "Sumit" ;
+    foaf:mbox "sumitgupta@gmail.com" ;
+    foaf:studentId "10089349" .
+
+<http://example.org/people/10089356> a focu:Student ;
+    focu:hasTranscript <http://example.org/transcript/T1S10089356> ;
+    focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
     foaf:familyName "Smith" ;
     foaf:givenName "Joe" ;
     foaf:mbox "joe.smith@gmail.com" ;
-    foaf:studentId "10089346" .
+    foaf:studentId "10089356" .
+
+<http://example.org/people/10089357> a focu:Student ;
+    focu:hasTranscript <http://example.org/transcript/T1S10089357> ;
+    focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    foaf:familyName "William" ;
+    foaf:givenName "Rose" ;
+    foaf:mbox "williamrose@gmail.com" ;
+    foaf:studentId "10089357" .
+
+<http://example.org/people/10089358> a focu:Student ;
+    focu:hasTranscript <http://example.org/transcript/T1S10089358> ;
+    focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    foaf:familyName "Agareal" ;
+    foaf:givenName "Luv" ;
+    foaf:mbox "luvgarewal@gmail.com" ;
+    foaf:studentId "10089358" .
 
 <http://example.org/people/10089473> a focu:Student ;
     focu:hasTranscript <http://example.org/transcript/T1S10089473>,
@@ -2521,10 +2570,46 @@ focu:takesCourse a rdf:Property ;
     ns1:identifier "10088393" .
 
 <http://example.org/transcript/T1S10089346> a focu:Transcript ;
-    focu:isAwarded "B" ;
-    focu:takesCourse "Distributed System Design" ;
+    focu:isAwarded "F" ;
+    focu:takesCourse "Computer Vision" ;
     ns1:PeriodOfTime "Summer2019" ;
     ns1:identifier "10089346" .
+
+<http://example.org/transcript/T1S10089347> a focu:Transcript ;
+    focu:isAwarded "B" ;
+    focu:takesCourse "Machine Learning" ;
+    ns1:PeriodOfTime "Fall2019" ;
+    ns1:identifier "10089347" .
+
+<http://example.org/transcript/T1S10089348> a focu:Transcript ;
+    focu:isAwarded "B" ;
+    focu:takesCourse "Advanced Image Processing" ;
+    ns1:PeriodOfTime "Summer2019" ;
+    ns1:identifier "10089348" .
+
+<http://example.org/transcript/T1S10089349> a focu:Transcript ;
+    focu:isAwarded "B" ;
+    focu:takesCourse "Computer Networks and Protocols" ;
+    ns1:PeriodOfTime "Winter2019" ;
+    ns1:identifier "10089349" .
+
+<http://example.org/transcript/T1S10089356> a focu:Transcript ;
+    focu:isAwarded "A" ;
+    focu:takesCourse "Distributed System Design" ;
+    ns1:PeriodOfTime "Fall2019" ;
+    ns1:identifier "10089356" .
+
+<http://example.org/transcript/T1S10089357> a focu:Transcript ;
+    focu:isAwarded "C" ;
+    focu:takesCourse "Advanced Pattern Recognition" ;
+    ns1:PeriodOfTime "Winter2019" ;
+    ns1:identifier "10089357" .
+
+<http://example.org/transcript/T1S10089358> a focu:Transcript ;
+    focu:isAwarded "B" ;
+    focu:takesCourse "Foundations of the Semantic Web" ;
+    ns1:PeriodOfTime "Fall2018" ;
+    ns1:identifier "10089358" .
 
 <http://example.org/transcript/T1S10089473> a focu:Transcript ;
     focu:isAwarded "B" ;
@@ -2537,6 +2622,12 @@ focu:takesCourse a rdf:Property ;
     focu:takesCourse "Parallel Programming" ;
     ns1:PeriodOfTime "Winter2020" ;
     ns1:identifier "10088393" .
+
+<http://example.org/transcript/T2S10089348> a focu:Transcript ;
+    focu:isAwarded "B" ;
+    focu:takesCourse "Machine Learning" ;
+    ns1:PeriodOfTime "Fall2019" ;
+    ns1:identifier "10089348" .
 
 <http://example.org/transcript/T2S10089473> a focu:Transcript ;
     focu:isAwarded "A" ;

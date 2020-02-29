@@ -68,7 +68,7 @@ def topicsTripleGenerator(topic_class):
     graph.serialize(format='turtle')
 
 
-def studentTripleGenerator(student_class, enrolled_property, takes_course_property, is_awarded, university, has_transcript):
+def studentTripleGenerator(student_class, enrolled_property, takes_course_property, is_awarded, university, has_transcript, transcript_class):
     student_ns = Namespace("http://example.org/people/")
     #student_graph = Graph()
     with open("StudentsRecord.csv", 'r') as csv_file:
@@ -87,14 +87,14 @@ def studentTripleGenerator(student_class, enrolled_property, takes_course_proper
             counter = 1
             for i in range(4,row_length):
                 transcript_identifier = "T" + str(counter) + "S" + student_list[0]
-                transcript_record = transcriptTripleGenerator(transcript_identifier, student_list[i], student_list[0], takes_course_property, is_awarded)
+                transcript_record = transcriptTripleGenerator(transcript_identifier, student_list[i], student_list[0], takes_course_property, is_awarded, transcript_class)
                 graph.add((student, has_transcript, transcript_record))
                 counter = counter + 1
 
     #print(student_graph.serialize(format='turtle'))
     graph.serialize(destination='FinalKnowledgeGraph.ttl', format='turtle')
 
-def transcriptTripleGenerator(transcript_identifier, student_subject_list, student_id, takes_course_property, is_awarded):
+def transcriptTripleGenerator(transcript_identifier, student_subject_list, student_id, takes_course_property, is_awarded, transcript_class):
     transcript_ns = Namespace("http://example.org/transcript/")
     #transcript_graph = Graph()
     split_subject_list = student_subject_list.split("-",3)
@@ -122,6 +122,8 @@ def sparql_query_1(query_graph):
     for row in query1:
         print("Total number of Triples:%s" % row)
 
+
+def sparql_query_2(query_graph):
     query2 = query_graph.query(
         """SELECT ?studentCount ?courseCount ?topicCount {
          {
@@ -149,11 +151,11 @@ def sparql_query_1(query_graph):
         print("Total number of students:%s, total number of courses:%s and total number of topics:%s" % row)
 
 
-def sparql_query_course(query_graph, question):
+def sparql_query_3(query_graph, courseName):
     query3 = query_graph.query(
                 f"""SELECT ?topicTitle ?topicUri 
                     WHERE {{ 
-                        ?topicSub foaf:isPrimaryTopicOf '{question}' . 
+                        ?topicSub foaf:isPrimaryTopicOf '{courseName}' . 
                         ?topicSub ns1:title ?topicTitle . 
                         ?topicSub rdfs:seeAlso ?topicUri
                 }}""")
@@ -162,9 +164,9 @@ def sparql_query_course(query_graph, question):
         print("Topic title:%s and Topic URI:%s" % row)
 
 
-def sparql_query_student(query_graph, studentName):
+def sparql_query_4(query_graph, studentName):
     query4 = query_graph.query(
-        f"""SELECT ?courseName ?grade 
+        f"""SELECT ?courseName ?grade ?semester
             WHERE {{ 
                 ?transcriptSub a focu:Transcript . 
                 ?transcriptSub ns1:identifier ?studentId . 
@@ -177,12 +179,14 @@ def sparql_query_student(query_graph, studentName):
                 }} . 
                 ?transcriptSub focu:takesCourse ?courseName . 
                 ?transcriptSub focu:isAwarded ?grade .
+                ?transcriptSub ns1:PeriodOfTime ?semester .
         }}""")
 
     for row in query4:
-        print(studentName, "has completed the Course %s with the Grade:%s" % row)
+        print(studentName, "has completed the Course %s with the Grade:%s in the term %s" % row)
 
-def sparql_query_studentAndTopic(query_graph, question):
+
+def sparql_query_5(query_graph, topicName):
     query5 = query_graph.query(
         f"""SELECT ?studentId ?firstName ?lastName
             WHERE {{
@@ -196,7 +200,7 @@ def sparql_query_studentAndTopic(query_graph, question):
                         {{
                             SELECT ?courseName 
                             WHERE{{ 
-                                ?topicSub ns1:title '{question}' . 
+                                ?topicSub ns1:title '{topicName}' . 
                                 ?topicSub foaf:isPrimaryTopicOf ?courseName .
                             }}
                         }} . 
@@ -212,7 +216,7 @@ def sparql_query_studentAndTopic(query_graph, question):
         print("Student id:%s Student Name:%s %s" % row)
 
 
-def sparql_query_topicAndStudent(query_graph, studentId):
+def sparql_query_6(query_graph, studentId):
     query6 = query_graph.query(
         f"""SELECT DISTINCT ?topicName
             WHERE {{
@@ -242,44 +246,79 @@ def sparql_query_topicAndStudent(query_graph, studentId):
         print("Topic Name:%s" % row)
 
 
-subject = list(graph.subjects(RDF.type, RDFS.Class))
-#print(subject)
-for row in subject:
-    if "#Courses" in row:
-        course_class = row
-    if "#University" in row:
-        university_class = row
-    if "#Student" in row:
-        student_class = row
-    if "#Topics" in row:
-        topic_class = row
-    if "#Transcript" in row:
-        transcript_class = row
+def customizedQuery(query_graph, query_input):
+    query7 = query_graph.query(query_input)
 
-properties = list(graph.subjects(RDF.type, RDF.Property))
-#print(properties)
-for row in properties:
-    if "#isEnrolledAt" in row:
-        enrolled_property = row
-    if "#takesCourse" in row:
-        takes_course_property = row
-    if "#isAwarded" in row:
-        is_awarded = row
-    if "#isofferedBy" in row:
-        is_offered_by = row
-    if "#hasTranscript" in row:
-        has_transcript = row
+    for row in query7:
+        print("%s" % row)
 
-university = universityTripleGenerator(university_class)
-#print(university)
-courseTripleGenerator(course_class, comp_grad_page, grad_page, is_offered_by, university)
-topicsTripleGenerator(topic_class)
-studentTripleGenerator(student_class, enrolled_property, takes_course_property, is_awarded, university, has_transcript)
-query_graph = Graph()
-query_graph.parse("FinalKnowledgeGraph.ttl", format="ttl")
-sparql_query_1(query_graph)
-question = input("Hello, I am your smart university agent. How can I help you?")
-#sparql_query_course(query_graph, question)
-sparql_query_student(query_graph, question)
-#sparql_query_studentAndTopic(query_graph, question)
-#sparql_query_topicAndStudent(query_graph, question)
+
+def main():
+    subject = list(graph.subjects(RDF.type, RDFS.Class))
+    #print(subject)
+    for row in subject:
+        if "#Courses" in row:
+            course_class = row
+        if "#University" in row:
+            university_class = row
+        if "#Student" in row:
+            student_class = row
+        if "#Topics" in row:
+            topic_class = row
+        if "#Transcript" in row:
+            transcript_class = row
+
+    properties = list(graph.subjects(RDF.type, RDF.Property))
+    #print(properties)
+    for row in properties:
+        if "#isEnrolledAt" in row:
+            enrolled_property = row
+        if "#takesCourse" in row:
+            takes_course_property = row
+        if "#isAwarded" in row:
+            is_awarded = row
+        if "#isofferedBy" in row:
+            is_offered_by = row
+        if "#hasTranscript" in row:
+            has_transcript = row
+
+    university = universityTripleGenerator(university_class)
+    courseTripleGenerator(course_class, comp_grad_page, grad_page, is_offered_by, university)
+    topicsTripleGenerator(topic_class)
+    studentTripleGenerator(student_class, enrolled_property, takes_course_property, is_awarded, university, has_transcript, transcript_class)
+    query_graph = Graph()
+    query_graph.parse("FinalKnowledgeGraph.ttl", format="ttl")
+    print("Hello, I am your smart university agent. Please choose one of the options mentioned below")
+
+    while True:
+        choice = input("\n1. Query 1\n2. Query 2\n3. Query 3\n4. Query 4\n5. Query 5\n6. Query 6\n7. Customize Query\n8. Exit\n")
+        if choice not in ('1', '2', '3', '4', '5', '6', '7', '8'):
+            print("Not an appropriate choice. Please enter a valid one")
+        else:
+            if choice == "1":
+                sparql_query_1(query_graph)
+            elif choice == "2":
+                sparql_query_2(query_graph)
+            elif choice == "3":
+                courseName = input("Enter the course name:")
+                sparql_query_3(query_graph, courseName)
+            elif choice == "4":
+                # use either student id or student name
+                studentName = input("Enter the first name of the student:")
+                sparql_query_4(query_graph, studentName)
+            elif choice == "5":
+                topicName = input("Enter the topic:")
+                sparql_query_5(query_graph, topicName)
+            elif choice == "6":
+                studentId = input("Enter the student id:")
+                sparql_query_6(query_graph, studentId)
+            elif choice == "7":
+                query = input("Enter the full query:")
+                #query without quotes
+                customizedQuery(query_graph, query)
+            elif choice == "8":
+                exit()
+
+
+if __name__ == "__main__":
+    main()
