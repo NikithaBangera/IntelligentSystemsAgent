@@ -1,7 +1,4 @@
-import requests
-from bs4 import BeautifulSoup
-import pandas as pd
-from rdflib.namespace import RDFS, RDF, FOAF, DC, OWL, URIRef
+from rdflib.namespace import RDFS, RDF, FOAF, DC
 from rdflib import Graph, Namespace, Literal
 import csv
 
@@ -322,3 +319,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
