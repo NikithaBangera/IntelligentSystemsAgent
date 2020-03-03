@@ -59,13 +59,13 @@ def topicsTripleGenerator(topic_class):
             graph.add((topic, RDF.type, topic_class))
             graph.add((topic, DC.title, Literal(topic_list[0])))
             graph.add((topic, RDFS.seeAlso, Literal(topic_list[1])))
-            graph.add((topic, FOAF.isPrimaryTopicOf, Literal(topic_list[2])))
+            graph.add((topic, FOAF.primaryTopicOf, Literal(topic_list[2])))
 
     #print(topic_graph.serialize(format='turtle'))
     graph.serialize(format='turtle')
 
 
-def studentTripleGenerator(student_class, enrolled_property, takes_course_property, is_awarded, university, has_transcript, transcript_class):
+def studentTripleGenerator(student_class, student_Id, enrolled_property, takes_course_property, is_awarded, university, has_transcript, transcript_class):
     student_ns = Namespace("http://example.org/people/")
     #student_graph = Graph()
     with open("StudentsRecord.csv", 'r') as csv_file:
@@ -75,7 +75,7 @@ def studentTripleGenerator(student_class, enrolled_property, takes_course_proper
             #print(student_list)
             student = student_ns[student_list[0]]
             graph.add((student, RDF.type, student_class))
-            graph.add((student, FOAF.studentId, Literal(student_list[0])))
+            graph.add((student, student_Id, Literal(student_list[0])))
             graph.add((student, FOAF.givenName, Literal(student_list[1])))
             graph.add((student, FOAF.familyName, Literal(student_list[2])))
             graph.add((student, FOAF.mbox, Literal(student_list[3])))
@@ -152,7 +152,7 @@ def sparql_query_3(query_graph, courseName):
     query3 = query_graph.query(
                 f"""SELECT ?topicTitle ?topicUri 
                     WHERE {{ 
-                        ?topicSub foaf:isPrimaryTopicOf '{courseName}' . 
+                        ?topicSub foaf:primaryTopicOf '{courseName}' . 
                         ?topicSub ns1:title ?topicTitle . 
                         ?topicSub rdfs:seeAlso ?topicUri
                 }}""")
@@ -171,7 +171,7 @@ def sparql_query_4(query_graph, studentName):
                     SELECT ?studentId 
                     WHERE {{ 
                         ?studentSub foaf:givenName '{studentName}' . 
-                        ?studentSub foaf:studentId ?studentId
+                        ?studentSub focu:studentId ?studentId
                     }} 
                 }} . 
                 ?transcriptSub focu:takesCourse ?courseName . 
@@ -188,7 +188,7 @@ def sparql_query_5(query_graph, topicName):
         f"""SELECT ?studentId ?firstName ?lastName
             WHERE {{
                 ?studentSub a focu:Student .
-                ?studentSub foaf:studentId ?studentId .
+                ?studentSub focu:studentId ?studentId .
                 {{
                 SELECT ?studentId
                     WHERE {{ 
@@ -198,7 +198,7 @@ def sparql_query_5(query_graph, topicName):
                             SELECT ?courseName 
                             WHERE{{ 
                                 ?topicSub ns1:title '{topicName}' . 
-                                ?topicSub foaf:isPrimaryTopicOf ?courseName .
+                                ?topicSub foaf:primaryTopicOf ?courseName .
                             }}
                         }} . 
                         ?transcriptSub ns1:identifier ?studentId .
@@ -218,7 +218,7 @@ def sparql_query_6(query_graph, studentId):
         f"""SELECT DISTINCT ?topicName
             WHERE {{
                 ?topicSub a focu:Topics .
-                ?topicSub foaf:isPrimaryTopicOf ?courseName .
+                ?topicSub foaf:primaryTopicOf ?courseName .
                 {{
                     SELECT ?courseName
                         WHERE {{ 
@@ -228,8 +228,8 @@ def sparql_query_6(query_graph, studentId):
                                 SELECT ?studentId 
                                 WHERE{{ 
                                     ?studentSub a focu:Student .
-                                    ?studentSub foaf:studentId '{studentId}' .
-                                    ?studentSub foaf:studentId ?studentId .  
+                                    ?studentSub focu:studentId '{studentId}' .
+                                    ?studentSub focu:studentId ?studentId .  
                                 }}
                             }} . 
                             ?transcriptSub focu:takesCourse ?courseName .
@@ -268,6 +268,8 @@ def main():
     properties = list(graph.subjects(RDF.type, RDF.Property))
     #print(properties)
     for row in properties:
+        if "#studentId" in row:
+            student_Id = row
         if "#isEnrolledAt" in row:
             enrolled_property = row
         if "#takesCourse" in row:
@@ -282,7 +284,7 @@ def main():
     university = universityTripleGenerator(university_class)
     courseTripleGenerator(course_class, comp_grad_page, grad_page, is_offered_by, university)
     topicsTripleGenerator(topic_class)
-    studentTripleGenerator(student_class, enrolled_property, takes_course_property, is_awarded, university, has_transcript, transcript_class)
+    studentTripleGenerator(student_class, student_Id,enrolled_property, takes_course_property, is_awarded, university, has_transcript, transcript_class)
     query_graph = Graph()
     query_graph.parse("FinalKnowledgeGraph.ttl", format="ttl")
     print("Hello, I am your smart university agent. Please choose one of the options mentioned below")

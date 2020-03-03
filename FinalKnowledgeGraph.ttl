@@ -12,7 +12,8 @@ focu:Courses a rdfs:Class ;
     rdfs:label "Courses"@en .
 
 focu:Student a rdfs:Class ;
-    rdfs:label "Student"@en .
+    rdfs:label "Student"@en ;
+    rdfs:subClassOf foaf:Person .
 
 focu:Topics a rdfs:Class ;
     rdfs:label "Topics"@en .
@@ -661,83 +662,83 @@ focu:University a rdfs:Class ;
     focu:hasTranscript <http://example.org/transcript/T1S10088393>,
         <http://example.org/transcript/T2S10088393> ;
     focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    focu:studentId "10088393" ;
     foaf:familyName "Bangera" ;
     foaf:givenName "Nikitha" ;
-    foaf:mbox "nikitha.bangera@gmail.com" ;
-    foaf:studentId "10088393" .
+    foaf:mbox "nikitha.bangera@gmail.com" .
 
 <http://example.org/people/10089346> a focu:Student ;
     focu:hasTranscript <http://example.org/transcript/T1S10089346> ;
     focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    focu:studentId "10089346" ;
     foaf:familyName "Simon" ;
     foaf:givenName "Jude" ;
-    foaf:mbox "jude.simon@gmail.com" ;
-    foaf:studentId "10089346" .
+    foaf:mbox "jude.simon@gmail.com" .
 
 <http://example.org/people/10089347> a focu:Student ;
     focu:hasTranscript <http://example.org/transcript/T1S10089347> ;
     focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    focu:studentId "10089347" ;
     foaf:familyName "Olive" ;
     foaf:givenName "Jane" ;
-    foaf:mbox "jane.olive@gmail.com" ;
-    foaf:studentId "10089347" .
+    foaf:mbox "jane.olive@gmail.com" .
 
 <http://example.org/people/10089348> a focu:Student ;
     focu:hasTranscript <http://example.org/transcript/T1S10089348>,
         <http://example.org/transcript/T2S10089348> ;
     focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    focu:studentId "10089348" ;
     foaf:familyName "Sagar" ;
     foaf:givenName "Aditya" ;
-    foaf:mbox "aditya29@gmail.com" ;
-    foaf:studentId "10089348" .
+    foaf:mbox "aditya29@gmail.com" .
 
 <http://example.org/people/10089349> a focu:Student ;
     focu:hasTranscript <http://example.org/transcript/T1S10089349> ;
     focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    focu:studentId "10089349" ;
     foaf:familyName "Gupta" ;
     foaf:givenName "Sumit" ;
-    foaf:mbox "sumitgupta@gmail.com" ;
-    foaf:studentId "10089349" .
+    foaf:mbox "sumitgupta@gmail.com" .
 
 <http://example.org/people/10089356> a focu:Student ;
     focu:hasTranscript <http://example.org/transcript/T1S10089356> ;
     focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    focu:studentId "10089356" ;
     foaf:familyName "Smith" ;
     foaf:givenName "Joe" ;
-    foaf:mbox "joe.smith@gmail.com" ;
-    foaf:studentId "10089356" .
+    foaf:mbox "joe.smith@gmail.com" .
 
 <http://example.org/people/10089357> a focu:Student ;
     focu:hasTranscript <http://example.org/transcript/T1S10089357> ;
     focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    focu:studentId "10089357" ;
     foaf:familyName "William" ;
     foaf:givenName "Rose" ;
-    foaf:mbox "williamrose@gmail.com" ;
-    foaf:studentId "10089357" .
+    foaf:mbox "williamrose@gmail.com" .
 
 <http://example.org/people/10089358> a focu:Student ;
     focu:hasTranscript <http://example.org/transcript/T1S10089358> ;
     focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    focu:studentId "10089358" ;
     foaf:familyName "Agareal" ;
     foaf:givenName "Luv" ;
-    foaf:mbox "luvgarewal@gmail.com" ;
-    foaf:studentId "10089358" .
+    foaf:mbox "luvgarewal@gmail.com" .
 
 <http://example.org/people/10089473> a focu:Student ;
     focu:hasTranscript <http://example.org/transcript/T1S10089473>,
         <http://example.org/transcript/T2S10089473> ;
     focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    focu:studentId "10089473" ;
     foaf:familyName "Bhayana" ;
     foaf:givenName "Aditi" ;
-    foaf:mbox "aditi.bhayana@gmail.com" ;
-    foaf:studentId "10089473" .
+    foaf:mbox "aditi.bhayana@gmail.com" .
 
 <http://example.org/topics/3D> a focu:Topics ;
     ns1:title "3D" ;
     rdfs:seeAlso "http://dbpedia.org/resource/3D_computer_graphics",
         "http://dbpedia.org/resource/3D_modeling",
         "http://dbpedia.org/resource/Three-dimensional_space" ;
-    foaf:isPrimaryTopicOf "Advanced 3D Graphics for Game Programming",
+    foaf:primaryTopicOf "Advanced 3D Graphics for Game Programming",
         "Advanced Game Development",
         "Bioinformatics Algorithms",
         "Digital Geometric Modelling" .
@@ -745,75 +746,75 @@ focu:University a rdfs:Class ;
 <http://example.org/topics/3D_graphics> a focu:Topics ;
     ns1:title "3D graphics" ;
     rdfs:seeAlso "http://dbpedia.org/resource/3D_computer_graphics" ;
-    foaf:isPrimaryTopicOf "Advanced 3D Graphics for Game Programming" .
+    foaf:primaryTopicOf "Advanced 3D Graphics for Game Programming" .
 
 <http://example.org/topics/AI> a focu:Topics ;
     ns1:title "AI" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Artificial_intelligence" ;
-    foaf:isPrimaryTopicOf "Advanced Game Development" .
+    foaf:primaryTopicOf "Advanced Game Development" .
 
 <http://example.org/topics/Advanced_Encryption> a focu:Topics ;
     ns1:title "Advanced Encryption Standard" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Advanced_Encryption_Standard" ;
-    foaf:isPrimaryTopicOf "Cryptography and Data Security" .
+    foaf:primaryTopicOf "Cryptography and Data Security" .
 
 <http://example.org/topics/Agile> a focu:Topics ;
     ns1:title "Agile" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Agile_software_development" ;
-    foaf:isPrimaryTopicOf "Software Systems Requirements Specification" .
+    foaf:primaryTopicOf "Software Systems Requirements Specification" .
 
 <http://example.org/topics/Amortized_analysis> a focu:Topics ;
     ns1:title "Amortized analysis" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Amortized_analysis" ;
-    foaf:isPrimaryTopicOf "Advanced Analysis of Algorithms" .
+    foaf:primaryTopicOf "Advanced Analysis of Algorithms" .
 
 <http://example.org/topics/Applied_Computer> a focu:Topics ;
     ns1:title "Applied Computer Science" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Computer_science" ;
-    foaf:isPrimaryTopicOf "Programming Competency Test",
+    foaf:primaryTopicOf "Programming Competency Test",
         "Project and Report" .
 
 <http://example.org/topics/Artificial_Intelligence> a focu:Topics ;
     ns1:title "Artificial Intelligence" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Artificial_intelligence" ;
-    foaf:isPrimaryTopicOf "Advanced Game Development",
+    foaf:primaryTopicOf "Advanced Game Development",
         "Applied Artificial Intelligence" .
 
 <http://example.org/topics/Bayesian_decision> a focu:Topics ;
     ns1:title "Bayesian decision theory" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Bayes_estimator" ;
-    foaf:isPrimaryTopicOf "Pattern Recognition" .
+    foaf:primaryTopicOf "Pattern Recognition" .
 
 <http://example.org/topics/Bayesian_inference> a focu:Topics ;
     ns1:title "Bayesian inference" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Bayesian_inference" ;
-    foaf:isPrimaryTopicOf "Advanced Image Processing" .
+    foaf:primaryTopicOf "Advanced Image Processing" .
 
 <http://example.org/topics/Bioinformatics> a focu:Topics ;
     ns1:title "Bioinformatics" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Bioinformatics" ;
-    foaf:isPrimaryTopicOf "Bioinformatics Algorithms",
+    foaf:primaryTopicOf "Bioinformatics Algorithms",
         "Bioinformatics Databases and Systems" .
 
 <http://example.org/topics/Blogosphere> a focu:Topics ;
     ns1:title "Blogosphere" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Blogosphere" ;
-    foaf:isPrimaryTopicOf "Semantic Computing" .
+    foaf:primaryTopicOf "Semantic Computing" .
 
 <http://example.org/topics/Boolean> a focu:Topics ;
     ns1:title "Boolean" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Boolean_algebra" ;
-    foaf:isPrimaryTopicOf "Information Retrieval and Web Search" .
+    foaf:primaryTopicOf "Information Retrieval and Web Search" .
 
 <http://example.org/topics/CASE> a focu:Topics ;
     ns1:title "CASE" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Computer-aided_software_engineering" ;
-    foaf:isPrimaryTopicOf "Software Comprehension and Maintenance" .
+    foaf:primaryTopicOf "Software Comprehension and Maintenance" .
 
 <http://example.org/topics/COMP> a focu:Topics ;
     ns1:title "COMP" ;
     rdfs:seeAlso "http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific" ;
-    foaf:isPrimaryTopicOf "Advanced Analysis of Algorithms",
+    foaf:primaryTopicOf "Advanced Analysis of Algorithms",
         "Advanced Rendering and Animation",
         "Computer Vision",
         "Cryptography and Data Security",
@@ -826,27 +827,27 @@ focu:University a rdfs:Class ;
 <http://example.org/topics/CORBA> a focu:Topics ;
     ns1:title "CORBA" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Common_Object_Request_Broker_Architecture" ;
-    foaf:isPrimaryTopicOf "Distributed System Design" .
+    foaf:primaryTopicOf "Distributed System Design" .
 
 <http://example.org/topics/Client-server> a focu:Topics ;
     ns1:title "Client-server" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Clientâ€“server_model" ;
-    foaf:isPrimaryTopicOf "Distributed System Design" .
+    foaf:primaryTopicOf "Distributed System Design" .
 
 <http://example.org/topics/Collaborative_Filtering> a focu:Topics ;
     ns1:title "Collaborative Filtering" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Collaborative_filtering" ;
-    foaf:isPrimaryTopicOf "Semantic Computing" .
+    foaf:primaryTopicOf "Semantic Computing" .
 
 <http://example.org/topics/Computational_learning> a focu:Topics ;
     ns1:title "Computational learning theory" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Computational_learning_theory" ;
-    foaf:isPrimaryTopicOf "Machine Learning" .
+    foaf:primaryTopicOf "Machine Learning" .
 
 <http://example.org/topics/Computer_Science> a focu:Topics ;
     ns1:title "Computer Science" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Computer_science" ;
-    foaf:isPrimaryTopicOf "Discrete Mathematics of Paul ErdÃƒÂ¶s",
+    foaf:primaryTopicOf "Discrete Mathematics of Paul ErdÃƒÂ¶s",
         "Graduate Seminar in Computer Science",
         "Topics in Computer Science I",
         "Topics in Computer Science II" .
@@ -854,334 +855,334 @@ focu:University a rdfs:Class ;
 <http://example.org/topics/Computer_Vision> a focu:Topics ;
     ns1:title "Computer Vision" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Computer_vision" ;
-    foaf:isPrimaryTopicOf "Computer Vision" .
+    foaf:primaryTopicOf "Computer Vision" .
 
 <http://example.org/topics/Continuous_integration> a focu:Topics ;
     ns1:title "Continuous integration" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Continuous_integration" ;
-    foaf:isPrimaryTopicOf "Software Engineering Processes" .
+    foaf:primaryTopicOf "Software Engineering Processes" .
 
 <http://example.org/topics/Cryptographic_hash> a focu:Topics ;
     ns1:title "Cryptographic hash functions" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Cryptographic_hash_function" ;
-    foaf:isPrimaryTopicOf "Cryptography and Data Security" .
+    foaf:primaryTopicOf "Cryptography and Data Security" .
 
 <http://example.org/topics/Cryptography> a focu:Topics ;
     ns1:title "Cryptography" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Cryptography" ;
-    foaf:isPrimaryTopicOf "Cryptography and Data Security" .
+    foaf:primaryTopicOf "Cryptography and Data Security" .
 
 <http://example.org/topics/DC> a focu:Topics ;
     ns1:title "DC" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Direct_current" ;
-    foaf:isPrimaryTopicOf "Large-Scale Optimization" .
+    foaf:primaryTopicOf "Large-Scale Optimization" .
 
 <http://example.org/topics/Data_mining> a focu:Topics ;
     ns1:title "Data mining" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Data_mining" ;
-    foaf:isPrimaryTopicOf "Advanced Database Technology and Applications" .
+    foaf:primaryTopicOf "Advanced Database Technology and Applications" .
 
 <http://example.org/topics/Data_warehouse> a focu:Topics ;
     ns1:title "Data warehouse" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Data_warehouse" ;
-    foaf:isPrimaryTopicOf "Advanced Database Technology and Applications" .
+    foaf:primaryTopicOf "Advanced Database Technology and Applications" .
 
 <http://example.org/topics/Delaunay> a focu:Topics ;
     ns1:title "Delaunay" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Robert_Delaunay" ;
-    foaf:isPrimaryTopicOf "Computational Geometry" .
+    foaf:primaryTopicOf "Computational Geometry" .
 
 <http://example.org/topics/Design_methods> a focu:Topics ;
     ns1:title "Design methods" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Design_methods" ;
-    foaf:isPrimaryTopicOf "Software Design Methodologies" .
+    foaf:primaryTopicOf "Software Design Methodologies" .
 
 <http://example.org/topics/Discrete_Mathematics> a focu:Topics ;
     ns1:title "Discrete Mathematics" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Discrete_mathematics" ;
-    foaf:isPrimaryTopicOf "Discrete Mathematics of Paul ErdÃƒÂ¶s" .
+    foaf:primaryTopicOf "Discrete Mathematics of Paul ErdÃƒÂ¶s" .
 
 <http://example.org/topics/English> a focu:Topics ;
     ns1:title "English" ;
     rdfs:seeAlso "http://dbpedia.org/resource/English_language" ;
-    foaf:isPrimaryTopicOf "Natural Language Analysis" .
+    foaf:primaryTopicOf "Natural Language Analysis" .
 
 <http://example.org/topics/Extensible_Markup> a focu:Topics ;
     ns1:title "Extensible Markup Language (XML)" ;
     rdfs:seeAlso "http://dbpedia.org/resource/XML" ;
-    foaf:isPrimaryTopicOf "Foundations of the Semantic Web" .
+    foaf:primaryTopicOf "Foundations of the Semantic Web" .
 
 <http://example.org/topics/Extremal_graph> a focu:Topics ;
     ns1:title "Extremal graph theory" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Extremal_graph_theory" ;
-    foaf:isPrimaryTopicOf "Discrete Mathematics of Paul ErdÃƒÂ¶s" .
+    foaf:primaryTopicOf "Discrete Mathematics of Paul ErdÃƒÂ¶s" .
 
 <http://example.org/topics/Feature_extraction> a focu:Topics ;
     ns1:title "Feature extraction" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Feature_extraction" ;
-    foaf:isPrimaryTopicOf "Pattern Recognition" .
+    foaf:primaryTopicOf "Pattern Recognition" .
 
 <http://example.org/topics/Formal_Methods> a focu:Topics ;
     ns1:title "Formal Methods" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Formal_methods" ;
-    foaf:isPrimaryTopicOf "Formal Methods" .
+    foaf:primaryTopicOf "Formal Methods" .
 
 <http://example.org/topics/Game_engine> a focu:Topics ;
     ns1:title "Game engine" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Game_engine" ;
-    foaf:isPrimaryTopicOf "Advanced Game Development" .
+    foaf:primaryTopicOf "Advanced Game Development" .
 
 <http://example.org/topics/General> a focu:Topics ;
     ns1:title "General" ;
     rdfs:seeAlso "http://dbpedia.org/resource/History_of_economic_thought" ;
-    foaf:isPrimaryTopicOf "Theory of Computation" .
+    foaf:primaryTopicOf "Theory of Computation" .
 
 <http://example.org/topics/Heuristics> a focu:Topics ;
     ns1:title "Heuristics" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Heuristic" ;
-    foaf:isPrimaryTopicOf "Large-Scale Optimization" .
+    foaf:primaryTopicOf "Large-Scale Optimization" .
 
 <http://example.org/topics/Hough_transform> a focu:Topics ;
     ns1:title "Hough transform" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Hough_transform" ;
-    foaf:isPrimaryTopicOf "Image Processing" .
+    foaf:primaryTopicOf "Image Processing" .
 
 <http://example.org/topics/IEEE> a focu:Topics ;
     ns1:title "IEEE" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Institute_of_Electrical_and_Electronics_Engineers" ;
-    foaf:isPrimaryTopicOf "Software Systems Requirements Specification" .
+    foaf:primaryTopicOf "Software Systems Requirements Specification" .
 
 <http://example.org/topics/IPv6> a focu:Topics ;
     ns1:title "IPv6" ;
     rdfs:seeAlso "http://dbpedia.org/resource/IPv6" ;
-    foaf:isPrimaryTopicOf "Computer Networks and Protocols" .
+    foaf:primaryTopicOf "Computer Networks and Protocols" .
 
 <http://example.org/topics/ISO> a focu:Topics ;
     ns1:title "ISO" ;
     rdfs:seeAlso "http://dbpedia.org/resource/International_Organization_for_Standardization" ;
-    foaf:isPrimaryTopicOf "Software Systems Requirements Specification" .
+    foaf:primaryTopicOf "Software Systems Requirements Specification" .
 
 <http://example.org/topics/Incomplete> a focu:Topics ;
     ns1:title "Incomplete" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Incomplete_(Backstreet_Boys_song)" ;
-    foaf:isPrimaryTopicOf "Database Systems Principles" .
+    foaf:primaryTopicOf "Database Systems Principles" .
 
 <http://example.org/topics/Information_Retrieval> a focu:Topics ;
     ns1:title "Information Retrieval" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Information_retrieval" ;
-    foaf:isPrimaryTopicOf "Information Retrieval and Web Search" .
+    foaf:primaryTopicOf "Information Retrieval and Web Search" .
 
 <http://example.org/topics/Information_integration> a focu:Topics ;
     ns1:title "Information integration" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Information_integration" ;
-    foaf:isPrimaryTopicOf "Advanced Database Technology and Applications" .
+    foaf:primaryTopicOf "Advanced Database Technology and Applications" .
 
 <http://example.org/topics/Information_theory> a focu:Topics ;
     ns1:title "Information theory" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Information_theory" ;
-    foaf:isPrimaryTopicOf "Cryptography and Data Security" .
+    foaf:primaryTopicOf "Cryptography and Data Security" .
 
 <http://example.org/topics/Intelligent_Systems> a focu:Topics ;
     ns1:title "Intelligent Systems" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Artificial_intelligence" ;
-    foaf:isPrimaryTopicOf "Intelligent Systems" .
+    foaf:primaryTopicOf "Intelligent Systems" .
 
 <http://example.org/topics/Internet_Protocol> a focu:Topics ;
     ns1:title "Internet Protocol" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Internet_Protocol" ;
-    foaf:isPrimaryTopicOf "Computer Networks and Protocols" .
+    foaf:primaryTopicOf "Computer Networks and Protocols" .
 
 <http://example.org/topics/Key_distribution> a focu:Topics ;
     ns1:title "Key distribution" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Key_distribution" ;
-    foaf:isPrimaryTopicOf "Cryptography and Data Security" .
+    foaf:primaryTopicOf "Cryptography and Data Security" .
 
 <http://example.org/topics/Knowledge_representation> a focu:Topics ;
     ns1:title "Knowledge representation" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Knowledge_representation_and_reasoning" ;
-    foaf:isPrimaryTopicOf "Intelligent Systems" .
+    foaf:primaryTopicOf "Intelligent Systems" .
 
 <http://example.org/topics/LOD> a focu:Topics ;
     ns1:title "LOD" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Linked_data" ;
-    foaf:isPrimaryTopicOf "Semantic Computing" .
+    foaf:primaryTopicOf "Semantic Computing" .
 
 <http://example.org/topics/Linked_Open> a focu:Topics ;
     ns1:title "Linked Open Data" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Linked_data" ;
-    foaf:isPrimaryTopicOf "Semantic Computing" .
+    foaf:primaryTopicOf "Semantic Computing" .
 
 <http://example.org/topics/MAN> a focu:Topics ;
     ns1:title "MAN" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Metropolitan_area_network" ;
-    foaf:isPrimaryTopicOf "Mobile Computing and Wireless Networks" .
+    foaf:primaryTopicOf "Mobile Computing and Wireless Networks" .
 
 <http://example.org/topics/Machine_Learning> a focu:Topics ;
     ns1:title "Machine Learning" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Machine_learning" ;
-    foaf:isPrimaryTopicOf "Machine Learning",
+    foaf:primaryTopicOf "Machine Learning",
         "Semantic Computing" .
 
 <http://example.org/topics/Markov> a focu:Topics ;
     ns1:title "Markov" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Hidden_Markov_model" ;
-    foaf:isPrimaryTopicOf "Machine Learning" .
+    foaf:primaryTopicOf "Machine Learning" .
 
 <http://example.org/topics/Markov_random> a focu:Topics ;
     ns1:title "Markov random field" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Markov_random_field" ;
-    foaf:isPrimaryTopicOf "Advanced Image Processing" .
+    foaf:primaryTopicOf "Advanced Image Processing" .
 
 <http://example.org/topics/Mathematical_modelling> a focu:Topics ;
     ns1:title "Mathematical modelling" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Mathematical_model" ;
-    foaf:isPrimaryTopicOf "Large-Scale Optimization" .
+    foaf:primaryTopicOf "Large-Scale Optimization" .
 
 <http://example.org/topics/Model_Driven> a focu:Topics ;
     ns1:title "Model Driven Architecture (MDA)" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Model-driven_architecture" ;
-    foaf:isPrimaryTopicOf "Advanced Software Architectures" .
+    foaf:primaryTopicOf "Advanced Software Architectures" .
 
 <http://example.org/topics/N-gram> a focu:Topics ;
     ns1:title "N-gram" ;
     rdfs:seeAlso "http://dbpedia.org/resource/N-gram" ;
-    foaf:isPrimaryTopicOf "Statistical Natural Language Processing" .
+    foaf:primaryTopicOf "Statistical Natural Language Processing" .
 
 <http://example.org/topics/NP-complete> a focu:Topics ;
     ns1:title "NP-complete" ;
     rdfs:seeAlso "http://dbpedia.org/resource/NP-completeness" ;
-    foaf:isPrimaryTopicOf "Algorithm Design Techniques" .
+    foaf:primaryTopicOf "Algorithm Design Techniques" .
 
 <http://example.org/topics/Network_security> a focu:Topics ;
     ns1:title "Network security" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Network_security" ;
-    foaf:isPrimaryTopicOf "Computer Networks and Protocols" .
+    foaf:primaryTopicOf "Computer Networks and Protocols" .
 
 <http://example.org/topics/Neumann> a focu:Topics ;
     ns1:title "Neumann" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Balthasar_Neumann" ;
-    foaf:isPrimaryTopicOf "Parallel Programming" .
+    foaf:primaryTopicOf "Parallel Programming" .
 
 <http://example.org/topics/Numerical_Analysis> a focu:Topics ;
     ns1:title "Numerical Analysis" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Numerical_analysis" ;
-    foaf:isPrimaryTopicOf "Numerical Analysis of Nonlinear Equations" .
+    foaf:primaryTopicOf "Numerical Analysis of Nonlinear Equations" .
 
 <http://example.org/topics/OLAP> a focu:Topics ;
     ns1:title "OLAP" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Online_analytical_processing" ;
-    foaf:isPrimaryTopicOf "Advanced Database Technology and Applications" .
+    foaf:primaryTopicOf "Advanced Database Technology and Applications" .
 
 <http://example.org/topics/Ontologies> a focu:Topics ;
     ns1:title "Ontologies" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Ontology" ;
-    foaf:isPrimaryTopicOf "Semantic Computing" .
+    foaf:primaryTopicOf "Semantic Computing" .
 
 <http://example.org/topics/OpenCV> a focu:Topics ;
     ns1:title "OpenCV" ;
     rdfs:seeAlso "http://dbpedia.org/resource/OpenCV" ;
-    foaf:isPrimaryTopicOf "Computer Vision" .
+    foaf:primaryTopicOf "Computer Vision" .
 
 <http://example.org/topics/PAN> a focu:Topics ;
     ns1:title "PAN" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Personal_area_network" ;
-    foaf:isPrimaryTopicOf "Mobile Computing and Wireless Networks" .
+    foaf:primaryTopicOf "Mobile Computing and Wireless Networks" .
 
 <http://example.org/topics/Packet_switching> a focu:Topics ;
     ns1:title "Packet switching" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Packet_switching" ;
-    foaf:isPrimaryTopicOf "Computer Networks and Protocols" .
+    foaf:primaryTopicOf "Computer Networks and Protocols" .
 
 <http://example.org/topics/PageRank> a focu:Topics ;
     ns1:title "PageRank" ;
     rdfs:seeAlso "http://dbpedia.org/resource/PageRank" ;
-    foaf:isPrimaryTopicOf "Information Retrieval and Web Search" .
+    foaf:primaryTopicOf "Information Retrieval and Web Search" .
 
 <http://example.org/topics/Parallel_programming> a focu:Topics ;
     ns1:title "Parallel programming" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Parallel_computing" ;
-    foaf:isPrimaryTopicOf "Parallel Programming" .
+    foaf:primaryTopicOf "Parallel Programming" .
 
 <http://example.org/topics/Pattern_Recognition> a focu:Topics ;
     ns1:title "Pattern Recognition" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Pattern_recognition" ;
-    foaf:isPrimaryTopicOf "Advanced Pattern Recognition",
+    foaf:primaryTopicOf "Advanced Pattern Recognition",
         "Pattern Recognition" .
 
 <http://example.org/topics/Pattern_recognition> a focu:Topics ;
     ns1:title "Pattern recognition" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Pattern_recognition" ;
-    foaf:isPrimaryTopicOf "Advanced Pattern Recognition" .
+    foaf:primaryTopicOf "Advanced Pattern Recognition" .
 
 <http://example.org/topics/Query_processing> a focu:Topics ;
     ns1:title "Query processing" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Query_optimization" ;
-    foaf:isPrimaryTopicOf "Advanced Database Technology and Applications" .
+    foaf:primaryTopicOf "Advanced Database Technology and Applications" .
 
 <http://example.org/topics/RDF> a focu:Topics ;
     ns1:title "RDF" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Resource_Description_Framework" ;
-    foaf:isPrimaryTopicOf "Semantic Computing" .
+    foaf:primaryTopicOf "Semantic Computing" .
 
 <http://example.org/topics/RDFS> a focu:Topics ;
     ns1:title "RDFS" ;
     rdfs:seeAlso "http://dbpedia.org/resource/RDF_Schema" ;
-    foaf:isPrimaryTopicOf "Semantic Computing" .
+    foaf:primaryTopicOf "Semantic Computing" .
 
 <http://example.org/topics/Ramsey> a focu:Topics ;
     ns1:title "Ramsey" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Ramsey_Abbey" ;
-    foaf:isPrimaryTopicOf "Discrete Mathematics of Paul ErdÃƒÂ¶s" .
+    foaf:primaryTopicOf "Discrete Mathematics of Paul ErdÃƒÂ¶s" .
 
 <http://example.org/topics/Random_graphs> a focu:Topics ;
     ns1:title "Random graphs" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Random_graph" ;
-    foaf:isPrimaryTopicOf "Discrete Mathematics of Paul ErdÃƒÂ¶s" .
+    foaf:primaryTopicOf "Discrete Mathematics of Paul ErdÃƒÂ¶s" .
 
 <http://example.org/topics/Refactoring> a focu:Topics ;
     ns1:title "Refactoring" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Code_refactoring" ;
-    foaf:isPrimaryTopicOf "Software Refactoring" .
+    foaf:primaryTopicOf "Software Refactoring" .
 
 <http://example.org/topics/Reinforcement_learning> a focu:Topics ;
     ns1:title "Reinforcement learning" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Reinforcement_learning" ;
-    foaf:isPrimaryTopicOf "Machine Learning" .
+    foaf:primaryTopicOf "Machine Learning" .
 
 <http://example.org/topics/Relevance_feedback> a focu:Topics ;
     ns1:title "Relevance feedback" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Relevance_feedback" ;
-    foaf:isPrimaryTopicOf "Information Retrieval and Web Search" .
+    foaf:primaryTopicOf "Information Retrieval and Web Search" .
 
 <http://example.org/topics/Requirements_engineering> a focu:Topics ;
     ns1:title "Requirements engineering" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Requirements_engineering" ;
-    foaf:isPrimaryTopicOf "Software Systems Requirements Specification" .
+    foaf:primaryTopicOf "Software Systems Requirements Specification" .
 
 <http://example.org/topics/Resource_Description> a focu:Topics ;
     ns1:title "Resource Description Framework (RDF)" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Resource_Description_Framework" ;
-    foaf:isPrimaryTopicOf "Foundations of the Semantic Web" .
+    foaf:primaryTopicOf "Foundations of the Semantic Web" .
 
 <http://example.org/topics/Rijndael> a focu:Topics ;
     ns1:title "Rijndael" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Advanced_Encryption_Standard" ;
-    foaf:isPrimaryTopicOf "Cryptography and Data Security" .
+    foaf:primaryTopicOf "Cryptography and Data Security" .
 
 <http://example.org/topics/Risk_analysis> a focu:Topics ;
     ns1:title "Risk analysis" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Risk_analysis" ;
-    foaf:isPrimaryTopicOf "Software Systems Requirements Specification" .
+    foaf:primaryTopicOf "Software Systems Requirements Specification" .
 
 <http://example.org/topics/SOA> a focu:Topics ;
     ns1:title "SOA" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Service-oriented_architecture" ;
-    foaf:isPrimaryTopicOf "Advanced Software Architectures" .
+    foaf:primaryTopicOf "Advanced Software Architectures" .
 
 <http://example.org/topics/SOEN> a focu:Topics ;
     ns1:title "SOEN" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Soen" ;
-    foaf:isPrimaryTopicOf "Project and Report",
+    foaf:primaryTopicOf "Project and Report",
         "Semantic Computing",
         "Software Re-engineering",
         "Software Refactoring",
@@ -1191,33 +1192,33 @@ focu:University a rdfs:Class ;
 <http://example.org/topics/SPARQL> a focu:Topics ;
     ns1:title "SPARQL" ;
     rdfs:seeAlso "http://dbpedia.org/resource/SPARQL" ;
-    foaf:isPrimaryTopicOf "Semantic Computing" .
+    foaf:primaryTopicOf "Semantic Computing" .
 
 <http://example.org/topics/Self-documenting_code> a focu:Topics ;
     ns1:title "Self-documenting code" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Self-documenting_code" ;
-    foaf:isPrimaryTopicOf "Advanced Programming Practices" .
+    foaf:primaryTopicOf "Advanced Programming Practices" .
 
 <http://example.org/topics/Semantic_Web> a focu:Topics ;
     ns1:title "Semantic Web" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Semantic_Web" ;
-    foaf:isPrimaryTopicOf "Foundations of the Semantic Web",
+    foaf:primaryTopicOf "Foundations of the Semantic Web",
         "Semantic Computing" .
 
 <http://example.org/topics/Semantics> a focu:Topics ;
     ns1:title "Semantics" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Semantics" ;
-    foaf:isPrimaryTopicOf "Semantics of Programming Languages" .
+    foaf:primaryTopicOf "Semantics of Programming Languages" .
 
 <http://example.org/topics/Service_Oriented> a focu:Topics ;
     ns1:title "Service Oriented Architecture" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Service-oriented_architecture" ;
-    foaf:isPrimaryTopicOf "Advanced Software Architectures" .
+    foaf:primaryTopicOf "Advanced Software Architectures" .
 
 <http://example.org/topics/Software_Engineering> a focu:Topics ;
     ns1:title "Software Engineering" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Software_engineering" ;
-    foaf:isPrimaryTopicOf "Programming Competency Test",
+    foaf:primaryTopicOf "Programming Competency Test",
         "Software Engineering Processes",
         "Topics in Software Engineering",
         "Topics in Software Engineering II" .
@@ -1225,1343 +1226,1347 @@ focu:University a rdfs:Class ;
 <http://example.org/topics/Software_configuration> a focu:Topics ;
     ns1:title "Software configuration management" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Software_configuration_management" ;
-    foaf:isPrimaryTopicOf "Advanced Programming Practices" .
+    foaf:primaryTopicOf "Advanced Programming Practices" .
 
 <http://example.org/topics/Software_development> a focu:Topics ;
     ns1:title "Software development" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Software_development" ;
-    foaf:isPrimaryTopicOf "Formal Methods" .
+    foaf:primaryTopicOf "Formal Methods" .
 
 <http://example.org/topics/String_matching> a focu:Topics ;
     ns1:title "String matching" ;
     rdfs:seeAlso "http://dbpedia.org/resource/String_searching_algorithm" ;
-    foaf:isPrimaryTopicOf "Algorithm Design Techniques" .
+    foaf:primaryTopicOf "Algorithm Design Techniques" .
 
 <http://example.org/topics/Support_vector> a focu:Topics ;
     ns1:title "Support vector machines" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Support_vector_machine" ;
-    foaf:isPrimaryTopicOf "Machine Learning" .
+    foaf:primaryTopicOf "Machine Learning" .
 
 <http://example.org/topics/System_analysis> a focu:Topics ;
     ns1:title "System analysis" ;
     rdfs:seeAlso "http://dbpedia.org/resource/System_analysis" ;
-    foaf:isPrimaryTopicOf "Semantic Computing" .
+    foaf:primaryTopicOf "Semantic Computing" .
 
 <http://example.org/topics/TCP> a focu:Topics ;
     ns1:title "TCP" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Transmission_Control_Protocol" ;
-    foaf:isPrimaryTopicOf "Computer Networks and Protocols" .
+    foaf:primaryTopicOf "Computer Networks and Protocols" .
 
 <http://example.org/topics/Test> a focu:Topics ;
     ns1:title "Test" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Test_cricket" ;
-    foaf:isPrimaryTopicOf "Programming Competency Test",
+    foaf:primaryTopicOf "Programming Competency Test",
         "Software Systems Requirements Specification" .
 
 <http://example.org/topics/Text_Mining> a focu:Topics ;
     ns1:title "Text Mining" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Text_mining" ;
-    foaf:isPrimaryTopicOf "Semantic Computing" .
+    foaf:primaryTopicOf "Semantic Computing" .
 
 <http://example.org/topics/The_Web> a focu:Topics ;
     ns1:title "The Web" ;
     rdfs:seeAlso "http://dbpedia.org/resource/World_Wide_Web" ;
-    foaf:isPrimaryTopicOf "Semantic Computing" .
+    foaf:primaryTopicOf "Semantic Computing" .
 
 <http://example.org/topics/Time> a focu:Topics ;
     ns1:title "Time" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Time" ;
-    foaf:isPrimaryTopicOf "Theory of Computation" .
+    foaf:primaryTopicOf "Theory of Computation" .
 
 <http://example.org/topics/Tokenization> a focu:Topics ;
     ns1:title "Tokenization" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Lexical_analysis" ;
-    foaf:isPrimaryTopicOf "Information Retrieval and Web Search" .
+    foaf:primaryTopicOf "Information Retrieval and Web Search" .
 
 <http://example.org/topics/Turing_computable> a focu:Topics ;
     ns1:title "Turing computable" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Computable_function" ;
-    foaf:isPrimaryTopicOf "Theory of Computation" .
+    foaf:primaryTopicOf "Theory of Computation" .
 
 <http://example.org/topics/Turing_machines> a focu:Topics ;
     ns1:title "Turing machines" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Turing_machine" ;
-    foaf:isPrimaryTopicOf "Theory of Computation" .
+    foaf:primaryTopicOf "Theory of Computation" .
 
 <http://example.org/topics/UDP> a focu:Topics ;
     ns1:title "UDP" ;
     rdfs:seeAlso "http://dbpedia.org/resource/User_Datagram_Protocol" ;
-    foaf:isPrimaryTopicOf "Computer Networks and Protocols" .
+    foaf:primaryTopicOf "Computer Networks and Protocols" .
 
 <http://example.org/topics/UML> a focu:Topics ;
     ns1:title "UML" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Unified_Modeling_Language" ;
-    foaf:isPrimaryTopicOf "Software Systems Requirements Specification" .
+    foaf:primaryTopicOf "Software Systems Requirements Specification" .
 
 <http://example.org/topics/Unsupervised_learning> a focu:Topics ;
     ns1:title "Unsupervised learning" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Unsupervised_learning" ;
-    foaf:isPrimaryTopicOf "Machine Learning" .
+    foaf:primaryTopicOf "Machine Learning" .
 
 <http://example.org/topics/Van> a focu:Topics ;
     ns1:title "Van" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Van" ;
-    foaf:isPrimaryTopicOf "Discrete Mathematics of Paul ErdÃƒÂ¶s" .
+    foaf:primaryTopicOf "Discrete Mathematics of Paul ErdÃƒÂ¶s" .
 
 <http://example.org/topics/Version_control> a focu:Topics ;
     ns1:title "Version control" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Version_control" ;
-    foaf:isPrimaryTopicOf "Software Engineering Processes" .
+    foaf:primaryTopicOf "Software Engineering Processes" .
 
 <http://example.org/topics/Voronoi> a focu:Topics ;
     ns1:title "Voronoi" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Voronoi_diagram" ;
-    foaf:isPrimaryTopicOf "Computational Geometry" .
+    foaf:primaryTopicOf "Computational Geometry" .
 
 <http://example.org/topics/Web_Ontology> a focu:Topics ;
     ns1:title "Web Ontology Language (OWL)" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Web_Ontology_Language" ;
-    foaf:isPrimaryTopicOf "Foundations of the Semantic Web" .
+    foaf:primaryTopicOf "Foundations of the Semantic Web" .
 
 <http://example.org/topics/Weighting> a focu:Topics ;
     ns1:title "Weighting" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Weighting" ;
-    foaf:isPrimaryTopicOf "Information Retrieval and Web Search" .
+    foaf:primaryTopicOf "Information Retrieval and Web Search" .
 
 <http://example.org/topics/World_Wide> a focu:Topics ;
     ns1:title "World Wide Web Consortium (W3C)" ;
     rdfs:seeAlso "http://dbpedia.org/resource/World_Wide_Web_Consortium" ;
-    foaf:isPrimaryTopicOf "Foundations of the Semantic Web" .
+    foaf:primaryTopicOf "Foundations of the Semantic Web" .
 
 <http://example.org/topics/XML> a focu:Topics ;
     ns1:title "XML" ;
     rdfs:seeAlso "http://dbpedia.org/resource/XML" ;
-    foaf:isPrimaryTopicOf "Advanced Database Technology and Applications",
+    foaf:primaryTopicOf "Advanced Database Technology and Applications",
         "Information Retrieval and Web Search" .
 
 <http://example.org/topics/access_control> a focu:Topics ;
     ns1:title "access control" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Access_control" ;
-    foaf:isPrimaryTopicOf "Cryptography and Data Security" .
+    foaf:primaryTopicOf "Cryptography and Data Security" .
 
 <http://example.org/topics/algorithm> a focu:Topics ;
     ns1:title "algorithm" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Algorithm" ;
-    foaf:isPrimaryTopicOf "Algorithm Design Techniques",
+    foaf:primaryTopicOf "Algorithm Design Techniques",
         "Information Retrieval and Web Search" .
 
 <http://example.org/topics/application_architecture> a focu:Topics ;
     ns1:title "application architecture" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Applications_architecture" ;
-    foaf:isPrimaryTopicOf "Advanced 3D Graphics for Game Programming" .
+    foaf:primaryTopicOf "Advanced 3D Graphics for Game Programming" .
 
 <http://example.org/topics/asymptotic_stability> a focu:Topics ;
     ns1:title "asymptotic stability" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Lyapunov_stability" ;
-    foaf:isPrimaryTopicOf "Numerical Analysis of Nonlinear Equations" .
+    foaf:primaryTopicOf "Numerical Analysis of Nonlinear Equations" .
 
 <http://example.org/topics/authentication> a focu:Topics ;
     ns1:title "authentication" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Authentication" ;
-    foaf:isPrimaryTopicOf "Cryptography and Data Security" .
+    foaf:primaryTopicOf "Cryptography and Data Security" .
 
 <http://example.org/topics/automated_reasoning> a focu:Topics ;
     ns1:title "automated reasoning" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Automated_reasoning" ;
-    foaf:isPrimaryTopicOf "Applied Artificial Intelligence" .
+    foaf:primaryTopicOf "Applied Artificial Intelligence" .
 
 <http://example.org/topics/bilinear> a focu:Topics ;
     ns1:title "bilinear" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Bilinear_form" ;
-    foaf:isPrimaryTopicOf "Large-Scale Optimization" .
+    foaf:primaryTopicOf "Large-Scale Optimization" .
 
 <http://example.org/topics/binary> a focu:Topics ;
     ns1:title "binary" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Binary_number" ;
-    foaf:isPrimaryTopicOf "Computational Geometry" .
+    foaf:primaryTopicOf "Computational Geometry" .
 
 <http://example.org/topics/bioinformatics> a focu:Topics ;
     ns1:title "bioinformatics" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Bioinformatics" ;
-    foaf:isPrimaryTopicOf "Bioinformatics Algorithms",
+    foaf:primaryTopicOf "Bioinformatics Algorithms",
         "Bioinformatics Databases and Systems" .
 
 <http://example.org/topics/blackboard> a focu:Topics ;
     ns1:title "blackboard" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Blackboard" ;
-    foaf:isPrimaryTopicOf "Intelligent Systems" .
+    foaf:primaryTopicOf "Intelligent Systems" .
 
 <http://example.org/topics/branch-and-bound> a focu:Topics ;
     ns1:title "branch-and-bound" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Branch_and_bound" ;
-    foaf:isPrimaryTopicOf "Algorithm Design Techniques",
+    foaf:primaryTopicOf "Algorithm Design Techniques",
         "Large-Scale Optimization" .
 
 <http://example.org/topics/business_intelligence> a focu:Topics ;
     ns1:title "business intelligence" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Business_intelligence" ;
-    foaf:isPrimaryTopicOf "Semantic Computing" .
+    foaf:primaryTopicOf "Semantic Computing" .
 
 <http://example.org/topics/challenge-response_authentication> a focu:Topics ;
     ns1:title "challenge-response authentication" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Challengeâ€“response_authentication" ;
-    foaf:isPrimaryTopicOf "Cryptography and Data Security" .
+    foaf:primaryTopicOf "Cryptography and Data Security" .
 
 <http://example.org/topics/cinema> a focu:Topics ;
     ns1:title "cinema" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Movie_theater" ;
-    foaf:isPrimaryTopicOf "Advanced Rendering and Animation" .
+    foaf:primaryTopicOf "Advanced Rendering and Animation" .
 
 <http://example.org/topics/cloud_computing> a focu:Topics ;
     ns1:title "cloud computing" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Cloud_computing" ;
-    foaf:isPrimaryTopicOf "Advanced Software Architectures" .
+    foaf:primaryTopicOf "Advanced Software Architectures" .
 
 <http://example.org/topics/code_analysis> a focu:Topics ;
     ns1:title "code analysis" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Static_program_analysis" ;
-    foaf:isPrimaryTopicOf "Software Comprehension and Maintenance",
+    foaf:primaryTopicOf "Software Comprehension and Maintenance",
         "Software Refactoring" .
 
 <http://example.org/topics/code_generation> a focu:Topics ;
     ns1:title "code generation" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Automatic_programming" ;
-    foaf:isPrimaryTopicOf "Formal Methods" .
+    foaf:primaryTopicOf "Formal Methods" .
 
 <http://example.org/topics/code_optimization> a focu:Topics ;
     ns1:title "code optimization" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Program_optimization" ;
-    foaf:isPrimaryTopicOf "Compiler Design" .
+    foaf:primaryTopicOf "Compiler Design" .
 
 <http://example.org/topics/code_reuse> a focu:Topics ;
     ns1:title "code reuse" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Code_reuse" ;
-    foaf:isPrimaryTopicOf "Advanced Programming Practices" .
+    foaf:primaryTopicOf "Advanced Programming Practices" .
 
 <http://example.org/topics/code_review> a focu:Topics ;
     ns1:title "code review" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Code_review" ;
-    foaf:isPrimaryTopicOf "Software Engineering Processes" .
+    foaf:primaryTopicOf "Software Engineering Processes" .
 
 <http://example.org/topics/cognitive> a focu:Topics ;
     ns1:title "cognitive" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Cognition" ;
-    foaf:isPrimaryTopicOf "Software Comprehension and Maintenance" .
+    foaf:primaryTopicOf "Software Comprehension and Maintenance" .
 
 <http://example.org/topics/collision_detection> a focu:Topics ;
     ns1:title "collision detection" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Collision_detection" ;
-    foaf:isPrimaryTopicOf "Advanced 3D Graphics for Game Programming",
+    foaf:primaryTopicOf "Advanced 3D Graphics for Game Programming",
         "Advanced Game Development" .
 
 <http://example.org/topics/collocation> a focu:Topics ;
     ns1:title "collocation" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Collocation_method" ;
-    foaf:isPrimaryTopicOf "Topics in Scientific Computation" .
+    foaf:primaryTopicOf "Topics in Scientific Computation" .
 
 <http://example.org/topics/combinatorial> a focu:Topics ;
     ns1:title "combinatorial" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Combinatorial_optimization",
         "http://dbpedia.org/resource/Combinatorics" ;
-    foaf:isPrimaryTopicOf "Algorithm Design Techniques",
+    foaf:primaryTopicOf "Algorithm Design Techniques",
         "Combinatorial Algorithms" .
 
 <http://example.org/topics/combinatorics> a focu:Topics ;
     ns1:title "combinatorics" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Combinatorics" ;
-    foaf:isPrimaryTopicOf "Combinatorial Algorithms" .
+    foaf:primaryTopicOf "Combinatorial Algorithms" .
 
 <http://example.org/topics/commodity> a focu:Topics ;
     ns1:title "commodity" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Commodity_computing" ;
-    foaf:isPrimaryTopicOf "Parallel Programming" .
+    foaf:primaryTopicOf "Parallel Programming" .
 
 <http://example.org/topics/communication> a focu:Topics ;
     ns1:title "communication" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Communication" ;
-    foaf:isPrimaryTopicOf "Distributed System Design" .
+    foaf:primaryTopicOf "Distributed System Design" .
 
 <http://example.org/topics/complexity_analysis> a focu:Topics ;
     ns1:title "complexity analysis" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Analysis_of_algorithms" ;
-    foaf:isPrimaryTopicOf "Algorithm Design Techniques",
+    foaf:primaryTopicOf "Algorithm Design Techniques",
         "Parallel Algorithms and Architectures" .
 
 <http://example.org/topics/complexity_measures> a focu:Topics ;
     ns1:title "complexity measures" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Computational_complexity_theory" ;
-    foaf:isPrimaryTopicOf "Theory of Computation" .
+    foaf:primaryTopicOf "Theory of Computation" .
 
 <http://example.org/topics/complexity_theory> a focu:Topics ;
     ns1:title "complexity theory" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Computational_complexity_theory" ;
-    foaf:isPrimaryTopicOf "Theory of Computation" .
+    foaf:primaryTopicOf "Theory of Computation" .
 
 <http://example.org/topics/compositional_semantics> a focu:Topics ;
     ns1:title "compositional semantics" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Principle_of_compositionality" ;
-    foaf:isPrimaryTopicOf "Natural Language Analysis" .
+    foaf:primaryTopicOf "Natural Language Analysis" .
 
 <http://example.org/topics/computer> a focu:Topics ;
     ns1:title "computer" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Computer_science" ;
-    foaf:isPrimaryTopicOf "Advanced Game Development" .
+    foaf:primaryTopicOf "Advanced Game Development" .
 
 <http://example.org/topics/computer-aided_design> a focu:Topics ;
     ns1:title "computer-aided design" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Computer-aided_design" ;
-    foaf:isPrimaryTopicOf "Digital Geometric Modelling" .
+    foaf:primaryTopicOf "Digital Geometric Modelling" .
 
 <http://example.org/topics/computer_aided> a focu:Topics ;
     ns1:title "computer aided design" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Computer-aided_design" ;
-    foaf:isPrimaryTopicOf "Computational Geometry" .
+    foaf:primaryTopicOf "Computational Geometry" .
 
 <http://example.org/topics/computer_graphics> a focu:Topics ;
     ns1:title "computer graphics" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Computer_graphics" ;
-    foaf:isPrimaryTopicOf "Advanced Rendering and Animation",
+    foaf:primaryTopicOf "Advanced Rendering and Animation",
         "Computational Geometry" .
 
 <http://example.org/topics/computer_vision> a focu:Topics ;
     ns1:title "computer vision" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Computer_vision" ;
-    foaf:isPrimaryTopicOf "Computer Vision" .
+    foaf:primaryTopicOf "Computer Vision" .
 
 <http://example.org/topics/concurrency> a focu:Topics ;
     ns1:title "concurrency" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Concurrent_computing",
         "http://dbpedia.org/resource/Parallel_computing" ;
-    foaf:isPrimaryTopicOf "Advanced Programming Practices",
+    foaf:primaryTopicOf "Advanced Programming Practices",
         "Distributed System Design" .
 
 <http://example.org/topics/concurrency_control> a focu:Topics ;
     ns1:title "concurrency control" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Concurrency_control" ;
-    foaf:isPrimaryTopicOf "Distributed System Design" .
+    foaf:primaryTopicOf "Distributed System Design" .
 
 <http://example.org/topics/confidentiality> a focu:Topics ;
     ns1:title "confidentiality" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Confidentiality" ;
-    foaf:isPrimaryTopicOf "Cryptography and Data Security" .
+    foaf:primaryTopicOf "Cryptography and Data Security" .
 
 <http://example.org/topics/conflict_resolution> a focu:Topics ;
     ns1:title "conflict resolution" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Conflict_resolution" ;
-    foaf:isPrimaryTopicOf "Intelligent Systems" .
+    foaf:primaryTopicOf "Intelligent Systems" .
 
 <http://example.org/topics/conjecture> a focu:Topics ;
     ns1:title "conjecture" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Conjecture" ;
-    foaf:isPrimaryTopicOf "Discrete Mathematics of Paul ErdÃƒÂ¶s" .
+    foaf:primaryTopicOf "Discrete Mathematics of Paul ErdÃƒÂ¶s" .
 
 <http://example.org/topics/convex> a focu:Topics ;
     ns1:title "convex" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Convex_optimization",
         "http://dbpedia.org/resource/Convex_set" ;
-    foaf:isPrimaryTopicOf "Computational Geometry",
+    foaf:primaryTopicOf "Computational Geometry",
         "Large-Scale Optimization" .
 
 <http://example.org/topics/cryptographic> a focu:Topics ;
     ns1:title "cryptographic" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Cryptography" ;
-    foaf:isPrimaryTopicOf "Cryptography and Data Security" .
+    foaf:primaryTopicOf "Cryptography and Data Security" .
 
 <http://example.org/topics/cryptography> a focu:Topics ;
     ns1:title "cryptography" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Cryptography" ;
-    foaf:isPrimaryTopicOf "Cryptography and Data Security" .
+    foaf:primaryTopicOf "Cryptography and Data Security" .
 
 <http://example.org/topics/data_acquisition> a focu:Topics ;
     ns1:title "data acquisition" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Data_acquisition" ;
-    foaf:isPrimaryTopicOf "Advanced Pattern Recognition" .
+    foaf:primaryTopicOf "Advanced Pattern Recognition" .
 
 <http://example.org/topics/data_integrity> a focu:Topics ;
     ns1:title "data integrity" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Data_integrity" ;
-    foaf:isPrimaryTopicOf "Cryptography and Data Security" .
+    foaf:primaryTopicOf "Cryptography and Data Security" .
 
 <http://example.org/topics/data_management> a focu:Topics ;
     ns1:title "data management" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Data_management" ;
-    foaf:isPrimaryTopicOf "Advanced Database Technology and Applications",
+    foaf:primaryTopicOf "Advanced Database Technology and Applications",
         "Bioinformatics Databases and Systems" .
 
 <http://example.org/topics/database> a focu:Topics ;
     ns1:title "database" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Database" ;
-    foaf:isPrimaryTopicOf "Bioinformatics Databases and Systems" .
+    foaf:primaryTopicOf "Bioinformatics Databases and Systems" .
 
 <http://example.org/topics/debugging> a focu:Topics ;
     ns1:title "debugging" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Debugging" ;
-    foaf:isPrimaryTopicOf "Formal Methods" .
+    foaf:primaryTopicOf "Formal Methods" .
 
 <http://example.org/topics/decision_trees> a focu:Topics ;
     ns1:title "decision trees" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Decision_tree_learning" ;
-    foaf:isPrimaryTopicOf "Machine Learning" .
+    foaf:primaryTopicOf "Machine Learning" .
 
 <http://example.org/topics/deep_belief> a focu:Topics ;
     ns1:title "deep belief networks" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Deep_belief_network" ;
-    foaf:isPrimaryTopicOf "Machine Learning" .
+    foaf:primaryTopicOf "Machine Learning" .
 
 <http://example.org/topics/design_patterns> a focu:Topics ;
     ns1:title "design patterns" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Software_design_pattern" ;
-    foaf:isPrimaryTopicOf "Advanced Software Architectures",
+    foaf:primaryTopicOf "Advanced Software Architectures",
         "Software Design Methodologies" .
 
 <http://example.org/topics/diffusion> a focu:Topics ;
     ns1:title "diffusion" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Diffusion_equation" ;
-    foaf:isPrimaryTopicOf "Advanced Image Processing",
+    foaf:primaryTopicOf "Advanced Image Processing",
         "Topics in Scientific Computation" .
 
 <http://example.org/topics/digital> a focu:Topics ;
     ns1:title "digital" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Digital_data",
         "http://dbpedia.org/resource/Digital_electronics" ;
-    foaf:isPrimaryTopicOf "Cryptography and Data Security",
+    foaf:primaryTopicOf "Cryptography and Data Security",
         "Digital Geometric Modelling" .
 
 <http://example.org/topics/digital_geometry> a focu:Topics ;
     ns1:title "digital geometry" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Digital_geometry" ;
-    foaf:isPrimaryTopicOf "Digital Geometric Modelling" .
+    foaf:primaryTopicOf "Digital Geometric Modelling" .
 
 <http://example.org/topics/dimensionality_reduction> a focu:Topics ;
     ns1:title "dimensionality reduction" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Dimensionality_reduction" ;
-    foaf:isPrimaryTopicOf "Machine Learning" .
+    foaf:primaryTopicOf "Machine Learning" .
 
 <http://example.org/topics/discretization> a focu:Topics ;
     ns1:title "discretization" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Discretization" ;
-    foaf:isPrimaryTopicOf "Numerical Analysis of Nonlinear Equations" .
+    foaf:primaryTopicOf "Numerical Analysis of Nonlinear Equations" .
 
 <http://example.org/topics/discriminant> a focu:Topics ;
     ns1:title "discriminant" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Discriminant" ;
-    foaf:isPrimaryTopicOf "Pattern Recognition" .
+    foaf:primaryTopicOf "Pattern Recognition" .
 
 <http://example.org/topics/distributed_computing> a focu:Topics ;
     ns1:title "distributed computing" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Distributed_computing" ;
-    foaf:isPrimaryTopicOf "Distributed System Design" .
+    foaf:primaryTopicOf "Distributed System Design" .
 
 <http://example.org/topics/distributed_systems> a focu:Topics ;
     ns1:title "distributed systems" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Distributed_computing" ;
-    foaf:isPrimaryTopicOf "Distributed System Design",
+    foaf:primaryTopicOf "Distributed System Design",
         "Semantics of Programming Languages" .
 
 <http://example.org/topics/domain-specific> a focu:Topics ;
     ns1:title "domain-specific" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Domain-specific_language" ;
-    foaf:isPrimaryTopicOf "Software Systems Requirements Specification" .
+    foaf:primaryTopicOf "Software Systems Requirements Specification" .
 
 <http://example.org/topics/dynamic_programming> a focu:Topics ;
     ns1:title "dynamic programming" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Dynamic_programming" ;
-    foaf:isPrimaryTopicOf "Algorithm Design Techniques",
+    foaf:primaryTopicOf "Algorithm Design Techniques",
         "Bioinformatics Algorithms" .
 
 <http://example.org/topics/dynamic_typing> a focu:Topics ;
     ns1:title "dynamic typing" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Type_system" ;
-    foaf:isPrimaryTopicOf "Comparative Study of Programming Languages" .
+    foaf:primaryTopicOf "Comparative Study of Programming Languages" .
 
 <http://example.org/topics/dynamical_systems> a focu:Topics ;
     ns1:title "dynamical systems" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Dynamical_system" ;
-    foaf:isPrimaryTopicOf "Machine Learning" .
+    foaf:primaryTopicOf "Machine Learning" .
 
 <http://example.org/topics/e-commerce> a focu:Topics ;
     ns1:title "e-commerce" ;
     rdfs:seeAlso "http://dbpedia.org/resource/E-commerce" ;
-    foaf:isPrimaryTopicOf "Semantic Computing" .
+    foaf:primaryTopicOf "Semantic Computing" .
 
 <http://example.org/topics/e-science> a focu:Topics ;
     ns1:title "e-science" ;
     rdfs:seeAlso "http://dbpedia.org/resource/E-Science" ;
-    foaf:isPrimaryTopicOf "Semantic Computing" .
+    foaf:primaryTopicOf "Semantic Computing" .
 
 <http://example.org/topics/edge_detection> a focu:Topics ;
     ns1:title "edge detection" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Edge_detection" ;
-    foaf:isPrimaryTopicOf "Image Processing" .
+    foaf:primaryTopicOf "Image Processing" .
 
 <http://example.org/topics/encryption> a focu:Topics ;
     ns1:title "encryption" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Public-key_cryptography" ;
-    foaf:isPrimaryTopicOf "Cryptography and Data Security" .
+    foaf:primaryTopicOf "Cryptography and Data Security" .
 
 <http://example.org/topics/energy> a focu:Topics ;
     ns1:title "energy" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Energy" ;
-    foaf:isPrimaryTopicOf "Advanced Image Processing" .
+    foaf:primaryTopicOf "Advanced Image Processing" .
 
 <http://example.org/topics/error_detection> a focu:Topics ;
     ns1:title "error detection" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Error_detection_and_correction" ;
-    foaf:isPrimaryTopicOf "Computer Networks and Protocols" .
+    foaf:primaryTopicOf "Computer Networks and Protocols" .
 
 <http://example.org/topics/evolution> a focu:Topics ;
     ns1:title "evolution" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Evolution" ;
-    foaf:isPrimaryTopicOf "Software Refactoring",
+    foaf:primaryTopicOf "Software Refactoring",
         "Software Systems Requirements Specification" .
 
 <http://example.org/topics/expectation_maximization> a focu:Topics ;
     ns1:title "expectation maximization" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Expectationâ€“maximization_algorithm" ;
-    foaf:isPrimaryTopicOf "Machine Learning" .
+    foaf:primaryTopicOf "Machine Learning" .
 
 <http://example.org/topics/expert_systems> a focu:Topics ;
     ns1:title "expert systems" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Expert_system" ;
-    foaf:isPrimaryTopicOf "Advanced Pattern Recognition" .
+    foaf:primaryTopicOf "Advanced Pattern Recognition" .
 
 <http://example.org/topics/expression> a focu:Topics ;
     ns1:title "expression" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Gene_expression" ;
-    foaf:isPrimaryTopicOf "Bioinformatics Algorithms" .
+    foaf:primaryTopicOf "Bioinformatics Algorithms" .
 
 <http://example.org/topics/fault-tolerant> a focu:Topics ;
     ns1:title "fault-tolerant" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Fault_tolerance" ;
-    foaf:isPrimaryTopicOf "Distributed System Design" .
+    foaf:primaryTopicOf "Distributed System Design" .
 
 <http://example.org/topics/fault_tolerance> a focu:Topics ;
     ns1:title "fault tolerance" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Fault_tolerance" ;
-    foaf:isPrimaryTopicOf "Advanced Programming Practices",
+    foaf:primaryTopicOf "Advanced Programming Practices",
         "Distributed System Design" .
 
 <http://example.org/topics/feature_extraction> a focu:Topics ;
     ns1:title "feature extraction" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Feature_extraction" ;
-    foaf:isPrimaryTopicOf "Advanced Pattern Recognition" .
+    foaf:primaryTopicOf "Advanced Pattern Recognition" .
 
 <http://example.org/topics/finite-state> a focu:Topics ;
     ns1:title "finite-state" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Finite-state_machine" ;
-    foaf:isPrimaryTopicOf "Formal Methods" .
+    foaf:primaryTopicOf "Formal Methods" .
 
 <http://example.org/topics/finite_difference> a focu:Topics ;
     ns1:title "finite difference method" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Finite_difference_method" ;
-    foaf:isPrimaryTopicOf "Topics in Scientific Computation" .
+    foaf:primaryTopicOf "Topics in Scientific Computation" .
 
 <http://example.org/topics/first-order_logic> a focu:Topics ;
     ns1:title "first-order logic" ;
     rdfs:seeAlso "http://dbpedia.org/resource/First-order_logic" ;
-    foaf:isPrimaryTopicOf "Introduction to Knowledge-Base Systems" .
+    foaf:primaryTopicOf "Introduction to Knowledge-Base Systems" .
 
 <http://example.org/topics/flow_control> a focu:Topics ;
     ns1:title "flow control" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Control_flow" ;
-    foaf:isPrimaryTopicOf "Computer Networks and Protocols" .
+    foaf:primaryTopicOf "Computer Networks and Protocols" .
 
 <http://example.org/topics/formal_languages> a focu:Topics ;
     ns1:title "formal languages" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Formal_language" ;
-    foaf:isPrimaryTopicOf "Software Systems Requirements Specification" .
+    foaf:primaryTopicOf "Software Systems Requirements Specification" .
 
 <http://example.org/topics/formal_methods> a focu:Topics ;
     ns1:title "formal methods" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Formal_methods" ;
-    foaf:isPrimaryTopicOf "Formal Methods" .
+    foaf:primaryTopicOf "Formal Methods" .
 
 <http://example.org/topics/formal_specification> a focu:Topics ;
     ns1:title "formal specification" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Formal_specification" ;
-    foaf:isPrimaryTopicOf "Formal Methods",
+    foaf:primaryTopicOf "Formal Methods",
         "Software Systems Requirements Specification" .
 
 <http://example.org/topics/frequency_domain> a focu:Topics ;
     ns1:title "frequency domain" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Frequency_domain" ;
-    foaf:isPrimaryTopicOf "Image Processing" .
+    foaf:primaryTopicOf "Image Processing" .
 
 <http://example.org/topics/gene> a focu:Topics ;
     ns1:title "gene" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Gene" ;
-    foaf:isPrimaryTopicOf "Bioinformatics Algorithms" .
+    foaf:primaryTopicOf "Bioinformatics Algorithms" .
 
 <http://example.org/topics/geometry> a focu:Topics ;
     ns1:title "geometry" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Geometry" ;
-    foaf:isPrimaryTopicOf "Digital Geometric Modelling" .
+    foaf:primaryTopicOf "Digital Geometric Modelling" .
 
 <http://example.org/topics/graph> a focu:Topics ;
     ns1:title "graph" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Graph_theory" ;
-    foaf:isPrimaryTopicOf "Algorithm Design Techniques" .
+    foaf:primaryTopicOf "Algorithm Design Techniques" .
 
 <http://example.org/topics/graph_colouring> a focu:Topics ;
     ns1:title "graph colouring" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Graph_coloring" ;
-    foaf:isPrimaryTopicOf "Discrete Mathematics of Paul ErdÃƒÂ¶s" .
+    foaf:primaryTopicOf "Discrete Mathematics of Paul ErdÃƒÂ¶s" .
 
 <http://example.org/topics/graph_theory> a focu:Topics ;
     ns1:title "graph theory" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Graph_theory" ;
-    foaf:isPrimaryTopicOf "Combinatorial Algorithms" .
+    foaf:primaryTopicOf "Combinatorial Algorithms" .
 
 <http://example.org/topics/heterogeneous_computing> a focu:Topics ;
     ns1:title "heterogeneous computing" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Heterogeneous_computing" ;
-    foaf:isPrimaryTopicOf "Parallel Programming" .
+    foaf:primaryTopicOf "Parallel Programming" .
 
 <http://example.org/topics/heuristic> a focu:Topics ;
     ns1:title "heuristic" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Heuristic" ;
-    foaf:isPrimaryTopicOf "Applied Artificial Intelligence" .
+    foaf:primaryTopicOf "Applied Artificial Intelligence" .
 
 <http://example.org/topics/histogram> a focu:Topics ;
     ns1:title "histogram" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Histogram" ;
-    foaf:isPrimaryTopicOf "Image Processing" .
+    foaf:primaryTopicOf "Image Processing" .
 
 <http://example.org/topics/homotopy> a focu:Topics ;
     ns1:title "homotopy" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Homotopy" ;
-    foaf:isPrimaryTopicOf "Numerical Analysis of Nonlinear Equations" .
+    foaf:primaryTopicOf "Numerical Analysis of Nonlinear Equations" .
 
 <http://example.org/topics/image_compression> a focu:Topics ;
     ns1:title "image compression" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Image_compression" ;
-    foaf:isPrimaryTopicOf "Image Processing" .
+    foaf:primaryTopicOf "Image Processing" .
 
 <http://example.org/topics/image_enhancement> a focu:Topics ;
     ns1:title "image enhancement" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Digital_image_processing" ;
-    foaf:isPrimaryTopicOf "Image Processing" .
+    foaf:primaryTopicOf "Image Processing" .
 
 <http://example.org/topics/image_processing> a focu:Topics ;
     ns1:title "image processing" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Digital_image_processing" ;
-    foaf:isPrimaryTopicOf "Advanced Image Processing" .
+    foaf:primaryTopicOf "Advanced Image Processing" .
 
 <http://example.org/topics/image_segmentation> a focu:Topics ;
     ns1:title "image segmentation" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Image_segmentation" ;
-    foaf:isPrimaryTopicOf "Image Processing" .
+    foaf:primaryTopicOf "Image Processing" .
 
 <http://example.org/topics/inpainting> a focu:Topics ;
     ns1:title "inpainting" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Inpainting" ;
-    foaf:isPrimaryTopicOf "Advanced Image Processing" .
+    foaf:primaryTopicOf "Advanced Image Processing" .
 
 <http://example.org/topics/integer> a focu:Topics ;
     ns1:title "integer" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Integer" ;
-    foaf:isPrimaryTopicOf "Large-Scale Optimization" .
+    foaf:primaryTopicOf "Large-Scale Optimization" .
 
 <http://example.org/topics/interpolation> a focu:Topics ;
     ns1:title "interpolation" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Interpolation" ;
-    foaf:isPrimaryTopicOf "Animation for Computer Games" .
+    foaf:primaryTopicOf "Animation for Computer Games" .
 
 <http://example.org/topics/interprocess_communication> a focu:Topics ;
     ns1:title "interprocess communication" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Inter-process_communication" ;
-    foaf:isPrimaryTopicOf "Distributed System Design" .
+    foaf:primaryTopicOf "Distributed System Design" .
 
 <http://example.org/topics/inverse_kinematics> a focu:Topics ;
     ns1:title "inverse kinematics" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Inverse_kinematics" ;
-    foaf:isPrimaryTopicOf "Animation for Computer Games" .
+    foaf:primaryTopicOf "Animation for Computer Games" .
 
 <http://example.org/topics/k-means> a focu:Topics ;
     ns1:title "k-means" ;
     rdfs:seeAlso "http://dbpedia.org/resource/K-means_clustering" ;
-    foaf:isPrimaryTopicOf "Machine Learning" .
+    foaf:primaryTopicOf "Machine Learning" .
 
 <http://example.org/topics/knowledge_management> a focu:Topics ;
     ns1:title "knowledge management" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Knowledge_management" ;
-    foaf:isPrimaryTopicOf "Bioinformatics Databases and Systems" .
+    foaf:primaryTopicOf "Bioinformatics Databases and Systems" .
 
 <http://example.org/topics/knowledge_representation> a focu:Topics ;
     ns1:title "knowledge representation" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Knowledge_representation_and_reasoning" ;
-    foaf:isPrimaryTopicOf "Applied Artificial Intelligence",
+    foaf:primaryTopicOf "Applied Artificial Intelligence",
         "Introduction to Knowledge-Base Systems" .
 
 <http://example.org/topics/language_documentation> a focu:Topics ;
     ns1:title "language documentation" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Language_documentation" ;
-    foaf:isPrimaryTopicOf "Software Systems Requirements Specification" .
+    foaf:primaryTopicOf "Software Systems Requirements Specification" .
 
 <http://example.org/topics/level_set> a focu:Topics ;
     ns1:title "level set method" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Level-set_method" ;
-    foaf:isPrimaryTopicOf "Advanced Image Processing" .
+    foaf:primaryTopicOf "Advanced Image Processing" .
 
 <http://example.org/topics/lexical_analysis> a focu:Topics ;
     ns1:title "lexical analysis" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Lexical_analysis" ;
-    foaf:isPrimaryTopicOf "Compiler Design" .
+    foaf:primaryTopicOf "Compiler Design" .
 
 <http://example.org/topics/link_analysis> a focu:Topics ;
     ns1:title "link analysis" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Link_analysis" ;
-    foaf:isPrimaryTopicOf "Information Retrieval and Web Search" .
+    foaf:primaryTopicOf "Information Retrieval and Web Search" .
 
 <http://example.org/topics/load_balancing> a focu:Topics ;
     ns1:title "load balancing" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Weight_distribution" ;
-    foaf:isPrimaryTopicOf "Parallel Programming" .
+    foaf:primaryTopicOf "Parallel Programming" .
 
 <http://example.org/topics/logic> a focu:Topics ;
     ns1:title "logic" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Logic" ;
-    foaf:isPrimaryTopicOf "Semantics of Programming Languages" .
+    foaf:primaryTopicOf "Semantics of Programming Languages" .
 
 <http://example.org/topics/logic_programming> a focu:Topics ;
     ns1:title "logic programming" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Logic_programming" ;
-    foaf:isPrimaryTopicOf "Introduction to Knowledge-Base Systems" .
+    foaf:primaryTopicOf "Introduction to Knowledge-Base Systems" .
 
 <http://example.org/topics/logistic_regression> a focu:Topics ;
     ns1:title "logistic regression" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Logistic_regression" ;
-    foaf:isPrimaryTopicOf "Machine Learning" .
+    foaf:primaryTopicOf "Machine Learning" .
 
 <http://example.org/topics/machine_learning> a focu:Topics ;
     ns1:title "machine learning" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Machine_learning" ;
-    foaf:isPrimaryTopicOf "Bioinformatics Algorithms",
+    foaf:primaryTopicOf "Bioinformatics Algorithms",
         "Machine Learning" .
 
 <http://example.org/topics/massively_parallel> a focu:Topics ;
     ns1:title "massively parallel" ;
     rdfs:seeAlso "http://dbpedia.org/resource/MIMD" ;
-    foaf:isPrimaryTopicOf "Parallel Programming" .
+    foaf:primaryTopicOf "Parallel Programming" .
 
 <http://example.org/topics/memory> a focu:Topics ;
     ns1:title "memory" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Computer_memory" ;
-    foaf:isPrimaryTopicOf "Parallel Algorithms and Architectures",
+    foaf:primaryTopicOf "Parallel Algorithms and Architectures",
         "Parallel Programming" .
 
 <http://example.org/topics/mesh_generation> a focu:Topics ;
     ns1:title "mesh generation" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Mesh_generation" ;
-    foaf:isPrimaryTopicOf "Computational Geometry" .
+    foaf:primaryTopicOf "Computational Geometry" .
 
 <http://example.org/topics/message-passing> a focu:Topics ;
     ns1:title "message-passing" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Message_passing" ;
-    foaf:isPrimaryTopicOf "Parallel Programming" .
+    foaf:primaryTopicOf "Parallel Programming" .
 
 <http://example.org/topics/message_passing> a focu:Topics ;
     ns1:title "message passing" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Message_passing" ;
-    foaf:isPrimaryTopicOf "Parallel Programming" .
+    foaf:primaryTopicOf "Parallel Programming" .
 
 <http://example.org/topics/mobile_computing> a focu:Topics ;
     ns1:title "mobile computing" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Mobile_computing" ;
-    foaf:isPrimaryTopicOf "Mobile Computing and Wireless Networks" .
+    foaf:primaryTopicOf "Mobile Computing and Wireless Networks" .
 
 <http://example.org/topics/mobile_gaming> a focu:Topics ;
     ns1:title "mobile gaming" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Mobile_game" ;
-    foaf:isPrimaryTopicOf "Advanced Game Development" .
+    foaf:primaryTopicOf "Advanced Game Development" .
 
 <http://example.org/topics/model-theoretic> a focu:Topics ;
     ns1:title "model-theoretic" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Model_theory" ;
-    foaf:isPrimaryTopicOf "Semantics of Programming Languages" .
+    foaf:primaryTopicOf "Semantics of Programming Languages" .
 
 <http://example.org/topics/model_selection> a focu:Topics ;
     ns1:title "model selection" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Model_selection" ;
-    foaf:isPrimaryTopicOf "Machine Learning" .
+    foaf:primaryTopicOf "Machine Learning" .
 
 <http://example.org/topics/morphological> a focu:Topics ;
     ns1:title "morphological" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Shape" ;
-    foaf:isPrimaryTopicOf "Advanced Image Processing" .
+    foaf:primaryTopicOf "Advanced Image Processing" .
 
 <http://example.org/topics/motion_control> a focu:Topics ;
     ns1:title "motion control" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Motion_control" ;
-    foaf:isPrimaryTopicOf "Animation for Computer Games" .
+    foaf:primaryTopicOf "Animation for Computer Games" .
 
 <http://example.org/topics/motion_planning> a focu:Topics ;
     ns1:title "motion planning" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Motion_planning" ;
-    foaf:isPrimaryTopicOf "Computational Geometry" .
+    foaf:primaryTopicOf "Computational Geometry" .
 
 <http://example.org/topics/multi-core> a focu:Topics ;
     ns1:title "multi-core" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Multi-core_processor" ;
-    foaf:isPrimaryTopicOf "Parallel Programming" .
+    foaf:primaryTopicOf "Parallel Programming" .
 
 <http://example.org/topics/multi-resolution_analysis> a focu:Topics ;
     ns1:title "multi-resolution analysis" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Multiresolution_analysis" ;
-    foaf:isPrimaryTopicOf "Advanced Image Processing" .
+    foaf:primaryTopicOf "Advanced Image Processing" .
 
 <http://example.org/topics/multi-threading> a focu:Topics ;
     ns1:title "multi-threading" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Thread_(computing)" ;
-    foaf:isPrimaryTopicOf "Advanced Programming Practices" .
+    foaf:primaryTopicOf "Advanced Programming Practices" .
 
 <http://example.org/topics/multicasting> a focu:Topics ;
     ns1:title "multicasting" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Multicast" ;
-    foaf:isPrimaryTopicOf "Computer Networks and Protocols" .
+    foaf:primaryTopicOf "Computer Networks and Protocols" .
 
 <http://example.org/topics/multimedia> a focu:Topics ;
     ns1:title "multimedia" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Multimedia" ;
-    foaf:isPrimaryTopicOf "Advanced Database Technology and Applications" .
+    foaf:primaryTopicOf "Advanced Database Technology and Applications" .
 
 <http://example.org/topics/multiple_sequence> a focu:Topics ;
     ns1:title "multiple sequence alignment" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Multiple_sequence_alignment" ;
-    foaf:isPrimaryTopicOf "Bioinformatics Algorithms" .
+    foaf:primaryTopicOf "Bioinformatics Algorithms" .
 
 <http://example.org/topics/natural_language> a focu:Topics ;
     ns1:title "natural language processing",
         "natural language processing (NLP)" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Natural-language_processing" ;
-    foaf:isPrimaryTopicOf "Natural Language Analysis",
+    foaf:primaryTopicOf "Natural Language Analysis",
         "Statistical Natural Language Processing" .
 
 <http://example.org/topics/neural_networks> a focu:Topics ;
     ns1:title "neural networks" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Artificial_neural_network" ;
-    foaf:isPrimaryTopicOf "Advanced Pattern Recognition",
+    foaf:primaryTopicOf "Advanced Pattern Recognition",
         "Machine Learning" .
 
 <http://example.org/topics/non-linear_programming> a focu:Topics ;
     ns1:title "non-linear programming" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Nonlinear_programming" ;
-    foaf:isPrimaryTopicOf "Large-Scale Optimization" .
+    foaf:primaryTopicOf "Large-Scale Optimization" .
 
 <http://example.org/topics/non-repudiation> a focu:Topics ;
     ns1:title "non-repudiation" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Non-repudiation" ;
-    foaf:isPrimaryTopicOf "Cryptography and Data Security" .
+    foaf:primaryTopicOf "Cryptography and Data Security" .
 
 <http://example.org/topics/nonlinear> a focu:Topics ;
     ns1:title "nonlinear" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Nonlinear_system" ;
-    foaf:isPrimaryTopicOf "Large-Scale Optimization",
+    foaf:primaryTopicOf "Large-Scale Optimization",
         "Numerical Analysis of Nonlinear Equations",
         "Topics in Scientific Computation" .
 
 <http://example.org/topics/numerical_analysis> a focu:Topics ;
     ns1:title "numerical analysis" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Numerical_analysis" ;
-    foaf:isPrimaryTopicOf "Numerical Analysis of Nonlinear Equations" .
+    foaf:primaryTopicOf "Numerical Analysis of Nonlinear Equations" .
 
 <http://example.org/topics/numerical_methods> a focu:Topics ;
     ns1:title "numerical methods" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Numerical_analysis" ;
-    foaf:isPrimaryTopicOf "Topics in Scientific Computation" .
+    foaf:primaryTopicOf "Topics in Scientific Computation" .
 
 <http://example.org/topics/numerical_simulation> a focu:Topics ;
     ns1:title "numerical simulation" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Computer_simulation" ;
-    foaf:isPrimaryTopicOf "Numerical Analysis of Nonlinear Equations" .
+    foaf:primaryTopicOf "Numerical Analysis of Nonlinear Equations" .
 
 <http://example.org/topics/numerical_stability> a focu:Topics ;
     ns1:title "numerical stability" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Numerical_stability" ;
-    foaf:isPrimaryTopicOf "Topics in Scientific Computation" .
+    foaf:primaryTopicOf "Topics in Scientific Computation" .
 
 <http://example.org/topics/object-oriented> a focu:Topics ;
     ns1:title "object-oriented" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Object-oriented_design" ;
-    foaf:isPrimaryTopicOf "Software Design Methodologies" .
+    foaf:primaryTopicOf "Software Design Methodologies" .
 
 <http://example.org/topics/occlusion_culling> a focu:Topics ;
     ns1:title "occlusion culling" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Hidden_surface_determination" ;
-    foaf:isPrimaryTopicOf "Advanced 3D Graphics for Game Programming" .
+    foaf:primaryTopicOf "Advanced 3D Graphics for Game Programming" .
 
 <http://example.org/topics/ontologies> a focu:Topics ;
     ns1:title "ontologies" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Ontology",
         "http://dbpedia.org/resource/Upper_ontology" ;
-    foaf:isPrimaryTopicOf "Foundations of the Semantic Web",
+    foaf:primaryTopicOf "Foundations of the Semantic Web",
         "Software Systems Requirements Specification" .
 
 <http://example.org/topics/ontology> a focu:Topics ;
     ns1:title "ontology" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Ontology_engineering" ;
-    foaf:isPrimaryTopicOf "Foundations of the Semantic Web" .
+    foaf:primaryTopicOf "Foundations of the Semantic Web" .
 
 <http://example.org/topics/open_source> a focu:Topics ;
     ns1:title "open source" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Open-source_model" ;
-    foaf:isPrimaryTopicOf "Software Engineering Processes" .
+    foaf:primaryTopicOf "Software Engineering Processes" .
 
 <http://example.org/topics/optimization> a focu:Topics ;
     ns1:title "optimization" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Mathematical_optimization",
         "http://dbpedia.org/resource/Query_optimization" ;
-    foaf:isPrimaryTopicOf "Advanced Database Technology and Applications",
+    foaf:primaryTopicOf "Advanced Database Technology and Applications",
         "Database Systems Principles",
         "Large-Scale Optimization" .
 
 <http://example.org/topics/ordinary_differential> a focu:Topics ;
     ns1:title "ordinary differential equations" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Ordinary_differential_equation" ;
-    foaf:isPrimaryTopicOf "Topics in Scientific Computation" .
+    foaf:primaryTopicOf "Topics in Scientific Computation" .
 
 <http://example.org/topics/overfitting> a focu:Topics ;
     ns1:title "overfitting" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Overfitting" ;
-    foaf:isPrimaryTopicOf "Machine Learning" .
+    foaf:primaryTopicOf "Machine Learning" .
 
 <http://example.org/topics/parallel_processing> a focu:Topics ;
     ns1:title "parallel processing" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Parallel_computing" ;
-    foaf:isPrimaryTopicOf "Parallel Programming" .
+    foaf:primaryTopicOf "Parallel Programming" .
 
 <http://example.org/topics/parallel_programming> a focu:Topics ;
     ns1:title "parallel programming" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Parallel_computing" ;
-    foaf:isPrimaryTopicOf "Parallel Programming" .
+    foaf:primaryTopicOf "Parallel Programming" .
 
 <http://example.org/topics/parsing> a focu:Topics ;
     ns1:title "parsing" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Parsing" ;
-    foaf:isPrimaryTopicOf "Compiler Design",
+    foaf:primaryTopicOf "Compiler Design",
         "Natural Language Analysis",
         "Statistical Natural Language Processing" .
 
 <http://example.org/topics/part-of-speech_tagging> a focu:Topics ;
     ns1:title "part-of-speech tagging" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Part-of-speech_tagging" ;
-    foaf:isPrimaryTopicOf "Statistical Natural Language Processing" .
+    foaf:primaryTopicOf "Statistical Natural Language Processing" .
 
 <http://example.org/topics/partial_differential> a focu:Topics ;
     ns1:title "partial differential equation",
         "partial differential equations" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Partial_differential_equation" ;
-    foaf:isPrimaryTopicOf "Advanced Image Processing",
+    foaf:primaryTopicOf "Advanced Image Processing",
         "Topics in Scientific Computation" .
 
 <http://example.org/topics/pass/fail> a focu:Topics ;
     ns1:title "pass/fail" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Failure" ;
-    foaf:isPrimaryTopicOf "Graduate Seminar in Computer Science" .
+    foaf:primaryTopicOf "Graduate Seminar in Computer Science" .
 
 <http://example.org/topics/pathfinding> a focu:Topics ;
     ns1:title "pathfinding" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Pathfinding" ;
-    foaf:isPrimaryTopicOf "Advanced Game Development" .
+    foaf:primaryTopicOf "Advanced Game Development" .
 
 <http://example.org/topics/pattern_recognition> a focu:Topics ;
     ns1:title "pattern recognition" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Pattern_recognition" ;
-    foaf:isPrimaryTopicOf "Advanced Pattern Recognition" .
+    foaf:primaryTopicOf "Advanced Pattern Recognition" .
 
 <http://example.org/topics/perceptual_organization> a focu:Topics ;
     ns1:title "perceptual organization" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Perception" ;
-    foaf:isPrimaryTopicOf "Computer Vision" .
+    foaf:primaryTopicOf "Computer Vision" .
 
 <http://example.org/topics/photorealism> a focu:Topics ;
     ns1:title "photorealism" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Photorealism" ;
-    foaf:isPrimaryTopicOf "Advanced 3D Graphics for Game Programming" .
+    foaf:primaryTopicOf "Advanced 3D Graphics for Game Programming" .
 
 <http://example.org/topics/phylogeny> a focu:Topics ;
     ns1:title "phylogeny" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Phylogenetic_tree" ;
-    foaf:isPrimaryTopicOf "Bioinformatics Algorithms" .
+    foaf:primaryTopicOf "Bioinformatics Algorithms" .
 
 <http://example.org/topics/physics> a focu:Topics ;
     ns1:title "physics" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Game_physics" ;
-    foaf:isPrimaryTopicOf "Advanced 3D Graphics for Game Programming" .
+    foaf:primaryTopicOf "Advanced 3D Graphics for Game Programming" .
 
 <http://example.org/topics/pipeline> a focu:Topics ;
     ns1:title "pipeline" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Graphics_pipeline" ;
-    foaf:isPrimaryTopicOf "Advanced 3D Graphics for Game Programming",
+    foaf:primaryTopicOf "Advanced 3D Graphics for Game Programming",
         "Animation for Computer Games",
         "Digital Geometric Modelling" .
 
 <http://example.org/topics/plane_sweep> a focu:Topics ;
     ns1:title "plane sweep" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Sweep_line_algorithm" ;
-    foaf:isPrimaryTopicOf "Computational Geometry" .
+    foaf:primaryTopicOf "Computational Geometry" .
 
 <http://example.org/topics/player_character> a focu:Topics ;
     ns1:title "player character" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Player_character" ;
-    foaf:isPrimaryTopicOf "Advanced Game Development" .
+    foaf:primaryTopicOf "Advanced Game Development" .
 
 <http://example.org/topics/point_location> a focu:Topics ;
     ns1:title "point location" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Point_location" ;
-    foaf:isPrimaryTopicOf "Computational Geometry" .
+    foaf:primaryTopicOf "Computational Geometry" .
 
 <http://example.org/topics/polygon_triangulation> a focu:Topics ;
     ns1:title "polygon triangulation" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Polygon_triangulation" ;
-    foaf:isPrimaryTopicOf "Computational Geometry" .
+    foaf:primaryTopicOf "Computational Geometry" .
 
 <http://example.org/topics/polynomial_regression> a focu:Topics ;
     ns1:title "polynomial regression" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Polynomial_regression" ;
-    foaf:isPrimaryTopicOf "Machine Learning" .
+    foaf:primaryTopicOf "Machine Learning" .
 
 <http://example.org/topics/preventive_maintenance> a focu:Topics ;
     ns1:title "preventive maintenance" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Preventive_maintenance" ;
-    foaf:isPrimaryTopicOf "Software Refactoring" .
+    foaf:primaryTopicOf "Software Refactoring" .
 
 <http://example.org/topics/principal_component> a focu:Topics ;
     ns1:title "principal component analysis" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Principal_component_analysis" ;
-    foaf:isPrimaryTopicOf "Advanced Pattern Recognition" .
+    foaf:primaryTopicOf "Advanced Pattern Recognition" .
 
 <http://example.org/topics/principle_component> a focu:Topics ;
     ns1:title "principle component analysis" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Principal_component_analysis" ;
-    foaf:isPrimaryTopicOf "Machine Learning" .
+    foaf:primaryTopicOf "Machine Learning" .
 
 <http://example.org/topics/probabilistic_method> a focu:Topics ;
     ns1:title "probabilistic method" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Probabilistic_method" ;
-    foaf:isPrimaryTopicOf "Discrete Mathematics of Paul ErdÃƒÂ¶s" .
+    foaf:primaryTopicOf "Discrete Mathematics of Paul ErdÃƒÂ¶s" .
 
 <http://example.org/topics/process_model> a focu:Topics ;
     ns1:title "process model" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Software_development_process" ;
-    foaf:isPrimaryTopicOf "Formal Methods" .
+    foaf:primaryTopicOf "Formal Methods" .
 
 <http://example.org/topics/quality_assurance> a focu:Topics ;
     ns1:title "quality assurance" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Quality_assurance" ;
-    foaf:isPrimaryTopicOf "Software Systems Requirements Specification" .
+    foaf:primaryTopicOf "Software Systems Requirements Specification" .
 
 <http://example.org/topics/query_expansion> a focu:Topics ;
     ns1:title "query expansion" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Query_expansion" ;
-    foaf:isPrimaryTopicOf "Information Retrieval and Web Search" .
+    foaf:primaryTopicOf "Information Retrieval and Web Search" .
 
 <http://example.org/topics/range_searching> a focu:Topics ;
     ns1:title "range searching" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Range_searching" ;
-    foaf:isPrimaryTopicOf "Computational Geometry" .
+    foaf:primaryTopicOf "Computational Geometry" .
 
 <http://example.org/topics/realism> a focu:Topics ;
     ns1:title "realism" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Philosophical_realism" ;
-    foaf:isPrimaryTopicOf "Advanced Game Development" .
+    foaf:primaryTopicOf "Advanced Game Development" .
 
 <http://example.org/topics/recurrent_neural> a focu:Topics ;
     ns1:title "recurrent neural networks" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Recurrent_neural_network" ;
-    foaf:isPrimaryTopicOf "Applied Artificial Intelligence" .
+    foaf:primaryTopicOf "Applied Artificial Intelligence" .
 
 <http://example.org/topics/recursive_functions> a focu:Topics ;
     ns1:title "recursive functions" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Computable_function" ;
-    foaf:isPrimaryTopicOf "Theory of Computation" .
+    foaf:primaryTopicOf "Theory of Computation" .
 
 <http://example.org/topics/reengineering> a focu:Topics ;
     ns1:title "reengineering" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Code_refactoring" ;
-    foaf:isPrimaryTopicOf "Software Re-engineering" .
+    foaf:primaryTopicOf "Software Re-engineering" .
 
 <http://example.org/topics/relational_algebra> a focu:Topics ;
     ns1:title "relational algebra" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Relational_algebra" ;
-    foaf:isPrimaryTopicOf "Introduction to Knowledge-Base Systems" .
+    foaf:primaryTopicOf "Introduction to Knowledge-Base Systems" .
 
 <http://example.org/topics/relational_calculus> a focu:Topics ;
     ns1:title "relational calculus" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Relational_calculus" ;
-    foaf:isPrimaryTopicOf "Introduction to Knowledge-Base Systems" .
+    foaf:primaryTopicOf "Introduction to Knowledge-Base Systems" .
 
 <http://example.org/topics/remote_procedure> a focu:Topics ;
     ns1:title "remote procedure call" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Remote_procedure_call" ;
-    foaf:isPrimaryTopicOf "Distributed System Design" .
+    foaf:primaryTopicOf "Distributed System Design" .
 
 <http://example.org/topics/requirements_engineering> a focu:Topics ;
     ns1:title "requirements engineering" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Requirements_engineering" ;
-    foaf:isPrimaryTopicOf "Software Systems Requirements Specification" .
+    foaf:primaryTopicOf "Software Systems Requirements Specification" .
 
 <http://example.org/topics/reverse_engineering> a focu:Topics ;
     ns1:title "reverse engineering" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Reverse_engineering" ;
-    foaf:isPrimaryTopicOf "Digital Geometric Modelling",
+    foaf:primaryTopicOf "Digital Geometric Modelling",
         "Software Comprehension and Maintenance" .
 
 <http://example.org/topics/robot> a focu:Topics ;
     ns1:title "robot" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Robotics" ;
-    foaf:isPrimaryTopicOf "Computational Geometry" .
+    foaf:primaryTopicOf "Computational Geometry" .
 
 <http://example.org/topics/scalability> a focu:Topics ;
     ns1:title "scalability" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Scalability" ;
-    foaf:isPrimaryTopicOf "Distributed System Design",
+    foaf:primaryTopicOf "Distributed System Design",
         "Parallel Programming" .
 
 <http://example.org/topics/schema> a focu:Topics ;
     ns1:title "schema" ;
     rdfs:seeAlso "http://dbpedia.org/resource/XML_schema" ;
-    foaf:isPrimaryTopicOf "Foundations of the Semantic Web" .
+    foaf:primaryTopicOf "Foundations of the Semantic Web" .
 
 <http://example.org/topics/scientific_computation> a focu:Topics ;
     ns1:title "scientific computation" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Computational_science" ;
-    foaf:isPrimaryTopicOf "Topics in Scientific Computation" .
+    foaf:primaryTopicOf "Topics in Scientific Computation" .
 
 <http://example.org/topics/secondary_structure> a focu:Topics ;
     ns1:title "secondary structure prediction" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Protein_structure_prediction" ;
-    foaf:isPrimaryTopicOf "Bioinformatics Algorithms" .
+    foaf:primaryTopicOf "Bioinformatics Algorithms" .
 
 <http://example.org/topics/semantic> a focu:Topics ;
     ns1:title "semantic" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Semantic_Web",
         "http://dbpedia.org/resource/Semantics" ;
-    foaf:isPrimaryTopicOf "Semantic Computing",
+    foaf:primaryTopicOf "Semantic Computing",
         "Semantics of Programming Languages" .
 
 <http://example.org/topics/semantics> a focu:Topics ;
     ns1:title "semantics" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Semantics" ;
-    foaf:isPrimaryTopicOf "Semantics of Programming Languages" .
+    foaf:primaryTopicOf "Semantics of Programming Languages" .
 
 <http://example.org/topics/sensor_networks> a focu:Topics ;
     ns1:title "sensor networks" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Wireless_sensor_network" ;
-    foaf:isPrimaryTopicOf "Mobile Computing and Wireless Networks" .
+    foaf:primaryTopicOf "Mobile Computing and Wireless Networks" .
 
 <http://example.org/topics/sequence_alignment> a focu:Topics ;
     ns1:title "sequence alignment" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Multiple_sequence_alignment" ;
-    foaf:isPrimaryTopicOf "Bioinformatics Algorithms" .
+    foaf:primaryTopicOf "Bioinformatics Algorithms" .
 
 <http://example.org/topics/server> a focu:Topics ;
     ns1:title "server" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Web_server" ;
-    foaf:isPrimaryTopicOf "Distributed System Design" .
+    foaf:primaryTopicOf "Distributed System Design" .
 
 <http://example.org/topics/simulated_annealing> a focu:Topics ;
     ns1:title "simulated annealing" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Simulated_annealing" ;
-    foaf:isPrimaryTopicOf "Bioinformatics Algorithms" .
+    foaf:primaryTopicOf "Bioinformatics Algorithms" .
 
 <http://example.org/topics/software_configuration> a focu:Topics ;
     ns1:title "software configuration management" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Software_configuration_management" ;
-    foaf:isPrimaryTopicOf "Software Comprehension and Maintenance" .
+    foaf:primaryTopicOf "Software Comprehension and Maintenance" .
 
 <http://example.org/topics/software_design> a focu:Topics ;
     ns1:title "software design" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Software_design" ;
-    foaf:isPrimaryTopicOf "Software Design Methodologies" .
+    foaf:primaryTopicOf "Software Design Methodologies" .
 
 <http://example.org/topics/software_development> a focu:Topics ;
     ns1:title "software development" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Software_development" ;
-    foaf:isPrimaryTopicOf "Semantic Computing" .
+    foaf:primaryTopicOf "Semantic Computing" .
 
 <http://example.org/topics/software_engineering> a focu:Topics ;
     ns1:title "software engineering" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Software_engineering" ;
-    foaf:isPrimaryTopicOf "Advanced 3D Graphics for Game Programming",
+    foaf:primaryTopicOf "Advanced 3D Graphics for Game Programming",
         "Software Engineering Processes" .
 
 <http://example.org/topics/software_life-cycle> a focu:Topics ;
     ns1:title "software life-cycle" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Software_release_life_cycle" ;
-    foaf:isPrimaryTopicOf "Formal Methods" .
+    foaf:primaryTopicOf "Formal Methods" .
 
 <http://example.org/topics/software_lifecycle> a focu:Topics ;
     ns1:title "software lifecycle" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Software_development_process" ;
-    foaf:isPrimaryTopicOf "Software Systems Requirements Specification" .
+    foaf:primaryTopicOf "Software Systems Requirements Specification" .
 
 <http://example.org/topics/software_maintenance> a focu:Topics ;
     ns1:title "software maintenance" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Software_maintenance" ;
-    foaf:isPrimaryTopicOf "Software Comprehension and Maintenance" .
+    foaf:primaryTopicOf "Software Comprehension and Maintenance" .
 
 <http://example.org/topics/software_metrics> a focu:Topics ;
     ns1:title "software metrics" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Software_metric" ;
-    foaf:isPrimaryTopicOf "Software Re-engineering" .
+    foaf:primaryTopicOf "Software Re-engineering" .
 
 <http://example.org/topics/software_visualization> a focu:Topics ;
     ns1:title "software visualization" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Software_visualization" ;
-    foaf:isPrimaryTopicOf "Software Comprehension and Maintenance" .
+    foaf:primaryTopicOf "Software Comprehension and Maintenance" .
 
 <http://example.org/topics/spam_filtering> a focu:Topics ;
     ns1:title "spam filtering" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Anti-spam_techniques" ;
-    foaf:isPrimaryTopicOf "Information Retrieval and Web Search" .
+    foaf:primaryTopicOf "Information Retrieval and Web Search" .
 
 <http://example.org/topics/spline> a focu:Topics ;
     ns1:title "spline" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Flat_spline" ;
-    foaf:isPrimaryTopicOf "Digital Geometric Modelling" .
+    foaf:primaryTopicOf "Digital Geometric Modelling" .
 
 <http://example.org/topics/statistical_machine> a focu:Topics ;
     ns1:title "statistical machine translation" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Statistical_machine_translation" ;
-    foaf:isPrimaryTopicOf "Statistical Natural Language Processing" .
+    foaf:primaryTopicOf "Statistical Natural Language Processing" .
 
 <http://example.org/topics/symmetric-key> a focu:Topics ;
     ns1:title "symmetric-key" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Symmetric-key_algorithm" ;
-    foaf:isPrimaryTopicOf "Cryptography and Data Security" .
+    foaf:primaryTopicOf "Cryptography and Data Security" .
 
 <http://example.org/topics/temporal_logic> a focu:Topics ;
     ns1:title "temporal logic" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Temporal_logic" ;
-    foaf:isPrimaryTopicOf "Semantics of Programming Languages" .
+    foaf:primaryTopicOf "Semantics of Programming Languages" .
 
 <http://example.org/topics/text_mining> a focu:Topics ;
     ns1:title "text mining" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Text_mining" ;
-    foaf:isPrimaryTopicOf "Natural Language Analysis" .
+    foaf:primaryTopicOf "Natural Language Analysis" .
 
 <http://example.org/topics/theorem> a focu:Topics ;
     ns1:title "theorem" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Theorem" ;
-    foaf:isPrimaryTopicOf "Discrete Mathematics of Paul ErdÃƒÂ¶s",
+    foaf:primaryTopicOf "Discrete Mathematics of Paul ErdÃƒÂ¶s",
         "Theory of Computation" .
 
 <http://example.org/topics/thresholding> a focu:Topics ;
     ns1:title "thresholding" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Thresholding_(image_processing)" ;
-    foaf:isPrimaryTopicOf "Image Processing" .
+    foaf:primaryTopicOf "Image Processing" .
 
 <http://example.org/topics/topology> a focu:Topics ;
     ns1:title "topology" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Network_topology" ;
-    foaf:isPrimaryTopicOf "Mobile Computing and Wireless Networks" .
+    foaf:primaryTopicOf "Mobile Computing and Wireless Networks" .
 
 <http://example.org/topics/traditional_animation> a focu:Topics ;
     ns1:title "traditional animation" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Traditional_animation" ;
-    foaf:isPrimaryTopicOf "Animation for Computer Games" .
+    foaf:primaryTopicOf "Animation for Computer Games" .
 
 <http://example.org/topics/travelling_wave> a focu:Topics ;
     ns1:title "travelling wave" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Wave" ;
-    foaf:isPrimaryTopicOf "Numerical Analysis of Nonlinear Equations" .
+    foaf:primaryTopicOf "Numerical Analysis of Nonlinear Equations" .
 
 <http://example.org/topics/triangle> a focu:Topics ;
     ns1:title "triangle" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Computer_graphics" ;
-    foaf:isPrimaryTopicOf "Digital Geometric Modelling" .
+    foaf:primaryTopicOf "Digital Geometric Modelling" .
 
 <http://example.org/topics/triangle_mesh> a focu:Topics ;
     ns1:title "triangle mesh" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Triangle_mesh" ;
-    foaf:isPrimaryTopicOf "Digital Geometric Modelling" .
+    foaf:primaryTopicOf "Digital Geometric Modelling" .
 
 <http://example.org/topics/triangulations> a focu:Topics ;
     ns1:title "triangulations" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Polygon_triangulation" ;
-    foaf:isPrimaryTopicOf "Computational Geometry" .
+    foaf:primaryTopicOf "Computational Geometry" .
 
 <http://example.org/topics/type_checking> a focu:Topics ;
     ns1:title "type checking" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Type_system" ;
-    foaf:isPrimaryTopicOf "Formal Methods" .
+    foaf:primaryTopicOf "Formal Methods" .
 
 <http://example.org/topics/unit_tests> a focu:Topics ;
     ns1:title "unit tests" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Unit_testing" ;
-    foaf:isPrimaryTopicOf "Advanced Programming Practices" .
+    foaf:primaryTopicOf "Advanced Programming Practices" .
 
 <http://example.org/topics/user_stories> a focu:Topics ;
     ns1:title "user stories" ;
     rdfs:seeAlso "http://dbpedia.org/resource/User_story" ;
-    foaf:isPrimaryTopicOf "Software Systems Requirements Specification" .
+    foaf:primaryTopicOf "Software Systems Requirements Specification" .
 
 <http://example.org/topics/variational_methods> a focu:Topics ;
     ns1:title "variational methods" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Calculus_of_variations" ;
-    foaf:isPrimaryTopicOf "Advanced Image Processing" .
+    foaf:primaryTopicOf "Advanced Image Processing" .
 
 <http://example.org/topics/vector_space> a focu:Topics ;
     ns1:title "vector space" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Vector_space" ;
-    foaf:isPrimaryTopicOf "Information Retrieval and Web Search" .
+    foaf:primaryTopicOf "Information Retrieval and Web Search" .
 
 <http://example.org/topics/wavelet> a focu:Topics ;
     ns1:title "wavelet" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Wavelet" ;
-    foaf:isPrimaryTopicOf "Advanced Image Processing" .
+    foaf:primaryTopicOf "Advanced Image Processing" .
 
 <http://example.org/topics/wavelet_transform> a focu:Topics ;
     ns1:title "wavelet transform" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Wavelet_transform" ;
-    foaf:isPrimaryTopicOf "Image Processing" .
+    foaf:primaryTopicOf "Image Processing" .
 
 <http://example.org/topics/wide_range> a focu:Topics ;
     ns1:title "wide range" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Fender_Wide_Range" ;
-    foaf:isPrimaryTopicOf "Digital Geometric Modelling" .
+    foaf:primaryTopicOf "Digital Geometric Modelling" .
 
 <http://example.org/topics/wireless> a focu:Topics ;
     ns1:title "wireless" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Wireless_LAN" ;
-    foaf:isPrimaryTopicOf "Mobile Computing and Wireless Networks" .
+    foaf:primaryTopicOf "Mobile Computing and Wireless Networks" .
 
 <http://example.org/topics/word_sense> a focu:Topics ;
     ns1:title "word sense disambiguation" ;
     rdfs:seeAlso "http://dbpedia.org/resource/Word-sense_disambiguation" ;
-    foaf:isPrimaryTopicOf "Statistical Natural Language Processing" .
+    foaf:primaryTopicOf "Statistical Natural Language Processing" .
 
 focu:containsTopic a rdf:Property ;
     rdfs:label "containsTopic"@en ;
-    rdfs:comment "Course contains topic" .
+    rdfs:comment "Course contains topic"@en .
 
 focu:hasTranscript a rdf:Property ;
     rdfs:label "hasTranscript"@en ;
-    rdfs:comment "Student has transcript" ;
+    rdfs:comment "Student has transcript"@en ;
     rdfs:domain focu:Student .
 
 focu:isAwarded a rdf:Property ;
     rdfs:label "isAwarded"@en ;
-    rdfs:comment "Student is awarded the grade" .
+    rdfs:comment "Student is awarded the grade"@en .
 
 focu:isEnrolledAt a rdf:Property ;
     rdfs:label "isEnrolledAt"@en ;
-    rdfs:comment "Enrolled in University" ;
+    rdfs:comment "Enrolled in University"@en ;
     rdfs:domain focu:Student ;
     rdfs:range focu:University .
 
 focu:isofferedBy a rdf:Property ;
     rdfs:label "isofferedBy"@en ;
-    rdfs:comment "University offers courses" ;
-    rdfs:domain focu:University ;
-    rdfs:range focu:Courses .
+    rdfs:comment "University offers courses"@en ;
+    rdfs:domain focu:Courses ;
+    rdfs:range focu:University .
+
+focu:studentId a rdf:Property ;
+    rdfs:label "studentId"@en ;
+    rdfs:comment "Univeristy ID of a student"@en .
 
 focu:takesCourse a rdf:Property ;
     rdfs:label "takesCourse"@en ;
-    rdfs:comment "Student takes course" ;
-    rdfs:domain focu:Courses ;
-    rdfs:range focu:Student .
+    rdfs:comment "Student takes course"@en ;
+    rdfs:domain focu:Student ;
+    rdfs:range focu:Courses .
 
 <http://example.org/transcript/T1S10088393> a focu:Transcript ;
     focu:isAwarded "B" ;
