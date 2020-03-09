@@ -1,4 +1,4 @@
-@prefix dbPage: <http://dbpedia.org/resource/> .
+@prefix dbOntology: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix focu: <http://focu.io/schema#> .
 @prefix ns1: <http://purl.org/dc/elements/1.1/> .
@@ -17592,6 +17592,55 @@ focu:University a rdfs:Class ;
     foaf:givenName "Luv" ;
     foaf:mbox "luvgarewal@gmail.com" .
 
+<http://example.org/people/10089359> a focu:Student ;
+    focu:hasTranscript <http://example.org/transcript/T1S10089359>,
+        <http://example.org/transcript/T2S10089359> ;
+    focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    focu:studentId "10089359" ;
+    foaf:familyName "Angela" ;
+    foaf:givenName "Johnson" ;
+    foaf:mbox "john.angela@gmail.com" .
+
+<http://example.org/people/10089368> a focu:Student ;
+    focu:hasTranscript <http://example.org/transcript/T1S10089368> ;
+    focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    focu:studentId "10089368" ;
+    foaf:familyName "Smith" ;
+    foaf:givenName "Robert" ;
+    foaf:mbox "rob.smith@gmail.com" .
+
+<http://example.org/people/10089370> a focu:Student ;
+    focu:hasTranscript <http://example.org/transcript/T1S10089370> ;
+    focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    focu:studentId "10089370" ;
+    foaf:familyName "Navale" ;
+    foaf:givenName "Reethu" ;
+    foaf:mbox "reethunavale@gmail.com" .
+
+<http://example.org/people/10089377> a focu:Student ;
+    focu:hasTranscript <http://example.org/transcript/T1S10089377> ;
+    focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    focu:studentId "10089377" ;
+    foaf:familyName "Agrawal" ;
+    foaf:givenName "Rahul" ;
+    foaf:mbox "rahulagarwal@gmail.com" .
+
+<http://example.org/people/10089382> a focu:Student ;
+    focu:hasTranscript <http://example.org/transcript/T1S10089382> ;
+    focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    focu:studentId "10089382" ;
+    foaf:familyName "Myers" ;
+    foaf:givenName "Jack" ;
+    foaf:mbox "jack.myers@gmail.com" .
+
+<http://example.org/people/10089390> a focu:Student ;
+    focu:hasTranscript <http://example.org/transcript/T1S10089390> ;
+    focu:isEnrolledAt <http://example.org/university/Concordia_University> ;
+    focu:studentId "10089390" ;
+    foaf:familyName "William" ;
+    foaf:givenName "Jill" ;
+    foaf:mbox "williamjill@gmail.com" .
+
 <http://example.org/people/10089473> a focu:Student ;
     focu:hasTranscript <http://example.org/transcript/T1S10089473>,
         <http://example.org/transcript/T2S10089473> ;
@@ -31435,10 +31484,6 @@ focu:University a rdfs:Class ;
     ns2:sameAs "http://dbpedia.org/resource/Zero-knowledge_proof" ;
     foaf:primaryTopicOf "Foundations of Cryptography" .
 
-focu:containsTopic a rdf:Property ;
-    rdfs:label "containsTopic"@en ;
-    rdfs:comment "Course contains topic"@en .
-
 focu:hasTranscript a rdf:Property ;
     rdfs:label "hasTranscript"@en ;
     rdfs:comment "Student has transcript"@en ;
@@ -31446,7 +31491,9 @@ focu:hasTranscript a rdf:Property ;
 
 focu:isAwarded a rdf:Property ;
     rdfs:label "isAwarded"@en ;
-    rdfs:comment "Student is awarded the grade"@en .
+    rdfs:comment "Student is awarded the grade"@en ;
+    rdfs:domain focu:Student ;
+    rdfs:range xsd:String .
 
 focu:isEnrolledAt a rdf:Property ;
     rdfs:label "isEnrolledAt"@en ;
@@ -31471,75 +31518,117 @@ focu:takesCourse a rdf:Property ;
     rdfs:range focu:Courses .
 
 <http://example.org/transcript/T1S10088393> a focu:Transcript ;
+    dbOntology:termPeriod "Fall2019" ;
     focu:isAwarded "B" ;
     focu:takesCourse "Distributed System Design" ;
-    ns1:PeriodOfTime "Fall2019" ;
     ns1:identifier "10088393" .
 
 <http://example.org/transcript/T1S10089346> a focu:Transcript ;
+    dbOntology:termPeriod "Summer2019" ;
     focu:isAwarded "F" ;
     focu:takesCourse "Computer Vision" ;
-    ns1:PeriodOfTime "Summer2019" ;
     ns1:identifier "10089346" .
 
 <http://example.org/transcript/T1S10089347> a focu:Transcript ;
+    dbOntology:termPeriod "Fall2019" ;
     focu:isAwarded "B" ;
     focu:takesCourse "Machine Learning" ;
-    ns1:PeriodOfTime "Fall2019" ;
     ns1:identifier "10089347" .
 
 <http://example.org/transcript/T1S10089348> a focu:Transcript ;
+    dbOntology:termPeriod "Summer2019" ;
     focu:isAwarded "B" ;
     focu:takesCourse "Advanced Image Processing" ;
-    ns1:PeriodOfTime "Summer2019" ;
     ns1:identifier "10089348" .
 
 <http://example.org/transcript/T1S10089349> a focu:Transcript ;
+    dbOntology:termPeriod "Winter2019" ;
     focu:isAwarded "B" ;
     focu:takesCourse "Computer Networks and Protocols" ;
-    ns1:PeriodOfTime "Winter2019" ;
     ns1:identifier "10089349" .
 
 <http://example.org/transcript/T1S10089356> a focu:Transcript ;
+    dbOntology:termPeriod "Fall2019" ;
     focu:isAwarded "A" ;
     focu:takesCourse "Distributed System Design" ;
-    ns1:PeriodOfTime "Fall2019" ;
     ns1:identifier "10089356" .
 
 <http://example.org/transcript/T1S10089357> a focu:Transcript ;
+    dbOntology:termPeriod "Winter2019" ;
     focu:isAwarded "C" ;
     focu:takesCourse "Advanced Pattern Recognition" ;
-    ns1:PeriodOfTime "Winter2019" ;
     ns1:identifier "10089357" .
 
 <http://example.org/transcript/T1S10089358> a focu:Transcript ;
+    dbOntology:termPeriod "Fall2018" ;
     focu:isAwarded "B" ;
     focu:takesCourse "Foundations of the Semantic Web" ;
-    ns1:PeriodOfTime "Fall2018" ;
     ns1:identifier "10089358" .
 
+<http://example.org/transcript/T1S10089359> a focu:Transcript ;
+    dbOntology:termPeriod "Summer2019" ;
+    focu:isAwarded "B" ;
+    focu:takesCourse "Structural Composites" ;
+    ns1:identifier "10089359" .
+
+<http://example.org/transcript/T1S10089368> a focu:Transcript ;
+    dbOntology:termPeriod "Summer2019" ;
+    focu:isAwarded "F" ;
+    focu:takesCourse "Adaptive Signal Processing" ;
+    ns1:identifier "10089368" .
+
+<http://example.org/transcript/T1S10089370> a focu:Transcript ;
+    dbOntology:termPeriod "Winter2019" ;
+    focu:isAwarded "B" ;
+    focu:takesCourse "Applied Evolutionary and Learning Algorithms" ;
+    ns1:identifier "10089370" .
+
+<http://example.org/transcript/T1S10089377> a focu:Transcript ;
+    dbOntology:termPeriod "Fall2018" ;
+    focu:isAwarded "B" ;
+    focu:takesCourse "Structural Composites" ;
+    ns1:identifier "10089377" .
+
+<http://example.org/transcript/T1S10089382> a focu:Transcript ;
+    dbOntology:termPeriod "Fall2019" ;
+    focu:isAwarded "A" ;
+    focu:takesCourse "Adaptive Signal Processing" ;
+    ns1:identifier "10089382" .
+
+<http://example.org/transcript/T1S10089390> a focu:Transcript ;
+    dbOntology:termPeriod "Winter2019" ;
+    focu:isAwarded "C" ;
+    focu:takesCourse "Soil Testing and Properties" ;
+    ns1:identifier "10089390" .
+
 <http://example.org/transcript/T1S10089473> a focu:Transcript ;
+    dbOntology:termPeriod "Fall2019" ;
     focu:isAwarded "B" ;
     focu:takesCourse "Parallel Programming" ;
-    ns1:PeriodOfTime "Fall2019" ;
     ns1:identifier "10089473" .
 
 <http://example.org/transcript/T2S10088393> a focu:Transcript ;
+    dbOntology:termPeriod "Winter2020" ;
     focu:isAwarded "A" ;
     focu:takesCourse "Parallel Programming" ;
-    ns1:PeriodOfTime "Winter2020" ;
     ns1:identifier "10088393" .
 
 <http://example.org/transcript/T2S10089348> a focu:Transcript ;
+    dbOntology:termPeriod "Fall2019" ;
     focu:isAwarded "B" ;
     focu:takesCourse "Machine Learning" ;
-    ns1:PeriodOfTime "Fall2019" ;
     ns1:identifier "10089348" .
 
+<http://example.org/transcript/T2S10089359> a focu:Transcript ;
+    dbOntology:termPeriod "Fall2019" ;
+    focu:isAwarded "B" ;
+    focu:takesCourse "Handling and Stability of Road Vehicles" ;
+    ns1:identifier "10089359" .
+
 <http://example.org/transcript/T2S10089473> a focu:Transcript ;
+    dbOntology:termPeriod "Winter2020" ;
     focu:isAwarded "A" ;
     focu:takesCourse "Parallel Programming" ;
-    ns1:PeriodOfTime "Winter2020" ;
     ns1:identifier "10089473" .
 
 <http://example.org/university/Concordia_University> a focu:University ;

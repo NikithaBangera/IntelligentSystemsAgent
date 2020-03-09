@@ -1,7 +1,6 @@
 @base <http://example.org/>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix schema: <http://schema.org/>.
-@prefix dbPage: <http://dbpedia.org/resource/>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -54,16 +53,13 @@ focu:takesCourse
   rdfs:comment "Student takes course"@en ;
   rdfs:domain focu:Student ;
   rdfs:range focu:Courses .
-  
-focu:containsTopic
-  a rdf:Property ;
-  rdfs:label "containsTopic"@en ;
-  rdfs:comment "Course contains topic"@en .
-  
+
 focu:isAwarded
   a rdf:Property ;
   rdfs:label "isAwarded"@en ;
-  rdfs:comment "Student is awarded the grade"@en .
+  rdfs:comment "Student is awarded the grade"@en ;
+  rdfs:domain focu:Student ;
+  rdfs:range xsd:String .
 
 focu:hasTranscript
   a rdf:Property ;

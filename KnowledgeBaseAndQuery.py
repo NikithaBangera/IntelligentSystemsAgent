@@ -1,11 +1,12 @@
 from rdflib.namespace import RDFS, RDF, FOAF, DC, OWL
 from rdflib import Graph, Namespace, Literal
+import rdflib
 import csv
 
+dbOntology =rdflib.Namespace('http://dbpedia.org/ontology/')
 graph = Graph()
 graph.parse("Classes.rdf", format="application/rdf+xml")
-comp_grad_page = "https://www.concordia.ca/academics/graduate/calendar/current/encs/computer-science-courses.html#course-descriptions"
-grad_page = "https://www.concordia.ca/academics/graduate/calendar/current/encs/engineering-courses.html#topicsinengineering"
+graph.bind("dbOntology", dbOntology)
 
 def universityTripleGenerator(university_class):
     university_ns = Namespace("http://example.org/university/")
@@ -18,7 +19,7 @@ def universityTripleGenerator(university_class):
     return university
 
 
-def courseTripleGenerator(course_class, comp_grad_page, grad_page, is_offered_by, university):
+def courseTripleGenerator(course_class, is_offered_by, university):
     course_ns = Namespace("http://example.org/course/")
     with open("Courses.csv", 'r', encoding='utf-8') as csv_file:
         file_reader = csv.reader(csv_file, delimiter="|")
@@ -86,7 +87,7 @@ def transcriptTripleGenerator(transcript_identifier, student_subject_list, stude
     graph.add((transcript, DC.identifier, Literal(student_id)))
     graph.add((transcript, takes_course_property, Literal(split_subject_list[0])))
     graph.add((transcript, is_awarded, Literal(split_subject_list[1])))
-    graph.add((transcript, DC.PeriodOfTime, Literal(split_subject_list[2])))
+    graph.add((transcript, dbOntology.termPeriod, Literal(split_subject_list[2])))
 
     graph.serialize(format='turtle')
     return transcript
@@ -142,13 +143,22 @@ def sparql_query_3(query_graph, courseName):
                             ?topicSub ns2:sameAs ?topicUri
                 }}""")
 
-    for row in query3:
-        print("Topic title:%s and Topic URI:%s" % row)
+    if len(query3) == 0:
+        print(courseName, "is not present in the knowledge base graph.")
+    else:
+        print("The following topics are part of the course {}:".format(courseName))
+        for row in query3:
+            print("Topic title:%s and Topic URI:%s" % row)
 
 
 def sparql_query_4(query_graph, studentName):
-    student_first_name = studentName.split(" ")[0]
-    student_last_name = studentName.split(" ")[1]
+    if len(studentName.split(" ")) == 2:
+        student_first_name = studentName.split(" ")[0]
+        student_last_name = studentName.split(" ")[1]
+    else:
+        student_first_name = studentName.split(" ")[0]
+        student_last_name = " "
+
     query4 = query_graph.query(
         f"""SELECT ?courseName ?grade ?semester
             WHERE {{ 
@@ -158,17 +168,20 @@ def sparql_query_4(query_graph, studentName):
                     SELECT ?studentId 
                     WHERE {{ 
                         ?studentSub foaf:givenName '{student_first_name}' . 
-                        ?studentSub foaf:familyName '{student_last_name}' .
+                        Optional {{ ?studentSub foaf:familyName '{student_last_name}'}} .
                         ?studentSub focu:studentId ?studentId .
                     }} 
                 }} . 
                 ?transcriptSub focu:takesCourse ?courseName . 
                 ?transcriptSub focu:isAwarded ?grade .
-                ?transcriptSub ns1:PeriodOfTime ?semester .
+                ?transcriptSub dbOntology:termPeriod ?semester .
         }}""")
 
-    for row in query4:
-        print(studentName, "has completed the Course %s with the Grade:%s in the term %s" % row)
+    if len(query4) == 0:
+        print(studentName, "is not enrolled in the University!")
+    else:
+        for row in query4:
+            print(studentName, "has completed the Course %s with the Grade:%s in the term %s" % row)
 
 
 def sparql_query_5(query_graph, topicName):
@@ -197,8 +210,12 @@ def sparql_query_5(query_graph, topicName):
                 ?studentSub foaf:familyName ?lastName .
         }}""" )
 
-    for row in query5:
-        print("Student id:%s Student Name:%s %s" % row)
+    if len(query5) == 0:
+        print(topicName, "is not presen in the knowledge base graph!")
+    else:
+        print("Below is the list students familiar with the topic {}:".format(topicName))
+        for row in query5:
+            print("Student id:%s and the Student Name:%s %s" % row)
 
 
 def sparql_query_6(query_graph, studentId):
@@ -226,9 +243,12 @@ def sparql_query_6(query_graph, studentId):
                 }} .
                 ?topicSub ns1:title ?topicName .
         }}""" )
-
-    for row in query6:
-        print("Topic Name:%s" % row)
+    if len(query6) == 0:
+        print("The student with the student id",studentId, "is not enrolled in the university!")
+    else:
+        print("The student with the student id", studentId, "is familiar with the following topics:")
+        for row in query6:
+            print("Topic Name:%s" % row)
 
 
 def customizedQuery(query_graph, query_input):
@@ -267,10 +287,10 @@ def main():
         elif "#hasTranscript" in row:
             has_transcript = row
 
-    university = universityTripleGenerator(university_class)
-    courseTripleGenerator(course_class, comp_grad_page, grad_page, is_offered_by, university)
+    '''university = universityTripleGenerator(university_class)
+    courseTripleGenerator(course_class, is_offered_by, university)
     topicsTripleGenerator(topic_class)
-    studentTripleGenerator(student_class, student_Id,enrolled_property, takes_course_property, is_awarded, university, has_transcript, transcript_class)
+    studentTripleGenerator(student_class, student_Id,enrolled_property, takes_course_property, is_awarded, university, has_transcript, transcript_class)'''
     query_graph = Graph()
     query_graph.parse("FinalKnowledgeGraph.ttl", format="ttl")
     print("Hello, I am your smart university agent. Please choose one of the options mentioned below")
@@ -288,15 +308,19 @@ def main():
                 courseName = input("Enter the course name:")
                 sparql_query_3(query_graph, courseName)
             elif choice == "4":
-                # use either student id or student name
                 studentName = input("Enter the name of the student:")
                 sparql_query_4(query_graph, studentName)
             elif choice == "5":
                 topicName = input("Enter the topic:")
                 sparql_query_5(query_graph, topicName)
             elif choice == "6":
-                studentId = input("Enter the student id:")
-                sparql_query_6(query_graph, studentId)
+                while True:
+                    studentId = input("Enter the student id:")
+                    if (len(studentId) < 8) or (len(studentId) > 8):
+                        print("Please enter a valid student id")
+                    else:
+                        sparql_query_6(query_graph, studentId)
+                        break
             elif choice == "7":
                 query = input("Enter the full query:")
                 #query without quotes
