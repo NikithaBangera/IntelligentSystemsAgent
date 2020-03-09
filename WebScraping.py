@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import re
 
-
+#Web Scraping of Software Engineering and Computer Science Course page
 def compWebPageScraping(comp_grad_page):
     page = requests.get(comp_grad_page)
     soup = BeautifulSoup(page.content, "html.parser")
@@ -18,6 +18,7 @@ def compWebPageScraping(comp_grad_page):
     course_subject = []
     course_number = []
     course_desc = []
+    course_link = []
     for i in range(2, len(courses)):
         courses_split = courses[i].find(class_="large-text").getText(strip=True).replace(u"\xa0", u" ").split(")", 1)
         print (courses_split)
@@ -32,6 +33,7 @@ def compWebPageScraping(comp_grad_page):
         course_subject.append(cname_split.strip().split(" ", 2)[0])
         course_number.append(cname_split.strip().split(" ", 2)[1])
         course_name.append(cname_split.strip().split(" ", 2)[2])
+        course_link.append(comp_grad_page)
 
     courses_list = []
     for j in range(1, len(course_name_list), 2):
@@ -62,6 +64,7 @@ def compWebPageScraping(comp_grad_page):
             course_subject.append(items_split[0])
             course_number.append(items_split[1])
             course_name.append(items_split[2])
+            course_link.append(comp_grad_page)
 
     '''print(course_subject)
     print(course_number)
@@ -70,14 +73,15 @@ def compWebPageScraping(comp_grad_page):
 
     df = pd.DataFrame(
         {'course_number': course_number,
-         'course_name': course_name,
          'course_subject': course_subject,
-         'course_desc': course_desc
+         'course_name': course_name,
+         'course_desc': course_desc,
+         'course_link': course_link
         })
     df.to_csv('Courses.csv', index=False, sep='|')
 
 
-def course_name_extract(courses, course_number, course_subject, course_name, course_desc):
+def course_name_extract(courses, course_number, course_subject, course_name, course_desc, course_link, grad_page):
     #print(courses)
     reg_pattern = re.compile(r'[A-Z]\d\d -')
     for i in courses[1:]:
@@ -99,15 +103,17 @@ def course_name_extract(courses, course_number, course_subject, course_name, cou
                     course_number.append(split_data.strip().split(" ", 2)[1])
                     course_name.append(split_data.strip().split(" ", 2)[2])
                     course_desc.append("")
+                    course_link.append(grad_page)
             else:
                 split_dt = data.split("(",1)[0]
                 course_subject.append(split_dt.strip().split(" ", 2)[0])
                 course_number.append(split_dt.strip().split(" ", 2)[1])
                 course_name.append(split_dt.strip().split(" ", 2)[2])
                 course_desc.append("")
+                course_link.append(grad_page)
 
 
-def courses_with_desc(courses, course_number, course_subject, course_name, course_desc):
+def courses_with_desc(courses, course_number, course_subject, course_name, course_desc, course_link, grad_page):
     for item in courses:
         item_clean = item.getText().replace(u"\xa0", u" ")
         #print(item_clean)
@@ -149,12 +155,14 @@ def courses_with_desc(courses, course_number, course_subject, course_name, cours
                 course_number.append(name_split.strip().split(" ", 2)[1])
                 course_name.append(name_split.strip().split(" ", 2)[2])
                 course_desc.append(desc.strip())
+                course_link.append(grad_page)
 
 def engWebPageScraping(grad_page):
     course_name = []
     course_subject = []
     course_number = []
     course_desc = []
+    course_link = []
     page = requests.get(grad_page)
     soup = BeautifulSoup(page.content, "html.parser")
     #print(soap)
@@ -163,12 +171,12 @@ def engWebPageScraping(grad_page):
     #course_details = course_details.find_all(class_="large-text")
     for i in range(3, 46):
         courses = course_details[i].find_all(class_="large-text")
-        course_name_extract(courses, course_number, course_subject, course_name, course_desc)
+        course_name_extract(courses, course_number, course_subject, course_name, course_desc, course_link, grad_page)
 
     for i in range(51, 58):
         courses = course_details[i].find_all(class_="large-text")
         #print(courses)
-        courses_with_desc(courses, course_number, course_subject, course_name, course_desc)
+        courses_with_desc(courses, course_number, course_subject, course_name, course_desc, course_link, grad_page)
 
     '''print(course_number)
     print(course_subject)
@@ -177,9 +185,10 @@ def engWebPageScraping(grad_page):
 
     df = pd.DataFrame(
         {'course_number': course_number,
-         'course_name': course_name,
          'course_subject': course_subject,
-         'course_desc': course_desc
+         'course_name': course_name,
+         'course_desc': course_desc,
+         'course_link' : course_link
          })
     df.to_csv('Courses.csv', mode='a', index=False, sep='|', header=False)
 
