@@ -1,4 +1,4 @@
-from rdflib.namespace import RDFS, RDF, FOAF, DC
+from rdflib.namespace import RDFS, RDF, FOAF, DC, OWL
 from rdflib import Graph, Namespace, Literal
 import csv
 
@@ -9,45 +9,36 @@ grad_page = "https://www.concordia.ca/academics/graduate/calendar/current/encs/e
 
 def universityTripleGenerator(university_class):
     university_ns = Namespace("http://example.org/university/")
-    #university_graph = Graph()
     university_list = ["Concordia_University"]
     university = university_ns[university_list[0]]
     graph.add((university, RDF.type, university_class))
     graph.add((university, FOAF.name, Literal("Concordia University")))
     graph.add((university, RDFS.seeAlso, Literal("http://dbpedia.org/resource/Concordia_University")))
-    #print(graph.serialize(format='turtle'))
     graph.serialize(format='turtle')
     return university
 
 
 def courseTripleGenerator(course_class, comp_grad_page, grad_page, is_offered_by, university):
     course_ns = Namespace("http://example.org/course/")
-    #course_graph = Graph()
-    with open("Courses.csv", 'r') as csv_file:
+    with open("Courses.csv", 'r', encoding='utf-8') as csv_file:
         file_reader = csv.reader(csv_file, delimiter="|")
         next(file_reader)
         for course_list in file_reader:
-            #print(course_list)
-            course = course_ns[course_list[2]+"_"+course_list[0]]
+            course = course_ns[course_list[1]+"_"+course_list[0]]
             graph.add((course, RDF.type, course_class))
             graph.add((course, DC.identifier, Literal(course_list[0])))
-            graph.add((course, DC.title, Literal(course_list[1])))
-            graph.add((course, DC.subject, Literal(course_list[2])))
+            graph.add((course, DC.title, Literal(course_list[2].strip().split("(")[0].strip())))
+            graph.add((course, DC.subject, Literal(course_list[1])))
             graph.add((course, DC.description, Literal(course_list[3])))
             graph.add((course, is_offered_by, Literal(university)))
-            if course_list[2] == 'COMP' or course_list[2] == 'SOEN':
-                graph.add((course, RDFS.seeAlso, Literal(comp_grad_page)))
-            else:
-                graph.add((course, RDFS.seeAlso, Literal(grad_page)))
+            graph.add((course, RDFS.seeAlso, Literal(course_list[4])))
 
-    #print(course_graph.serialize(format='turtle'))
     graph.serialize(format='turtle')
 
 
 def topicsTripleGenerator(topic_class):
     topic_ns = Namespace("http://example.org/topics/")
-    #topic_graph = Graph()
-    with open("topic.csv", 'r') as csv_file:
+    with open("topic.csv", 'r', encoding='utf-8') as csv_file:
         file_reader = csv.reader(csv_file, delimiter="|")
         next(file_reader)
         for topic_list in file_reader:
@@ -58,21 +49,18 @@ def topicsTripleGenerator(topic_class):
             topic = topic_ns[topic_name]
             graph.add((topic, RDF.type, topic_class))
             graph.add((topic, DC.title, Literal(topic_list[0])))
-            graph.add((topic, RDFS.seeAlso, Literal(topic_list[1])))
+            graph.add((topic, OWL.sameAs, Literal(topic_list[1])))
             graph.add((topic, FOAF.primaryTopicOf, Literal(topic_list[2])))
 
-    #print(topic_graph.serialize(format='turtle'))
     graph.serialize(format='turtle')
 
 
 def studentTripleGenerator(student_class, student_Id, enrolled_property, takes_course_property, is_awarded, university, has_transcript, transcript_class):
     student_ns = Namespace("http://example.org/people/")
-    #student_graph = Graph()
     with open("StudentsRecord.csv", 'r') as csv_file:
         file_reader = csv.reader(csv_file, delimiter="|")
         next(file_reader)
         for student_list in file_reader:
-            #print(student_list)
             student = student_ns[student_list[0]]
             graph.add((student, RDF.type, student_class))
             graph.add((student, student_Id, Literal(student_list[0])))
@@ -88,14 +76,11 @@ def studentTripleGenerator(student_class, student_Id, enrolled_property, takes_c
                 graph.add((student, has_transcript, transcript_record))
                 counter = counter + 1
 
-    #print(student_graph.serialize(format='turtle'))
     graph.serialize(destination='FinalKnowledgeGraph.ttl', format='turtle')
 
 def transcriptTripleGenerator(transcript_identifier, student_subject_list, student_id, takes_course_property, is_awarded, transcript_class):
     transcript_ns = Namespace("http://example.org/transcript/")
-    #transcript_graph = Graph()
     split_subject_list = student_subject_list.split("-",3)
-    #print(split_subject_list)
     transcript = transcript_ns[transcript_identifier]
     graph.add((transcript, RDF.type, transcript_class))
     graph.add((transcript, DC.identifier, Literal(student_id)))
@@ -124,10 +109,10 @@ def sparql_query_2(query_graph):
     query2 = query_graph.query(
         """SELECT ?studentCount ?courseCount ?topicCount {
          {
-            SELECT (count(DISTINCT ?firstName) AS ?studentCount) 
+            SELECT (count(DISTINCT ?studentId) AS ?studentCount) 
                 WHERE{
                     ?studentSub a focu:Student .
-                    ?studentSub foaf:givenName ?firstName .}
+                    ?studentSub focu:studentId ?studentId.}
          }
          {
             SELECT (count(?courseTitle) AS ?courseCount)
@@ -154,7 +139,7 @@ def sparql_query_3(query_graph, courseName):
                     WHERE {{ 
                         ?topicSub foaf:primaryTopicOf '{courseName}' . 
                         ?topicSub ns1:title ?topicTitle . 
-                        ?topicSub rdfs:seeAlso ?topicUri
+                            ?topicSub ns2:sameAs ?topicUri
                 }}""")
 
     for row in query3:
@@ -162,6 +147,8 @@ def sparql_query_3(query_graph, courseName):
 
 
 def sparql_query_4(query_graph, studentName):
+    student_first_name = studentName.split(" ")[0]
+    student_last_name = studentName.split(" ")[1]
     query4 = query_graph.query(
         f"""SELECT ?courseName ?grade ?semester
             WHERE {{ 
@@ -170,8 +157,9 @@ def sparql_query_4(query_graph, studentName):
                 {{
                     SELECT ?studentId 
                     WHERE {{ 
-                        ?studentSub foaf:givenName '{studentName}' . 
-                        ?studentSub focu:studentId ?studentId
+                        ?studentSub foaf:givenName '{student_first_name}' . 
+                        ?studentSub foaf:familyName '{student_last_name}' .
+                        ?studentSub focu:studentId ?studentId .
                     }} 
                 }} . 
                 ?transcriptSub focu:takesCourse ?courseName . 
@@ -252,33 +240,31 @@ def customizedQuery(query_graph, query_input):
 
 def main():
     subject = list(graph.subjects(RDF.type, RDFS.Class))
-    #print(subject)
     for row in subject:
         if "#Courses" in row:
             course_class = row
-        if "#University" in row:
+        elif "#University" in row:
             university_class = row
-        if "#Student" in row:
+        elif "#Student" in row:
             student_class = row
-        if "#Topics" in row:
+        elif "#Topics" in row:
             topic_class = row
-        if "#Transcript" in row:
+        elif "#Transcript" in row:
             transcript_class = row
 
     properties = list(graph.subjects(RDF.type, RDF.Property))
-    #print(properties)
     for row in properties:
         if "#studentId" in row:
             student_Id = row
-        if "#isEnrolledAt" in row:
+        elif "#isEnrolledAt" in row:
             enrolled_property = row
-        if "#takesCourse" in row:
+        elif "#takesCourse" in row:
             takes_course_property = row
-        if "#isAwarded" in row:
+        elif "#isAwarded" in row:
             is_awarded = row
-        if "#isofferedBy" in row:
+        elif "#isofferedBy" in row:
             is_offered_by = row
-        if "#hasTranscript" in row:
+        elif "#hasTranscript" in row:
             has_transcript = row
 
     university = universityTripleGenerator(university_class)
@@ -303,7 +289,7 @@ def main():
                 sparql_query_3(query_graph, courseName)
             elif choice == "4":
                 # use either student id or student name
-                studentName = input("Enter the first name of the student:")
+                studentName = input("Enter the name of the student:")
                 sparql_query_4(query_graph, studentName)
             elif choice == "5":
                 topicName = input("Enter the topic:")
