@@ -144,7 +144,7 @@ def sparql_query_3(query_graph, courseName):
                 }}""")
 
     if len(query3) == 0:
-        print(courseName, "is not present in the knowledge base graph.")
+        print(courseName, "does not have any topics related to it in the knowledge base graph.")
     else:
         print("The following topics are part of the course {}:".format(courseName))
         for row in query3:
@@ -211,7 +211,7 @@ def sparql_query_5(query_graph, topicName):
         }}""" )
 
     if len(query5) == 0:
-        print(topicName, "is not presen in the knowledge base graph!")
+        print("Student/Students did not enroll for the course containing the topic", topicName)
     else:
         print("Below is the list students familiar with the topic {}:".format(topicName))
         for row in query5:
@@ -255,7 +255,12 @@ def customizedQuery(query_graph, query_input):
     query7 = query_graph.query(query_input)
 
     for row in query7:
-        print("%s" % row)
+        if len(row) == 1:
+            print("%s" % row)
+        elif len(row) == 2:
+            print("%s, %s" % row)
+        elif len(row) == 3:
+            print("%s, %s, %s" % row)
 
 
 def main():
@@ -287,12 +292,13 @@ def main():
         elif "#hasTranscript" in row:
             has_transcript = row
 
-    '''university = universityTripleGenerator(university_class)
+    university = universityTripleGenerator(university_class)
     courseTripleGenerator(course_class, is_offered_by, university)
     topicsTripleGenerator(topic_class)
-    studentTripleGenerator(student_class, student_Id,enrolled_property, takes_course_property, is_awarded, university, has_transcript, transcript_class)'''
+    studentTripleGenerator(student_class, student_Id,enrolled_property, takes_course_property, is_awarded, university, has_transcript, transcript_class)
     query_graph = Graph()
     query_graph.parse("FinalKnowledgeGraph.ttl", format="ttl")
+
     print("Hello, I am your smart university agent. Please choose one of the options mentioned below")
 
     while True:
@@ -305,8 +311,19 @@ def main():
             elif choice == "2":
                 sparql_query_2(query_graph)
             elif choice == "3":
-                courseName = input("Enter the course name:")
-                sparql_query_3(query_graph, courseName)
+                while True:
+                    counter = 0
+                    courseName = input("Enter the course name:")
+                    with open("Courses.csv", 'r', encoding='utf-8') as course_file:
+                        file_reader = csv.reader(course_file, delimiter="|")
+                        for row in file_reader:
+                            if courseName == row[2].strip().split("(")[0].strip():
+                                counter = counter + 1
+                        if counter == 0:
+                            print("Enter a valid course name")
+                        else:
+                            sparql_query_3(query_graph, courseName)
+                            break
             elif choice == "4":
                 studentName = input("Enter the name of the student:")
                 sparql_query_4(query_graph, studentName)
