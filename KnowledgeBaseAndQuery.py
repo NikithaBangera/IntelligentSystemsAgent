@@ -140,7 +140,7 @@ def sparql_query_3(query_graph, courseName):
                     WHERE {{ 
                         ?topicSub foaf:primaryTopicOf '{courseName}' . 
                         ?topicSub ns1:title ?topicTitle . 
-                            ?topicSub ns2:sameAs ?topicUri
+                        ?topicSub ns2:sameAs ?topicUri
                 }}""")
 
     if len(query3) == 0:
@@ -218,7 +218,7 @@ def sparql_query_5(query_graph, topicName):
             print("Student id:%s and the Student Name:%s %s" % row)
 
 
-def sparql_query_6(query_graph, studentId):
+def sparql_query_6(query_graph, student_first_name, student_last_name):
     query6 = query_graph.query(
         f"""SELECT DISTINCT ?topicName
             WHERE {{
@@ -233,7 +233,8 @@ def sparql_query_6(query_graph, studentId):
                                 SELECT ?studentId 
                                 WHERE{{ 
                                     ?studentSub a focu:Student .
-                                    ?studentSub focu:studentId '{studentId}' .
+                                    ?studentSub foaf:givenName '{student_first_name}' . 
+                                    Optional {{ ?studentSub foaf:familyName '{student_last_name}'}}.
                                     ?studentSub focu:studentId ?studentId .  
                                 }}
                             }} . 
@@ -244,9 +245,9 @@ def sparql_query_6(query_graph, studentId):
                 ?topicSub ns1:title ?topicName .
         }}""" )
     if len(query6) == 0:
-        print("The student with the student id",studentId, "is not enrolled in the university!")
+        print("The student",student_first_name,student_last_name, "is not enrolled in the university!")
     else:
-        print("The student with the student id", studentId, "is familiar with the following topics:")
+        print("The student",student_first_name,student_last_name, "is familiar with the following topics:")
         for row in query6:
             print("Topic Name:%s" % row)
 
@@ -292,10 +293,10 @@ def main():
         elif "#hasTranscript" in row:
             has_transcript = row
 
-    university = universityTripleGenerator(university_class)
+    '''university = universityTripleGenerator(university_class)
     courseTripleGenerator(course_class, is_offered_by, university)
     topicsTripleGenerator(topic_class)
-    studentTripleGenerator(student_class, student_Id,enrolled_property, takes_course_property, is_awarded, university, has_transcript, transcript_class)
+    studentTripleGenerator(student_class, student_Id,enrolled_property, takes_course_property, is_awarded, university, has_transcript, transcript_class)'''
     query_graph = Graph()
     query_graph.parse("FinalKnowledgeGraph.ttl", format="ttl")
 
@@ -332,12 +333,20 @@ def main():
                 sparql_query_5(query_graph, topicName)
             elif choice == "6":
                 while True:
-                    studentId = input("Enter the student id:")
-                    if (len(studentId) < 8) or (len(studentId) > 8):
-                        print("Please enter a valid student id")
+                    studentId = input("Enter the student name:")
+                    '''if studentId.isdigit():
+                        if (len(studentId) < 8) or (len(studentId) > 8):
+                            print("Please enter a valid student id")
+                        else:
+                            sparql_query_6(query_graph, studentId, None, None)
+                            break
+                    else:'''
+                    if len(studentId.split(" ")) == 2:
+                        sparql_query_6(query_graph, studentId.split(" ")[0], studentId.split(" ")[1])
                     else:
-                        sparql_query_6(query_graph, studentId)
-                        break
+                        sparql_query_6(query_graph, studentId, None)
+                    break
+
             elif choice == "7":
                 query = input("Enter the full query:")
                 #query without quotes
