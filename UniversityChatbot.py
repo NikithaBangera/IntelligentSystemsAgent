@@ -110,19 +110,19 @@ def university_chatbot():
     while True:
         question = input("Please type your query or type Exit/exit if you do not have any query:")
         if re.search(r'''^[W|w]hat is the (?P<courseName>.*\bw*\b)\?$''', question, flags=re.IGNORECASE):
-            result = re.match(r'''[W|w]hat is the (?P<courseName>.*\bw*\b)\?$''', question, flags=re.IGNORECASE)
+            result = re.search(r'''[W|w]hat is the (?P<courseName>.*\bw*\b)\?$''', question, flags=re.IGNORECASE)
             question1(result)
         elif re.search(r'''^[W|w]hich courses did (?P<studentName>.*) take\?$''', question, flags=re.IGNORECASE):
-            result = re.match(r'''[W|w]hich courses did (?P<studentName>.*) take\?$''', question, flags=re.IGNORECASE)
+            result = re.search(r'''[W|w]hich courses did (?P<studentName>.*) take\?$''', question, flags=re.IGNORECASE)
             question2(result)
         elif re.search(r'''^[W|w]hich courses cover (?P<topicName>.*)\?$''', question, flags=re.IGNORECASE):
-            result = re.match(r'''[W|w]hich courses cover (?P<topicName>.*)\?$''', question, flags=re.IGNORECASE)
+            result = re.search(r'''[W|w]hich courses cover (?P<topicName>.*)\?$''', question, flags=re.IGNORECASE)
             question3(result)
         elif re.search(r'''^[W|w]ho is familiar with (?P<topicName>.*)\?$''', question, flags=re.IGNORECASE):
-            result = re.match(r'''^[W|w]ho is familiar with (?P<topicName>.*)\?$''', question, flags=re.IGNORECASE)
+            result = re.search(r'''^[W|w]ho is familiar with (?P<topicName>.*)\?$''', question, flags=re.IGNORECASE)
             question4(result)
         elif re.search(r'''^[W|w]hat does (?P<student>.*) know\?$''', question, flags=re.IGNORECASE):
-            result = re.match(r'''^[W|w]hat does (?P<student>.*) know\?$''', question, flags=re.IGNORECASE)
+            result = re.search(r'''^[W|w]hat does (?P<student>.*) know\?$''', question, flags=re.IGNORECASE)
             question5(result)
         elif re.search(r'''[E|e]xit''', question):
             exit()
