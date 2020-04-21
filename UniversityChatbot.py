@@ -5,7 +5,7 @@ from KnowledgeBaseAndQuery import sparql_query_5, sparql_query_6
 query_graph = Graph()
 query_graph.parse("FinalKnowledgeGraph.ttl", format="ttl")
 
-
+'''Function to fetch the course description of a given course'''
 def question1(result):
     course_name = result.groupdict().get("courseName")
     course_name_split = course_name.split(" ")
@@ -25,6 +25,7 @@ def question1(result):
         print(course_name_split[0].upper(),course_name_split[1],"is %s and the course description is %s" % row)
 
 
+'''Function to fetch the course details of the courses taken by a particular student'''
 def question2(result):
     student_name = result.groupdict().get("studentName")
     if len(student_name.split()) == 2:
@@ -62,11 +63,15 @@ def question2(result):
                 ?courseSub ns1:identifier ?courseId .
             }}""")
 
-    print(student_name, "took the following courses:")
+    if len(student_name.split()) == 2:
+        print(student_name, "took the following courses:")
+    else:
+        print(first_name,"took the following courses:")
     for row in query2:
         print("%s %s %s scored %s grade in the %s term" % row)
 
 
+'''Function to fetch the courses which cover the given topic'''
 def question3(result):
     topic_name = result.groupdict().get("topicName")
 
@@ -84,11 +89,13 @@ def question3(result):
         print("%s" % row)
 
 
+'''Function to fetch the details of the students who are familiar with the given topic'''
 def question4(result):
     topic_name = result.groupdict().get("topicName")
     sparql_query_5(query_graph, topic_name)
 
 
+'''Function to fetch the topics that are known to a particular student'''
 def question5(result):
     student = result.groupdict().get("student")
     if len(student.split(" ")) == 2:
@@ -97,6 +104,7 @@ def question5(result):
         sparql_query_6(query_graph, student, None)
 
 
+'''Function which identifies the pattern in a particular question and gives correct answers to the questions asked'''
 def university_chatbot():
     print("Hello, I am your smart university agent. How can I help you?")
     while True:

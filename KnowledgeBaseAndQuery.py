@@ -8,6 +8,7 @@ graph = Graph()
 graph.parse("Classes.rdf", format="application/rdf+xml")
 graph.bind("dbOntology", dbOntology)
 
+'''Function to generate triples for the university'''
 def universityTripleGenerator(university_class):
     university_ns = Namespace("http://example.org/university/")
     university_list = ["Concordia_University"]
@@ -19,6 +20,7 @@ def universityTripleGenerator(university_class):
     return university
 
 
+'''Function to generate triples for the courses offered'''
 def courseTripleGenerator(course_class, is_offered_by, university):
     course_ns = Namespace("http://example.org/course/")
     with open("Courses.csv", 'r', encoding='utf-8') as csv_file:
@@ -37,6 +39,7 @@ def courseTripleGenerator(course_class, is_offered_by, university):
     graph.serialize(format='turtle')
 
 
+'''Function to generate triples for the topics'''
 def topicsTripleGenerator(topic_class):
     topic_ns = Namespace("http://example.org/topics/")
     with open("topic.csv", 'r', encoding='utf-8') as csv_file:
@@ -56,6 +59,7 @@ def topicsTripleGenerator(topic_class):
     graph.serialize(format='turtle')
 
 
+'''Function to generate triples for the students'''
 def studentTripleGenerator(student_class, student_Id, enrolled_property, takes_course_property, is_awarded, university, has_transcript, transcript_class):
     student_ns = Namespace("http://example.org/people/")
     with open("StudentsRecord.csv", 'r') as csv_file:
@@ -79,6 +83,8 @@ def studentTripleGenerator(student_class, student_Id, enrolled_property, takes_c
 
     graph.serialize(destination='FinalKnowledgeGraph.ttl', format='turtle')
 
+
+'''Function to generate triples for the transcripts of the students'''
 def transcriptTripleGenerator(transcript_identifier, student_subject_list, student_id, takes_course_property, is_awarded, transcript_class):
     transcript_ns = Namespace("http://example.org/transcript/")
     split_subject_list = student_subject_list.split("-",3)
@@ -93,6 +99,7 @@ def transcriptTripleGenerator(transcript_identifier, student_subject_list, stude
     return transcript
 
 
+'''Function to fetch the total count of triples present in the knowledge base graph'''
 def sparql_query_1(query_graph):
 
     query1 = query_graph.query(
@@ -106,6 +113,7 @@ def sparql_query_1(query_graph):
         print("Total number of Triples:%s" % row)
 
 
+'''Function to fetch the total count of students, courses and topics'''
 def sparql_query_2(query_graph):
     query2 = query_graph.query(
         """SELECT ?studentCount ?courseCount ?topicCount {
@@ -134,6 +142,7 @@ def sparql_query_2(query_graph):
         print("Total number of students:%s, total number of courses:%s and total number of topics:%s" % row)
 
 
+'''Function to fetch the topics of a particular course'''
 def sparql_query_3(query_graph, courseName):
     query3 = query_graph.query(
                 f"""SELECT ?topicTitle ?topicUri 
@@ -151,6 +160,7 @@ def sparql_query_3(query_graph, courseName):
             print("Topic title:%s and Topic URI:%s" % row)
 
 
+''''Function to fetch the courses cleared by a particular student'''
 def sparql_query_4(query_graph, studentName):
     if len(studentName.split(" ")) == 2:
         student_first_name = studentName.split(" ")[0]
@@ -184,6 +194,7 @@ def sparql_query_4(query_graph, studentName):
             print(studentName, "has completed the Course %s with the Grade:%s in the term %s" % row)
 
 
+'''Function to fetch the list of students fsmiliar with the particular topic'''
 def sparql_query_5(query_graph, topicName):
     query5 = query_graph.query(
         f"""SELECT ?studentId ?firstName ?lastName
@@ -198,8 +209,9 @@ def sparql_query_5(query_graph, topicName):
                         {{
                             SELECT ?courseName 
                             WHERE{{ 
-                                ?topicSub ns1:title '{topicName}' . 
+                                ?topicSub ns1:title ?topicName . 
                                 ?topicSub foaf:primaryTopicOf ?courseName .
+                                FILTER (regex(str(?topicName), '{topicName}', 'i'))
                             }}
                         }} . 
                         ?transcriptSub ns1:identifier ?studentId .
@@ -218,6 +230,7 @@ def sparql_query_5(query_graph, topicName):
             print("Student id:%s and the Student Name:%s %s" % row)
 
 
+'''Function to fetch the list of topics that a student is familiar with'''
 def sparql_query_6(query_graph, student_first_name, student_last_name):
     query6 = query_graph.query(
         f"""SELECT DISTINCT ?topicName
