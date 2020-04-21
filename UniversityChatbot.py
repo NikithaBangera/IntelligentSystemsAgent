@@ -7,8 +7,6 @@ query_graph.parse("FinalKnowledgeGraph.ttl", format="ttl")
 
 
 def question1(result):
-    #question = input("Hello, I am your smart university agent. How can I help you?")
-    #result = re.search(r'''What is (?P<courseName>.*) about\?$''', question, flags=re.IGNORECASE)
     course_name = result.groupdict().get("courseName")
     course_name_split = course_name.split(" ")
 
@@ -16,19 +14,18 @@ def question1(result):
         f"""SELECT ?courseTitle ?courseDesc 
             WHERE {{
                 ?courseSub a focu:Courses .
-                ?courseSub ns1:subject '{course_name_split[0]}' .
+                ?courseSub ns1:subject ?courseSubject .
                 ?courseSub ns1:identifier '{course_name_split[1]}' .
                 ?courseSub ns1:title ?courseTitle .
                 ?courseSub ns1:description ?courseDesc .
+                FILTER (regex(str(?courseSubject), '{course_name_split[0]}','i'))
             }}""")
 
     for row in query1:
-        print(course_name,"is %s and the course description is %s" % row)
+        print(course_name_split[0].upper(),course_name_split[1],"is %s and the course description is %s" % row)
 
 
 def question2(result):
-    #question = input("Hello, I am your smart university agent. How can I help you?")
-    #result = re.search(r'''Which courses did (?P<studentName>.*) take\?$''', question, flags=re.IGNORECASE)
     student_name = result.groupdict().get("studentName")
     if len(student_name.split()) == 2:
         first_name = student_name.split(" ")[0]
@@ -36,7 +33,6 @@ def question2(result):
     else:
         first_name = student_name
         family_name = None
-    #student_name_split = student_name.split(" ")
 
     query2 = query_graph.query(
         f"""SELECT ?courseSubject ?courseId ?courseName ?grade ?term
@@ -54,7 +50,7 @@ def question2(result):
                                 ?studentSub a focu:Student .
                                 ?studentSub foaf:givenName '{first_name}' .
                                 Optional {{ ?studentSub foaf:familyName '{family_name}' }} .
-                                ?studentSub focu:studentId ?studentId . 
+                                ?studentSub focu:studentId ?studentId .
                             }}
                         }}
                         ?transcriptSub dbOntology:termPeriod ?term .
@@ -72,16 +68,15 @@ def question2(result):
 
 
 def question3(result):
-    #question = input("Hello, I am your smart university agent. How can I help you?")
-    #result = re.search(r'''Which courses cover (?P<topicName>.*)\?$''', question, flags=re.IGNORECASE)
     topic_name = result.groupdict().get("topicName")
 
     query3 = query_graph.query(
         f"""SELECT ?courseName 
             WHERE {{
                 ?topicSub a focu:Topics .
-                ?topicSub ns1:title '{topic_name}' .
+                ?topicSub ns1:title ?topicName .
                 ?topicSub foaf:primaryTopicOf ?courseName .
+                FILTER (regex(str(?topicName), '{topic_name}', 'i'))
             }}""")
     print("The following courses cover",topic_name,":")
 
@@ -101,29 +96,31 @@ def question5(result):
     else:
         sparql_query_6(query_graph, student, None)
 
+
 def university_chatbot():
     print("Hello, I am your smart university agent. How can I help you?")
     while True:
         question = input("Please type your query or type Exit/exit if you do not have any query:")
-        if re.search(r'''^What is the (?P<courseName>.*) about\?$''', question, flags=re.IGNORECASE):
-            result = re.search(r'''What is the (?P<courseName>.*) about\?$''', question, flags=re.IGNORECASE)
+        if re.search(r'''^[W|w]hat is the (?P<courseName>.*\bw*\b)\?$''', question, flags=re.IGNORECASE):
+            result = re.match(r'''[W|w]hat is the (?P<courseName>.*\bw*\b)\?$''', question, flags=re.IGNORECASE)
             question1(result)
-        elif re.search(r'''^Which courses did (?P<studentName>.*) take\?$''', question, flags=re.IGNORECASE):
-            result = re.search(r'''Which courses did (?P<studentName>.*) take\?$''', question, flags=re.IGNORECASE)
+        elif re.search(r'''^[W|w]hich courses did (?P<studentName>.*) take\?$''', question, flags=re.IGNORECASE):
+            result = re.match(r'''[W|w]hich courses did (?P<studentName>.*) take\?$''', question, flags=re.IGNORECASE)
             question2(result)
-        elif re.search(r'''^Which courses cover (?P<topicName>.*)\?$''', question, flags=re.IGNORECASE):
-            result = re.search(r'''Which courses cover (?P<topicName>.*)\?$''', question, flags=re.IGNORECASE)
+        elif re.search(r'''^[W|w]hich courses cover (?P<topicName>.*)\?$''', question, flags=re.IGNORECASE):
+            result = re.match(r'''[W|w]hich courses cover (?P<topicName>.*)\?$''', question, flags=re.IGNORECASE)
             question3(result)
-        elif re.search(r'''^Who is familiar with (?P<topicName>.*)\?$''', question, flags=re.IGNORECASE):
-            result = re.search(r'''^Who is familiar with (?P<topicName>.*)\?$''', question, flags=re.IGNORECASE)
+        elif re.search(r'''^[W|w]ho is familiar with (?P<topicName>.*)\?$''', question, flags=re.IGNORECASE):
+            result = re.match(r'''^[W|w]ho is familiar with (?P<topicName>.*)\?$''', question, flags=re.IGNORECASE)
             question4(result)
-        elif re.search(r'''^What does (?P<student>.*) know\?$''', question, flags=re.IGNORECASE):
-            result = re.search(r'''^What does (?P<student>.*) know\?$''', question, flags=re.IGNORECASE)
+        elif re.search(r'''^[W|w]hat does (?P<student>.*) know\?$''', question, flags=re.IGNORECASE):
+            result = re.match(r'''^[W|w]hat does (?P<student>.*) know\?$''', question, flags=re.IGNORECASE)
             question5(result)
-        elif re.search(r'''Exit|exit''', question):
+        elif re.search(r'''[E|e]xit''', question):
             exit()
         result = None
         print()
 
 
-university_chatbot()
+if __name__ == '__main__':
+    university_chatbot()

@@ -247,7 +247,10 @@ def sparql_query_6(query_graph, student_first_name, student_last_name):
     if len(query6) == 0:
         print("The student",student_first_name,student_last_name, "is not enrolled in the university!")
     else:
-        print("The student",student_first_name,student_last_name, "is familiar with the following topics:")
+        if student_last_name:
+            print("The student",student_first_name,student_last_name, "is familiar with the following topics:")
+        else:
+            print("The student", student_first_name, "is familiar with the following topics:")
         for row in query6:
             print("Topic Name:%s" % row)
 
