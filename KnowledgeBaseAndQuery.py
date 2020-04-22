@@ -309,10 +309,10 @@ def main():
         elif "#hasTranscript" in row:
             has_transcript = row
 
-    '''university = universityTripleGenerator(university_class)
+    university = universityTripleGenerator(university_class)
     courseTripleGenerator(course_class, is_offered_by, university)
     topicsTripleGenerator(topic_class)
-    studentTripleGenerator(student_class, student_Id,enrolled_property, takes_course_property, is_awarded, university, has_transcript, transcript_class)'''
+    studentTripleGenerator(student_class, student_Id,enrolled_property, takes_course_property, is_awarded, university, has_transcript, transcript_class)
     query_graph = Graph()
     query_graph.parse("FinalKnowledgeGraph.ttl", format="ttl")
 
