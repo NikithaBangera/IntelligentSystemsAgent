@@ -21,8 +21,11 @@ def question1(result):
                 FILTER (regex(str(?courseSubject), '{course_name_split[0]}','i'))
             }}""")
 
-    for row in query1:
-        print(course_name_split[0].upper(),course_name_split[1],"is %s and the course description is %s" % row)
+    if len(query1) == 0:
+        print(course_name_split[0].upper(),course_name_split[1],"is not provided by the University.")
+    else:
+        for row in query1:
+            print(course_name_split[0].upper(),course_name_split[1],"is %s and the course description is %s" % row)
 
 
 '''Function to fetch the course details of the courses taken by a particular student'''
@@ -63,12 +66,15 @@ def question2(result):
                 ?courseSub ns1:identifier ?courseId .
             }}""")
 
-    if len(student_name.split()) == 2:
-        print(student_name, "took the following courses:")
+    if len(query2) == 0:
+        print(student_name,"is not enrolled in the University")
     else:
-        print(first_name,"took the following courses:")
-    for row in query2:
-        print("%s %s %s scored %s grade in the %s term" % row)
+        if len(student_name.split()) == 2:
+            print(student_name, "took the following courses:")
+        else:
+            print(first_name,"took the following courses:")
+        for row in query2:
+            print("%s %s %s scored %s grade in the %s term" % row)
 
 
 '''Function to fetch the courses which cover the given topic'''
@@ -83,10 +89,13 @@ def question3(result):
                 ?topicSub foaf:primaryTopicOf ?courseName .
                 FILTER (regex(str(?topicName), '{topic_name}', 'i'))
             }}""")
-    print("The following courses cover",topic_name,":")
 
-    for row in query3:
-        print("%s" % row)
+    if len(query3) == 0:
+        print(topic_name,"is not covered by any of the courses provided by the University")
+    else:
+        print("The following courses cover", topic_name, ":")
+        for row in query3:
+            print("%s" % row)
 
 
 '''Function to fetch the details of the students who are familiar with the given topic'''
